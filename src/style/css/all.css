@@ -1,0 +1,91 @@
+aside::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+nav .nav-item {
+  @apply overflow-x-clip
+        before:absolute 
+        before:bg-white 
+        before:w-6 
+        before:h-5 
+        before:invisible
+        before:top-1/2
+        before:right-0
+        transition;
+}
+nav .nav-item.active {
+  @apply text-white
+            bg-blue-1000;
+}
+nav .nav-item img {
+  z-index: 2;
+}
+nav .nav-item:hover img {
+  transform: translateY(-8px);
+}
+
+nav .nav-item::before {
+  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
+          clip-path: polygon(0 0, 50% 50%, 0 100%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+nav .nav-item.active {
+  @apply before:visible;
+}
+
+.menu-btn * {
+  pointer-events: none;
+}/*# sourceMappingURL=all.css.map */r {
+  text-align: center;
+}/*# sourceMappingURL=all.css.map */ width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 8px;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+.dropdown.menu-open .dropdown-content {
+  @apply visible
+            opacity-100
+            translate-y-0;
+}
+.dropdown.notification .dropdown-content {
+  box-shadow: 2px 6px 32px rgba(149, 157, 165, 0.15);
+  @apply translate-x-80
+            translate-y-0;
+}
+.dropdown.notification.menu-open .dropdown-content {
+  @apply visible
+                opacity-100
+                translate-x-0;
+}
+.dropdown.sidebar-menu .dropdown-content {
+  box-shadow: 2px 6px 32px rgba(149, 157, 165, 0.15);
+  @apply -translate-x-80
+            translate-y-0;
+}
+.dropdown.sidebar-menu.menu-open .dropdown-content {
+  @apply translate-x-0;
+}
+.dropdown.add-bar .dropdown-content::before {
+  right: 18px;
+}
+.dropdown.add-bar .dropdown-content::after {
+  right: 19px;
+}
+.dropdown.options .dropdown-content::before {
+  right: 20px;
+}
+.dropdown.options .dropdown-content::after {
+  right: 21px;
+}
+
+.options.dropdown .dropdown-content a:last-child:hover svg path {
+  @apply fill-red-600;
+}
+
+.options.dropdown button:hover svg path {
+  @apply stroke-blue-600;
+}/*# sourceMappingURL=all.css.map */

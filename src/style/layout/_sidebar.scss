@@ -1,0 +1,62 @@
+aside
+{
+    &::-webkit-scrollbar 
+    {
+        width: 0px;
+        height: 0px;
+    }
+}
+nav 
+{
+    .nav-item
+    {
+        @apply
+        overflow-x-clip
+        before:absolute 
+        before:bg-white 
+        before:w-6 
+        before:h-5 
+        before:invisible
+        before:top-1/2
+        before:right-0
+        transition;
+        
+        
+
+        &.active
+        {
+            @apply
+            text-white
+            bg-blue-1000;
+        }
+
+        img 
+        {
+            z-index: 2;
+        }
+        &:hover 
+        {
+            img 
+            {
+                
+                transform: translateY(-8px);
+            }
+        }
+    }
+}
+nav .nav-item::before
+{
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+    transform: rotate(180deg) translateY(50%);
+}
+
+nav .nav-item.active
+{
+    @apply
+    before:visible;
+}
+
+.menu-btn * 
+{
+    pointer-events: none;
+}

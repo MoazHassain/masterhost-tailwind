@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --clr-primary-solid: #1BB899;
+  --clr-secondary-solid: #12856e;
+  --clr-primary-gradient: linear-gradient(to right, #CC2B5E 0%, #F48400 100%);
+  --clr-secondary-gradient: linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
+  --clr-primary-white: #ffffff;
+  --clr-secondary-white: #dedede;
+  --clr-tertiary-white: #bababa;
+  --clr-primary-dark: #000000;
+  --clr-secondary-dark: #2b2b2b;
+  --clr-tertiary-dark: #4a4a4a;
+  --clr-success: #1ee682;
+  --clr-warning: #ffc107;
+  --clr-danger: #dc3545;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+body {
+  height: 120vh;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** scrollbar **/
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(36, 36, 36) transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(70, 70, 70);
+  border-radius: 10px;
+  border: 4px solid transparent;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(36, 36, 36);
+  border-radius: 10px;
+  border: 4px solid transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.menu-btn * {
+  pointer-events: none;
+}
+
+/* dropdown */
+.dropdown {
+  /* notification dropdown */
+  /* responsive sidebar menu */
+}
+.dropdown .dropdown-content {
+  box-shadow: 0px 6px 32px rgba(149, 157, 165, 0.15);
+  @apply invisible
+        opacity-0
+        translate-y-8
+        transition-all;
+}
+.dropdown .dropdown-content a svg path {
+  transition: 0.15s ease-in-out;
+}
+.dropdown .dropdown-content a:hover svg path {
+  @apply fill-blue-500;
+}
+.dropdown .dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 30px;
+  border-color: rgba(0, 0, 0, 0.15);
+  border: solid transparent;
+  border-bottom-color: white;
+  border-width: 9px;
+  /* margin-left: -10px; */
+  z-index: 1;
+}
+.dropdown .dropdown-content::after {
+  content: "";
+  position: absolute;
+  right: 31px;
+  top: -16px;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 8px;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+.dropdown.menu-open .dropdown-content {
+  @apply visible
+            opacity-100
+            translate-y-0;
+}
+.dropdown.notification .dropdown-content {
+  box-shadow: 2px 6px 32px rgba(149, 157, 165, 0.15);
+  @apply translate-x-80
+            translate-y-0;
+}
+.dropdown.notification.menu-open .dropdown-content {
+  @apply visible
+                opacity-100
+                translate-x-0;
+}
+.dropdown.sidebar-menu .dropdown-content {
+  box-shadow: 2px 6px 32px rgba(149, 157, 165, 0.15);
+  @apply -translate-x-80
+            translate-y-0;
+}
+.dropdown.sidebar-menu.menu-open .dropdown-content {
+  @apply translate-x-0;
+}
+.dropdown.add-bar .dropdown-content::before {
+  right: 18px;
+}
+.dropdown.add-bar .dropdown-content::after {
+  right: 19px;
+}
+.dropdown.options .dropdown-content::before {
+  right: 20px;
+}
+.dropdown.options .dropdown-content::after {
+  right: 21px;
+}
+
+.options.dropdown .dropdown-content a:last-child:hover svg path {
+  @apply fill-red-600;
+}
+
+.options.dropdown button:hover svg path {
+  @apply stroke-blue-600;
+}
+
+aside::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+nav .nav-item {
+  @apply overflow-x-clip
+        before:absolute 
+        before:bg-white 
+        before:w-6 
+        before:h-5 
+        before:invisible
+        before:top-1/2
+        before:right-0
+        transition;
+}
+nav .nav-item.active {
+  @apply text-white
+            bg-blue-1000;
+}
+nav .nav-item img {
+  z-index: 2;
+}
+nav .nav-item:hover img {
+  transform: translateY(-8px);
+}
+
+nav .nav-item::before {
+  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
+          clip-path: polygon(0 0, 50% 50%, 0 100%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+nav .nav-item.active {
+  @apply before:visible;
+}
+
+.menu-btn * {
+  pointer-events: none;
+}/*# sourceMappingURL=main.css.map */
