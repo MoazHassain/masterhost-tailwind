@@ -1247,7 +1247,7 @@ body {
 
   font-weight: 300;
 
-  src: url("../../../dist/assets/font/Roboto-Light.ttf") format("truetype");
+  src: url("/resources/font/Roboto-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -1257,7 +1257,7 @@ body {
 
   font-weight: 400;
 
-  src: url("../../../dist/assets/font/Roboto-Regular.ttf") format("truetype");
+  src: url("/resources/font/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -1267,7 +1267,7 @@ body {
 
   font-weight: 500;
 
-  src: url("../../../dist/assets/font/Roboto-Medium.ttf") format("truetype");
+  src: url("/resources/font/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -1277,11 +1277,7 @@ body {
 
   font-weight: 700;
 
-  src: url("../../../dist/assets/font/Roboto-Bold.ttf") format("truetype");
-}
-
-.text-center {
-  text-align: center;
+  src: url("/resources/font/Roboto-Bold.ttf") format("truetype");
 }
 
 .menu-btn * {

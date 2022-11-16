@@ -18,7 +18,7 @@ func main() {
 
 func dashboardHome(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/index.gohtml")
+	ptmp, err := template.ParseFiles("dist/template/index.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
