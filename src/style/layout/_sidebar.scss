@@ -1,6 +1,13 @@
 /* sidebar */
 aside
 {
+    scrollbar-width: none;
+
+    &:hover
+    {
+        scrollbar-width: none;
+    }
+
     &::-webkit-scrollbar 
     {
         width: 0px;

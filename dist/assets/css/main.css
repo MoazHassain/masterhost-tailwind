@@ -779,12 +779,12 @@ video {
   width: 1.25rem;
 }
 
-.w-24 {
-  width: 6rem;
-}
-
 .w-1\/6 {
   width: 16.666667%;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .w-7 {
@@ -883,11 +883,6 @@ video {
 
 .border-l-4 {
   border-left-width: 4px;
-}
-
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .border-gray-200 {
@@ -1015,14 +1010,6 @@ video {
 
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
 }
 
 .text-left {
@@ -1168,10 +1155,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.outline-0 {
-  outline-width: 0px;
-}
-
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -1305,6 +1288,23 @@ body {
   pointer-events: none;
 }
 
+.search-field input {
+  min-width: 100px;
+  width: 100%;
+}
+
+input {
+  height: 3rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2.5rem;
+  padding-right: 0.75rem;
+  outline-width: 0px;
+}
+
 /* dropdown */
 
 .dropdown {
@@ -1398,13 +1398,7 @@ body {
   right: 21px;
 }
 
-.options.dropdown .dropdown-content a:last-child:hover svg path {
-  fill: #dc2626;
-}
-
-.options.dropdown button:hover svg path {
-  stroke: #2563eb;
-}
+/* tab */
 
 .tab-bar::-webkit-scrollbar {
   width: 0px;
@@ -1424,7 +1418,23 @@ body {
   display: block;
 }
 
+.message.active {
+  display: block;
+}
+
+.message.hide {
+  display: none;
+}
+
 /* sidebar */
+
+aside {
+  scrollbar-width: none;
+}
+
+aside:hover {
+  scrollbar-width: none;
+}
 
 aside::-webkit-scrollbar {
   width: 0px;
@@ -1508,6 +1518,14 @@ nav .nav-item.active::before {
 
 .group\/btn:hover .group-hover\/btn\:fill-blue-700 {
   fill: #1d4ed8;
+}
+
+.group\/btn:hover .group-hover\/btn\:fill-blue-600 {
+  fill: #2563eb;
+}
+
+.group\/btn:hover .group-hover\/btn\:stroke-blue-700 {
+  stroke: #1d4ed8;
 }
 
 @media (min-width: 640px) {

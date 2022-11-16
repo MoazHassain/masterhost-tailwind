@@ -96,6 +96,21 @@ body {
   pointer-events: none;
 }
 
+.search-field input {
+  min-width: 100px;
+  width: 100%;
+}
+
+input {
+  @apply border 
+    outline-0 
+    border-gray-300 
+    pl-10 
+    pr-3 
+    py-3 
+    h-12;
+}
+
 /* dropdown */
 .dropdown {
   /* notification dropdown */
@@ -168,14 +183,7 @@ body {
   right: 21px;
 }
 
-.options.dropdown .dropdown-content a:last-child:hover svg path {
-  @apply fill-red-600;
-}
-
-.options.dropdown button:hover svg path {
-  @apply stroke-blue-600;
-}
-
+/* tab */
 .tab-bar::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -191,7 +199,20 @@ body {
   @apply block;
 }
 
+.message.active {
+  display: block;
+}
+.message.hide {
+  display: none;
+}
+
 /* sidebar */
+aside {
+  scrollbar-width: none;
+}
+aside:hover {
+  scrollbar-width: none;
+}
 aside::-webkit-scrollbar {
   width: 0px;
   height: 0px;

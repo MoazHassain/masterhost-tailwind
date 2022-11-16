@@ -65,3 +65,14 @@ if (tabs) {
         }
     }
 }
+
+/* message */
+
+var message = document.querySelector("[data-message]");
+var clsMessage = message.querySelector("[data-close-message]");
+
+if(message) {
+    clsMessage.onclick = () => {
+        message.classList.add("hide");
+    }
+}

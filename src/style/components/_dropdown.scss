@@ -145,19 +145,3 @@
 //     }
 // }
 
-.options.dropdown .dropdown-content a:last-child:hover svg path
-{
-    @apply
-    fill-red-600;
-}
-
-
-
-
-.options.dropdown button:hover svg path
-{
-    @apply
-    stroke-blue-600
-} 
-
-
