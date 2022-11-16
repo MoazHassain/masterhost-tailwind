@@ -1,0 +1,30 @@
+.tab-bar
+{
+    &::-webkit-scrollbar 
+    {
+        width: 0px;
+        height: 0px;
+    }
+
+    .tab-button
+    {
+        &.active-tab
+        {
+            @apply
+            border-b-blue-600;
+        }
+    }
+}
+
+.tab-content 
+{
+    @apply
+    hidden;
+
+    &.active-content
+    {
+        @apply
+        block;
+    }
+}
+

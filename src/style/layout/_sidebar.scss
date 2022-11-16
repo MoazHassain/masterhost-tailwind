@@ -1,3 +1,4 @@
+/* sidebar */
 aside
 {
     &::-webkit-scrollbar 
@@ -21,15 +22,12 @@ nav
         before:right-0
         transition;
         
-        
-
-        &.active
+        &::before
         {
-            @apply
-            text-white
-            bg-blue-1000;
+            clip-path: polygon(0 0, 50% 50%, 0 100%);
+            transform: rotate(180deg) translateY(50%);
         }
-
+        
         img 
         {
             z-index: 2;
@@ -38,25 +36,17 @@ nav
         {
             img 
             {
-                
-                transform: translateY(-8px);
+                @apply
+                -translate-y-2
             }
         }
+
+        &.active
+        {
+            @apply
+            text-white
+            bg-blue-1000
+            before:visible;
+        }
     }
-}
-nav .nav-item::before
-{
-    clip-path: polygon(0 0, 50% 50%, 0 100%);
-    transform: rotate(180deg) translateY(50%);
-}
-
-nav .nav-item.active
-{
-    @apply
-    before:visible;
-}
-
-.menu-btn * 
-{
-    pointer-events: none;
 }

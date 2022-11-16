@@ -2,77 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 300;
-    src: url("../../../dist/assets/font/Roboto-Light.ttf") format('truetype');
-}
 
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../../../dist/assets/font/Roboto-Regular.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    src: url("../../../dist/assets/font/Roboto-Medium.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../../../dist/assets/font/Roboto-Bold.ttf") format('truetype');
-}
-
-/* sidebar */
-aside::-webkit-scrollbar 
-{
-    width: 0px;
-    height: 0px;
-}
-nav .nav-item.active
-{
-    @apply
-    text-white
-    bg-blue-1000 
-    
-}
-nav .nav-item
-{
-    @apply
-    overflow-x-clip
-    before:absolute 
-    before:bg-white 
-    before:w-6 
-    before:h-5 
-    before:invisible
-    before:top-1/2
-    before:right-0
-    transition 
-    
-}
-nav .nav-item:hover img 
-{
-    z-index: 2;
-    transform: translateY(-8px);
-}
-nav .nav-item::before
-{
-    clip-path: polygon(0 0, 50% 50%, 0 100%);
-    transform: rotate(180deg) translateY(50%);
-}
-
-nav .nav-item.active
-{
-    @apply
-    before:visible
-}
 
 
 
@@ -82,24 +12,3 @@ nav .nav-item.active
 
 
 /* tab */
-.tab-bar::-webkit-scrollbar 
-{
-    width: 0px;
-    height: 0px;
-}
-.tab-bar .tab-button.active-tab
-{
-    @apply
-    border-b-blue-600
-}
-
-.tab-content 
-{
-    @apply
-    hidden
-}
-.tab-content.active-content
-{
-    @apply
-    block
-}
