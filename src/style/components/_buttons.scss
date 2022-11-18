@@ -1,3 +1,8 @@
+.btn, 
+button 
+{
+    cursor: pointer;
+}
 
 .menu-btn 
 {
@@ -5,4 +10,21 @@
     {
         pointer-events: none;
     }
+}
+
+.filled-button
+{
+    @apply
+    h-12
+    px-4
+    flex
+    items-center
+    justify-center
+    bg-blue-200
+    text-blue-800
+    font-medium
+    rounded-md
+    transition
+
+    hover:bg-blue-300
 }

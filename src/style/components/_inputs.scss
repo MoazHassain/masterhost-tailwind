@@ -6,15 +6,187 @@
         width: 100%;
     }
 }
+.field 
+{
+    @apply
+    relative;
 
+    
+}
+label
+{
+    @apply
+    text-base
+    text-slate-500
+    mb-3
+    transition-all;
+
+    &.floating-label
+    {
+        @apply
+        pointer-events-none
+        absolute
+        top-1/2
+        -translate-y-1/2
+        origin-top-left
+        left-4;
+    }
+}
 input 
 {
     @apply
     border 
     outline-0 
     border-gray-300 
-    pl-10 
-    pr-3 
+    rounded-sm
+    px-4 
     py-3 
-    h-12;
+    h-12
+    transition-all;
+    
+    // removed default number arrow
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button
+    {
+        appearance: none;
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    // custom checkbox
+    &[type="checkbox"]
+    {
+        @apply
+        appearance-none
+        relative
+        bg-transparent
+        m-0
+        p-0
+        text-current
+        w-5
+        h-5
+        border-2
+        border-gray-500
+        rounded-sm
+        grid
+        place-items-center
+        transition;
+        
+        &:hover,
+        &:checked
+        {
+            @apply
+            border-blue-500;
+        }
+
+        
+
+        &::before 
+        {
+            content: "";
+            clip-path: polygon(14% 50%, 0 60%, 50% 100%, 100% 18%, 100% 0%, 43% 62%);
+            z-index: 1;
+            @apply
+            w-3
+            h-3
+            rounded-sm
+            scale-0
+            bg-white;
+
+        }
+        &::after 
+        {
+            content: "";
+            box-shadow: inset 0 0 0 0px #3b82f6;
+            @apply
+            absolute
+            inset-0
+            z-0
+            transition-all;
+        }
+
+        &:checked
+        {
+            &::before 
+            {
+                transform: scale(1);
+                @apply
+                scale-100
+            }
+            &::after
+            {
+                box-shadow: inset 0 0 0 20px #3b82f6;
+            }
+        }
+
+        
+    }
+
+    // floating label and input
+    &.floating-input
+    {
+        @apply
+        pt-6;
+
+        
+        &:focus
+        {
+            @apply
+            border-blue-500;
+
+        }
+
+        &:focus + .floating-label,
+        &:not(:placeholder-shown) + .floating-label
+        {
+            @apply
+            text-slate-400
+            scale-75
+            font-bold
+            top-1/3;
+        }
+    }
+
+
+    // radio box 
+    
+}
+
+.custom-radio 
+{
+    @apply
+    hidden;
+
+    + .box 
+    {
+        @apply
+        border 
+        h-14 
+        flex 
+        items-center 
+        justify-center 
+        text-gray-700 
+        border-gray-300 
+        hover:border-blue-500 
+        rounded-sm 
+        
+        transition;
+
+        * 
+        {
+            @apply
+            pointer-events-none;
+        }
+    }
+    
+    &:checked + .box 
+    {
+        @apply
+        bg-blue-500
+        border-blue-500
+        text-white
+        shadow-lg;
+    }
 }

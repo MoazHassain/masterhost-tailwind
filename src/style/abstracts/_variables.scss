@@ -1,43 +1,43 @@
-:root
-{
-    --clr-primary-solid: #1BB899;
-    --clr-secondary-solid: #12856e;
+// :root
+// {
+//     --clr-primary-solid: #1BB899;
+//     --clr-secondary-solid: #12856e;
 
-    --clr-primary-gradient: linear-gradient(to right, #CC2B5E 0%, #F48400 100%);
-    --clr-secondary-gradient: linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
+//     --clr-primary-gradient: linear-gradient(to right, #CC2B5E 0%, #F48400 100%);
+//     --clr-secondary-gradient: linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
 
-    --clr-primary-white: #ffffff;
-    --clr-secondary-white: #dedede;
-    --clr-tertiary-white: #bababa;
+//     --clr-primary-white: #ffffff;
+//     --clr-secondary-white: #dedede;
+//     --clr-tertiary-white: #bababa;
 
-    --clr-primary-dark: #000000;
-    --clr-secondary-dark: #2b2b2b;
-    --clr-tertiary-dark: #4a4a4a;
+//     --clr-primary-dark: #000000;
+//     --clr-secondary-dark: #2b2b2b;
+//     --clr-tertiary-dark: #4a4a4a;
 
-    --clr-success: #1ee682;
-    --clr-warning: #ffc107;
-    --clr-danger: #dc3545;
-}
+//     --clr-success: #1ee682;
+//     --clr-warning: #ffc107;
+//     --clr-danger: #dc3545;
+// }
 
 
 
-$primarySolidClr : var(--clr-primary-solid);
-$secondarySolidClr : var(--clr-secondary-solid);
+// $primarySolidClr : var(--clr-primary-solid);
+// $secondarySolidClr : var(--clr-secondary-solid);
 
-$primaryGradientClr : var(--clr-primary-gradient);
-$clr-secondary-gradient : var(--clr-secondary-gradient);
+// $primaryGradientClr : var(--clr-primary-gradient);
+// $clr-secondary-gradient : var(--clr-secondary-gradient);
 
-$primaryWhite: var(--clr-primary-white);
-$secindaryWhite: var(--clr-secondary-white);
-$tertiaryWhite: var(--clr-tertiary-white);
+// $primaryWhite: var(--clr-primary-white);
+// $secindaryWhite: var(--clr-secondary-white);
+// $tertiaryWhite: var(--clr-tertiary-white);
 
-$primaryDark: var(--clr-primary-dark);
-$secindaryDark: var(--clr-secondary-dark);
-$tertiaryDark: var(--clr-tertiary-dark);
+// $primaryDark: var(--clr-primary-dark);
+// $secindaryDark: var(--clr-secondary-dark);
+// $tertiaryDark: var(--clr-tertiary-dark);
 
-$clrSuccess: var(--clr-success);
-$clrWarning: var(--clr-warning);
-$clrDanger: var(--clr-danger);
+// $clrSuccess: var(--clr-success);
+// $clrWarning: var(--clr-warning);
+// $clrDanger: var(--clr-danger);
 
 // $hoverSolidClr : linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
 

@@ -1,5 +1,6 @@
 /* tab */
-.tab-bar
+.tab-bar,
+.inner-tab-bar
 {
     &::-webkit-scrollbar 
     {
@@ -7,7 +8,8 @@
         height: 0px;
     }
 
-    .tab-button
+    .tab-button,
+    .inner-tab-button
     {
         &.active-tab
         {
@@ -17,7 +19,8 @@
     }
 }
 
-.tab-content 
+.tab-content,
+.inner-tab-content 
 {
     @apply
     hidden;
@@ -25,7 +28,11 @@
     &.active-content
     {
         @apply
-        block;
+        flex;
     }
 }
 
+.inner-tab-content-wrap
+{
+    max-width: 520px;
+}
