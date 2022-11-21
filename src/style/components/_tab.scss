@@ -1,6 +1,7 @@
 /* tab */
 .tab-bar,
-.inner-tab-bar
+.inner-tab-bar,
+.modal-tab-bar
 {
     &::-webkit-scrollbar 
     {
@@ -20,7 +21,8 @@
 }
 
 .tab-content,
-.inner-tab-content 
+.inner-tab-content,
+.modal-tab-content
 {
     @apply
     hidden;

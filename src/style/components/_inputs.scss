@@ -190,3 +190,73 @@ input
         shadow-lg;
     }
 }
+
+.switch-field
+{
+    
+    @apply
+    flex
+    items-center
+    gap-5
+    w-fit
+    m-0;
+
+    input.custom-checkbox
+    {
+        @apply
+        hidden;
+    }
+
+    .switch 
+    {
+        min-width: 50px;
+        @apply
+        flex-grow
+        h-6
+        rounded-full
+        bg-blue-300
+        relative
+        transition-all;
+
+        &::before
+        {
+            content: "";
+            @apply
+            absolute
+            top-1/2
+            left-0
+            -translate-y-1/2
+            translate-x-1
+            w-4
+            h-4
+            rounded-full
+            bg-white
+            transition-all;
+
+        }
+    }
+
+    // span 
+    // {
+    //     color: var(--clr-black-200);
+    //     flex-grow: 0;
+    // }
+
+    input.custom-checkbox:checked + .switch
+    {
+        @apply
+        bg-blue-500;
+        
+        &::before
+        {
+            transform: translateY(-50%) translateX(calc(100% + 14px));
+            @apply
+            bg-white;
+        }
+    }
+
+    // input.custom-checkbox:checked ~ span 
+    // {
+    //     color: var(--clr-black-000);
+    // }
+}

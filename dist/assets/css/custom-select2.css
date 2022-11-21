@@ -17,6 +17,11 @@
     align-items: flex-end;
 }
 
+.select-no-label + .select2-container .select2-selection.select2-selection--single
+{
+    align-items: center;
+}
+
 .select2-container--default .select2-selection--multiple, .select2-container--default.select2-container--focus .select2-selection--multiple {
     border-width: 0 0 1px 0 !important;
     border-radius: 0 !important;

@@ -45,7 +45,7 @@ document.addEventListener("click", e => {
 /* tabs functionality */
 
 var tabs = document.querySelector(".tab-bar");
-var tabButton = document.querySelectorAll(".tab-button");
+var tabButton = document.querySelectorAll(".tab-bar > .tab-button");
 var contents = document.querySelectorAll(".tab-content-wrap > .tab-content");
 
 if (tabs) {
@@ -93,6 +93,56 @@ innerTabWrapper.forEach(innerTabWrap => {
         }
     }
     
+})
+
+var modalTabs = document.querySelector(".modal-tab-bar");
+var modalTabButton = modalTabs.querySelectorAll(".tab-button");
+var modalTabContents = document.querySelectorAll(".modal-tab-content-wrap > .modal-tab-content");
+
+if (modalTabs) {
+    modalTabs.onclick = e => {
+        var id = e.target.dataset.id;
+        console.log(id);
+        if (id) {
+            modalTabButton.forEach(btn => {
+                btn.classList.remove("active-tab");
+            });
+            e.target.classList.add("active-tab");
+
+            modalTabContents.forEach(content => {
+                content.classList.remove("active-content");
+            });
+            var element = document.getElementById(id);
+            element.classList.add("active-content");
+
+        }
+    }
+}
+
+/* modal */
+
+var modalButtons = document.querySelectorAll("[data-modal]");
+// var modalContents = document.querySelectorAll(".modal-wrap");
+
+modalButtons.forEach(modalButton => {
+    if(modalButton) {
+        modalButton.onclick = e => {
+            var modalId = e.target.dataset.modal;
+            console.log(modalId);
+
+            var modalContent = document.getElementById(modalId);
+            modalContent.classList.add("active-modal");
+            document.querySelector("body").classList.add("modal-open");
+
+            var closeModal = modalContent.querySelector("[data-modal-closer]");
+            if(closeModal) {
+                closeModal.onclick = () => {
+                    modalContent.classList.remove("active-modal");
+                    document.querySelector("body").classList.remove("modal-open");
+                }
+            }
+        }
+    }
 })
 
 /* message */

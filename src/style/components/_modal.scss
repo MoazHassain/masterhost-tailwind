@@ -1,0 +1,86 @@
+body
+{
+    &.modal-open 
+    {
+        @apply
+        h-screen
+        overflow-y-hidden;
+    }
+}
+
+.modal-wrap
+{
+    @apply
+    fixed
+    inset-0
+    shadow-2xl
+    z-50
+    hidden;
+
+    .modal-content
+    {
+        width: 80vw;
+        height: 90vh;
+        overflow-y: scroll;
+
+        @apply
+        absolute
+        top-1/2
+        left-1/2
+        -translate-x-1/2
+        -translate-y-1/2
+        scale-0
+        bg-white
+        shadow-2xl
+
+        z-50
+        invisible
+        opacity-0
+        origin-center
+        transition-all;
+    }
+    .modal-closer
+    {
+        @apply
+        absolute
+        top-11
+        right-16
+        w-12 
+        h-12 
+        bg-blue-100 
+        grid 
+        place-items-center 
+        rounded-full
+        transition-all;
+
+        &:hover
+        {
+            @apply
+            bg-blue-200
+        }
+    }
+    .modal-scrim 
+    {
+        @apply
+        absolute
+        inset-0
+        bg-gray-800
+        opacity-60;
+    }
+
+    &.active-modal
+    {
+        @apply
+        block;
+
+        .modal-content
+        {
+            @apply
+            scale-100
+            visible
+            opacity-100;
+
+            
+        }
+    }
+}
