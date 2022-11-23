@@ -1,3 +1,9 @@
+input, 
+textarea
+{
+    resize: vertical;
+}
+
 .search-field
 {
     input 
@@ -32,6 +38,8 @@ label
         left-4;
     }
 }
+select,
+textarea,
 input 
 {
     @apply
@@ -43,7 +51,25 @@ input
     py-3 
     h-12
     transition-all;
+
     
+
+    &:focus
+    {
+        @apply
+        border-blue-500;
+
+    }
+
+    
+    
+    // disabled input field
+    &:disabled
+    {
+        @apply
+        bg-gray-100;
+    }
+
     // removed default number arrow
     &[type="number"]::-webkit-outer-spin-button,
     &[type="number"]::-webkit-inner-spin-button
@@ -128,15 +154,11 @@ input
     &.floating-input
     {
         @apply
-        pt-6;
+        pt-6
+        pb-2.5;
 
         
-        &:focus
-        {
-            @apply
-            border-blue-500;
-
-        }
+        
 
         &:focus + .floating-label,
         &:not(:placeholder-shown) + .floating-label
@@ -189,6 +211,73 @@ input
         text-white
         shadow-lg;
     }
+
+    + .checkmark-box
+    {
+        @apply
+        relative
+        flex 
+        items-center 
+        justify-center 
+        text-gray-700 
+        rounded-sm 
+        transition;
+
+        &::before
+        {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 0;
+            height: 0;
+            border: solid transparent;
+            border-width: 16px;
+            z-index: 0;
+
+            @apply
+            border-t-blue-500
+            border-r-blue-500
+            opacity-0
+            transition-all;
+        }
+
+        &::after
+        {
+            content: "";
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            width: 14px;
+            height: 14px;
+            clip-path: polygon(0% 40%, 0 60%, 50% 100%, 100% 18%, 100% 0%, 43% 62%);
+            z-index: 1;
+
+            @apply
+            opacity-0
+            bg-white
+            transition-all;
+        }
+
+        * 
+        {
+            @apply
+            pointer-events-none;
+        }
+    }
+    &:checked + .checkmark-box
+    {
+        @apply
+        shadow-lg;
+
+        &::before,
+        &::after
+        {
+            @apply
+            opacity-100;
+        }
+        
+    }
 }
 
 .switch-field
@@ -198,7 +287,6 @@ input
     flex
     items-center
     gap-5
-    w-fit
     m-0;
 
     input.custom-checkbox
@@ -209,7 +297,8 @@ input
 
     .switch 
     {
-        min-width: 50px;
+        max-width: 50px;
+        width: 50px;
         @apply
         flex-grow
         h-6
@@ -259,4 +348,9 @@ input
     // {
     //     color: var(--clr-black-000);
     // }
+}
+
+textarea 
+{
+    height: unset;
 }

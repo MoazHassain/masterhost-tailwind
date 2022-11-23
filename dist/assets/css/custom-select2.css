@@ -9,6 +9,14 @@
 .select2-search--dropdown
 {
     display: none;
+    padding: 0px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field
+{
+    padding: 16px;
+    border-width: 0px !important;
+    border-bottom-width: 1px !important;
 }
 
 .select2-selection.select2-selection--single
@@ -78,7 +86,7 @@
 
 .select2-container .select2-selection--single .select2-selection__rendered
 {
-    padding-left: 12px;
+    padding-left: 16px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow
 {
@@ -125,11 +133,12 @@ textarea.materialize-textarea {
 .select-field label 
 {
     font-size: 12px;
-    font-weight: 500;
-    color: #6b7280;
+    font-weight: 700;
+    color: rgb(149, 165, 187);
     position: absolute;
-    top: 4px;
-    left: 12px;
+    top: 30%;
+    transform: translateY(-50%);
+    left: 16px;
     z-index: 1;
     pointer-events: none;
 }

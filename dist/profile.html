@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Host</title>
+    <link rel="stylesheet" href="./assets/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/custom-select2.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+<style>
+
+</style>
+<body class="font-roboto">
+    <aside class="bg-blue-900 fixed hidden w-32 h-screen overflow-y-scroll lg:block">
+        <!-- logo -->
+        <a class="" href="/dist/index.html">
+            <svg class="w-11 h-11 mx-auto my-7" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#ffffff"/>
+                <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#ffffff"/>
+            </svg>
+        </a>
+        <nav class="flex flex-col text-blue-200">
+            <a href="./index.html" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
+                <img class="w-12 h-12 transition" src="./assets/icon/products.svg" alt="products" srcset="">
+                <p class="text-lg font-medium text-center">Products</p>
+            </a>
+            <a href="./billing.html" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
+                <img class="w-12 h-12 transition" src="./assets/icon/products.svg" alt="products" srcset="">
+                <p class="text-lg font-medium text-center">Billing</p>
+            </a>
+            <a href="javascript:void(0)" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
+                <img class="w-12 h-12 transition" src="./assets/icon/products.svg" alt="products" srcset="">
+                <p class="text-lg font-medium text-center">Support</p>
+            </a>
+            <a href="javascript:void(0)" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
+                <img class="w-12 h-12 transition" src="./assets/icon/products.svg" alt="products" srcset="">
+                <p class="text-lg font-medium text-center">Referral Program</p>
+            </a>
+            <a href="./profile.html" class="nav-item active relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
+                <img class="w-12 h-12 transition" src="./assets/icon/products.svg" alt="products" srcset="">
+                <p class="text-lg font-medium text-center">Account</p>
+            </a>
+            <a href="javascript:void(0)" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
+                <img class="w-12 h-12 transition" src="./assets/icon/products.svg" alt="products" srcset="">
+                <p class="text-lg font-medium text-center">Master Docs</p>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="ml-0 lg:ml-32">
+        <header class="responsive-header bg-blue-900 h-16 px-8 flex items-center justify-between lg:hidden">
+            <div class="notification dropdown h-full flex items-center" data-dropdown>
+                <button class="menu-btn relative" data-dropdown-btn>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-white" d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.37 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.64 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16ZM16 17H8V11C8 8.52 9.51 6.5 12 6.5C14.49 6.5 16 8.52 16 11V17Z" fill="black"/>
+                    </svg>
+                    <span class="absolute -top-1 -right-1 w-4 h-4 bg-blue-700 text-white rounded-full text-xs flex items-center justify-center">1</span>
+                </button>
+
+                <div class="dropdown-content w-80 h-screen fixed top-0 right-0 z-50 bg-white">
+                    <div class="flex items-center justify-between pl-8 pr-5 py-4 border-b">
+                        <div class="">
+                            <p class="text-blue-900 text-lg font-medium">Notifications</p>
+                            <a href="" class=" text-blue-500 text-sm">Edit Preferences</a>
+                        </div>
+                        <button class="p-3 menu-btn" data-dropdown-cls>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-slate-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="px-8 py-4">
+                        <h3 class="font-medium text-blue-900">Updated Referral Program Terms</h3>
+                        <p class="text-sm text-gray-600">
+                            Our Referral Program terms have changed. Please review and agree to the revised 
+                            <a href="" class="text-blue-600">Referral Program Terms</a> 
+                            to continue particpating in the Referral Program.
+                        </p>
+                        <div class="flex items-center justify-between mt-3">
+                            <p class="date text-xs text-gray-400">2021-06-28 04:00:00</p>
+                            <button class="text-xs text-blue-600">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <a class="" href="/dist/index.html">
+                <svg class="w-11 h-11 mx-auto my-7" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#ffffff"/>
+                    <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#ffffff"/>
+                </svg>
+            </a>
+
+            <div class="sidebar-menu dropdown h-full flex items-center" data-dropdown>
+                <button class="menu-btn relative" data-dropdown-btn>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="fill-white" x="3" y="5" width="18" height="2.7" fill="black"/>
+                        <rect class="fill-white" x="3" y="10.5" width="18" height="2.7" fill="black"/>
+                        <rect class="fill-white" x="3" y="16" width="18" height="2.7" fill="black"/>
+                    </svg>
+                </button>
+
+                <div class="dropdown-content w-80 h-screen fixed top-0 left-0 z-50 bg-white">
+                    <div class="px-6 py-4">
+                        <button class="p-3 menu-btn" data-dropdown-cls>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-slate-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+
+                        <nav class="text-blue-1000 text-center flex flex-col gap-4 mt-5">
+                            <a href="./index.html" class="font-medium">Products</a>
+                            <a href="./billing.html" class="font-medium">Billing</a>
+                            <a href="" class="font-medium">Support</a>
+                            <a href="" class="font-medium">Referral Program</a>
+                            <a href="" class="font-medium">Account</a>
+                            <a href="" class="font-medium">Log Out</a>
+                        </nav>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </header>
+        <header class="border-b border-b-neutral-200 h-10 hidden lg:block">
+            <div class="container max-w-7xl h-full flex items-center justify-between">
+                <div class="news flex gap-2">
+                    <p class="text-sm font-extrabold text-blue-600">NEWS:</p>
+                    <p class="text-sm font-normal text-neutral-600">Vultr Managed Databases now supports Redis</p>
+                </div>
+
+                <div class="flex h-full gap-4 items-center">
+                    <button class="h-full group/btn tooltip-bottom" data-tooltip="View Tickets">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-400 group-hover/btn:fill-blue-700 transition" d="M4.64418 4.79999H20.5442C22.0442 4.79999 22.8002 5.50799 22.8002 6.94799V17.052C22.8002 18.48 22.0442 19.2 20.5442 19.2H4.64418C3.14418 19.2 2.38818 18.48 2.38818 17.052V6.94799C2.38818 5.50799 3.14418 4.79999 4.64418 4.79999ZM12.5882 15.12L20.6762 8.48399C20.9642 8.24399 21.1922 7.69199 20.8322 7.19999C20.4842 6.70799 19.8482 6.69599 19.4282 6.99599L12.5882 11.628L5.76018 6.99599C5.34018 6.69599 4.70418 6.70799 4.35618 7.19999C3.99618 7.69199 4.22418 8.24399 4.51218 8.48399L12.5882 15.12Z" fill="black"/>
+                        </svg>
+                    </button>
+
+                    <div class="notification dropdown h-full flex items-center" data-dropdown>
+                        <button class="menu-btn relative group/btn" data-dropdown-btn>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-400 group-hover/btn:fill-blue-600 transition" d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.37 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.64 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16ZM16 17H8V11C8 8.52 9.51 6.5 12 6.5C14.49 6.5 16 8.52 16 11V17Z" fill="black"/>
+                            </svg>
+                            <span class="absolute -top-1 -right-1 w-4 h-4 bg-blue-700 text-white rounded-full text-xs flex items-center justify-center">1</span>
+                        </button>
+
+                        <div class="dropdown-content w-80 h-screen fixed top-0 right-0 z-50 bg-white">
+                            <div class="flex items-center justify-between pl-8 pr-5 py-4 border-b">
+                                <div class="">
+                                    <p class="text-blue-900 text-lg font-medium">Notifications</p>
+                                    <a href="" class=" text-blue-500 text-sm">Edit Preferences</a>
+                                </div>
+                                <button class="p-3 menu-btn" data-dropdown-cls>
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="stroke-slate-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="px-8 py-4">
+                                <h3 class="font-medium text-blue-900">Updated Referral Program Terms</h3>
+                                <p class="text-sm text-gray-600">
+                                    Our Referral Program terms have changed. Please review and agree to the revised 
+                                    <a href="" class="text-blue-600">Referral Program Terms</a> 
+                                    to continue particpating in the Referral Program.
+                                </p>
+                                <div class="flex items-center justify-between mt-3">
+                                    <p class="date text-xs text-gray-400">2021-06-28 04:00:00</p>
+                                    <button class="text-xs text-blue-600">Dismiss</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user dropdown h-full flex items-center relative" data-dropdown>
+                        <button class="menu-btn h-full flex gap-1 items-center" data-dropdown-btn>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-400" d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
+                            </svg>
+                            <span class="text-blue-1000">MD Mostain Billah</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-700" d="M12.0002 15.552L7.34424 10.896L8.01624 10.224L12.0002 14.208L15.9842 10.224L16.6562 10.896L12.0002 15.552Z" fill="black"/>
+                            </svg>
+                        </button>
+
+                        <div class="dropdown-content py-1 w-56 absolute top-9 -left-3 bg-white text-gray-600 z-50">
+                            <a href="./profile.html" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Profile</a>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Preference</a>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Authentication</a>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">SSH Keys</a>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">API</a>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Users</a>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Notifications</a>
+                            <div class="w-full my-1 border-b border-b-neutral-200"></div>
+                            <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="container max-w-7xl my-10">
+                <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
+                <p class="text-sm text-slate-500">pay@mateors.com</p>
+            </div>
+            
+            
+
+            <div class="tab-bar-wrap container max-w-7xl relative">
+                <div class="tab-bar w-11/12 h-10 flex gap-8 text-gray-600 items-center overflow-x-auto overflow-y-clip">
+                    <a data-id="profile-tab" class="tab-button menu-button active-tab flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        Profile
+                    </a>
+                    <a data-id="preference-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        Preference
+                    </a>
+                    <a data-id="authentication-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        Authentication
+                    </a>
+                    <a data-id="ssh-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        SSH Keys
+                    </a>
+                    <a data-id="api-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        API
+                    </a>
+                    <a data-id="user-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        Users
+                    </a>
+                    <a data-id="notification-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                        Notifications
+                    </a>
+    
+                </div>
+
+                <div class="add-bar dropdown hover-dropdown" data-dropdown>
+                    <button data-dropdown-btn class="menu-btn w-14 h-14 rounded-full shadow-lg fixed bottom-3 right-6 sm:absolute sm:top-full sm:right-8 -translate-y-1/2 bg-blue-500 hover:bg-blue-900 transition-all flex items-center justify-center z-10">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-white" d="M11.883 3.007L12 3C12.2449 3.00003 12.4813 3.08996 12.6644 3.25272C12.8474 3.41547 12.9643 3.63975 12.993 3.883L13 4V11H20C20.2449 11 20.4813 11.09 20.6644 11.2527C20.8474 11.4155 20.9643 11.6397 20.993 11.883L21 12C21 12.2449 20.91 12.4813 20.7473 12.6644C20.5845 12.8474 20.3603 12.9643 20.117 12.993L20 13H13V20C13 20.2449 12.91 20.4813 12.7473 20.6644C12.5845 20.8474 12.3603 20.9643 12.117 20.993L12 21C11.7551 21 11.5187 20.91 11.3356 20.7473C11.1526 20.5845 11.0357 20.3603 11.007 20.117L11 20V13H4C3.75507 13 3.51866 12.91 3.33563 12.7473C3.15259 12.5845 3.03566 12.3603 3.007 12.117L3 12C3.00003 11.7551 3.08996 11.5187 3.25272 11.3356C3.41547 11.1526 3.63975 11.0357 3.883 11.007L4 11H11V4C11 3.75507 11.09 3.51866 11.2527 3.33563C11.4155 3.15259 11.6397 3.03566 11.883 3.007L12 3L11.883 3.007Z" fill="black"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content py-1 w-56 fixed top-1/4 translate-x-1/2 right-1/2 sm:absolute sm:top-20 sm:right-8 sm:translate-x-0 bg-white text-gray-600 shadow-2xl z-10">
+                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                            </svg>
+                            Deploy New Servers
+                        </a>
+                        <div class="w-full my-1 border-b border-b-neutral-200"></div>
+                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                            </svg>
+                            Add Database
+                        </a>
+                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                            </svg>
+                            Add Block Storage
+                        </a>
+                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                            </svg>
+                            Add Kubernetes
+                        </a>
+                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                                <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                            </svg>
+                            Add Object Storage
+                        </a>
+                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-gray-700 group-hover/btn:stroke-blue-700 transition" d="M4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13Z" stroke="black" stroke-width="2"/>
+                                <path class="stroke-gray-700 group-hover/btn:stroke-blue-700 transition" d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="black" stroke-width="2"/>
+                                <path class="stroke-gray-700 group-hover/btn:stroke-blue-700 transition" d="M20 13C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13Z" stroke="black" stroke-width="2"/>
+                            </svg>
+                            View More Options
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full border-b border-b-neutral-200"></div>
+
+            <div class="tab-content-wrap container max-w-7xl mt-12 mb-20">
+                <div class="tab-content active-content flex-col max-w-md" id="profile-tab">
+                    <h5 class="text-2xl text-gray-700 mb-4">Your Details</h5>
+                    
+                    <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                        <div class="flex gap-3 mb-5">
+                            <div class="field w-full">
+                                <input type="text" id="fname-input" name="fname-input" class="floating-input w-full" value="MD Mostain" placeholder=" ">
+                                <label for="fname-input" class="floating-label"><span class="text-red-700">*</span> First Name</label>
+                            </div>
+    
+                            <div class="field w-full">
+                                <input type="text" id="lname-input" name="lname-input" class="floating-input w-full" value="Billah" placeholder=" ">
+                                <label for="lname-input" class="floating-label"><span class="text-red-700">*</span> Last Name</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" id="email-input" name="email-input" disabled class="floating-input w-full" value="pay@mateors.com"  placeholder=" ">
+                            <label for="email-input" class="floating-label">Email</label>
+                        </div>
+                        <a href="" class="text-xs text-blue-500 flex justify-end mb-3">Change Email Address</a>
+                        <div class="field mb-5">
+                            <input type="tel" id="phone-input" name="phone-input" class="floating-input w-full" value="3365822922" placeholder=" ">
+                            <label for="phone-input" class="floating-label"><span class="text-red-700">*</span> Phone Number</label>
+                        </div>
+                        <div class="field mb-5">
+                            <input type="text" id="address1-input" name="address1-input" class="floating-input w-full" value="35-46 74 street" placeholder=" ">
+                            <label for="address1-input" class="floating-label"><span class="text-red-700">*</span> Address</label>
+                        </div>
+                        <div class="field mb-5">
+                            <input type="text" id="address2-input" name="address2-input" class="floating-input w-full" value="Apartment # 406" placeholder=" ">
+                            <label for="address2-input" class="floating-label">Address 2 (optional)</label>
+                        </div>
+
+                        <div class="flex gap-4 mb-5">
+                            <div class="field w-full">
+                                <input type="text" id="city-input" name="city-input" class="floating-input w-full" value="Jackson Heights" placeholder=" ">
+                                <label for="city-input" class="floating-label"><span class="text-red-700">*</span> City</label>
+                            </div>
+    
+                            <div class="field ">
+                                <input type="text" id="zip-input" name="zip-input" class="floating-input w-full" value="11372" placeholder=" ">
+                                <label for="zip-input" class="floating-label"><span class="text-red-700">*</span> Zip Code</label>
+                            </div>
+                        </div>
+
+                        <div class="select-field mb-5">
+                            <label for="country-select" class="">
+                                <span class="text-red-700">*</span> Country/Region
+                            </label>
+                            
+                            <select  id="country-select" name="country-select" class="custom-select">
+                                <option value="" disabled>Select Country :</option>
+                                <option value="Bangladesh" selected>Bangladesh</option>
+                                <option value="United State">United State</option>
+                                <option value="India">India</option>
+                            </select>
+                        </div>
+
+                        <div class="field mb-5">
+                            <input type="text" id="company-input" name="company-input" class="floating-input w-full" placeholder=" ">
+                            <label for="company-input" class="floating-label">Company</label>
+                        </div>
+                        <div class="field mb-5">
+                            <input type="text" id="company-link-input" name="company-link-input" class="floating-input w-full" placeholder=" ">
+                            <label for="company-link-input" class="floating-label">Company URL (Optional)</label>
+                        </div>
+
+                        <div class="select-field mb-5">
+                            <label for="business-catagory-select" class="">
+                                <span class="text-red-700">*</span> What catagory best describe your business?
+                            </label>
+                            
+                            <select  id="business-catagory-select" name="business-catagory-select" class="custom-select">
+                                <option value="0" disabled selected>Please Choose</option>
+                                <option value="Ecommerce">Ecommerce</option>
+                                <option value="Education">Education</option>
+                                <option value="Health Care">Health Care</option>
+                            </select>
+                        </div>
+                        <div class="select-field mb-5">
+                            <label for="business-size-select" class="">
+                                <span class="text-red-700">*</span> What is the size of your business organization?
+                            </label>
+                            
+                            <select  id="business-size-select" name="business-size-select" class="custom-select">
+                                <option value="0" disabled selected>Please Choose</option>
+                                <option value="Individual">Individual</option>
+                                <option value="Small Business">Small Business</option>
+                                <option value="Large Business">Large Business</option>
+                            </select>
+                        </div>
+
+                        <div class="field mb-5">
+                            <label for="company-link-input" class=""><span class="text-red-700">*</span> Describe the service(s) you are running with your account.</label>
+                            <textarea rows="4" id="company-link-input" name="company-link-input" class="w-full mt-2"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <button class="filled-button w-full" type="submit">Update Profile</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-content flex-col max-w-md" id="preference-tab">
+                    <h5 class="text-2xl text-gray-700 mb-4">User Preferences</h5>
+
+                    <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                        <div class="flex flex-col items-center gap-2 my-6 radio-fields">
+                            <label class="radio-box w-60">
+                                <input type="radio" class="custom-radio" name="ammount" id="ammount" checked>
+                                <div class="checkmark-box flex-col bg-neutral-100">
+                                    <img class="w-32 mt-6" src="./assets/img/theme-preview--light.svg" alt="">
+                                    <div class="w-full border-b border-b-neutral-200"></div>
+                                    <p class="p-1.5">Light Mode</p>
+                                </div>
+                            </label>
+                            <label class="radio-box w-60">
+                                <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                                <div class="checkmark-box flex-col bg-gray-700">
+                                    <img class="w-32 mt-6" src="./assets/img/theme-preview--dark.svg" alt="">
+                                    <div class="w-full border-b border-b-neutral-600"></div>
+                                    <p class="text-gray-200 p-1.5">Dark Mode</p>
+                                </div>
+                            </label>
+                            
+                        </div>
+
+                        <div class="select-field mb-5">
+                            <label for="timezone-select" class="">
+                                Display Timezone
+                            </label>
+                            
+                            <select  id="timezone-select" name="timezone-select" class="custom-select search">
+                                <!-- <option value="0" disabled selected></option> -->
+                                <option value="abidjan" selected>(GMT-0:00) - Abidjan</option>
+                                <option value="dhaka">(GMT +6:00) - Dhaka</option>
+                            </select>
+                        </div>
+
+                        <div class="select-field mb-5">
+                            <label for="date-format-select" class="">
+                                Date Format
+                            </label>
+                            
+                            <select  id="date-format-select" name="date-format-select" class="custom-select search">
+                                <!-- <option value="0" disabled selected></option> -->
+                                <option value="y-m-d" selected>YYYY-MM-DD</option>
+                                <option value="m-d-y">MM-DD-YYYY</option>
+                                <option value="d-m-y">DD-MM-YYYY</option>
+                            </select>
+                        </div>
+
+                        <div class="field my-6">
+                            <label class="field switch-field w-full justify-between">
+                                <span class="text-gray-700">Enable screen reader enhancements</span>
+                                <input type="checkbox" class="custom-checkbox" name="enabled" id="checkbox-enabled">
+                                <div class="switch"></div>
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <button class="filled-button w-full" type="submit">Update Profile</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-content flex-col max-w-md" id="authentication-tab">
+                    <div class="mb-7">
+                        <h5 class="text-2xl text-gray-700 mb-4">Two Factor Authentication</h5>
+                        <p class="text-gray-700 mb-5">
+                            Keep your account secure by enabling two-factor authentication. Each time you log in, you’ll be required to provide your password plus a randomly generated access code.
+                        </p>
+                        <div class="field mb-5">
+                            <button class="!bg-gray-200 !text-gray-700 hover:!bg-blue-200 hover:!text-blue-600 filled-button w-full" type="submit">
+                                Manage Two Factor Authentication
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mb-7">
+                        <h5 class="text-2xl text-gray-700 mb-4">Trusted Device Security</h5>
+                        <p class="text-gray-700 mb-5">
+                            If you don't have Two Factor Authentication enabled, you can add an extra layer of security by requiring email verification when you sign in from an unknown device.
+                        </p>
+                        <div class="field mb-5">
+                            <button class="filled-button w-full" type="submit">
+                                Enable Trusted Device Security
+                            </button>
+                        </div>
+                    </div>
+                    <form id="reset-password" name="reset-password" action="" method="" class="w-full">
+                        <div class="field mb-5">
+                            <input type="text" id="current-password" name="current-password" class="floating-input w-full" placeholder=" ">
+                            <label for="current-password" class="floating-label">
+                                Current Password
+                            </label>
+                        </div>
+                        <div class="field mb-5">
+                            <input type="text" id="new-password" name="new-password" class="floating-input w-full" placeholder=" ">
+                            <label for="new-password" class="floating-label">
+                                New Password
+                            </label>
+                        </div>
+                        <div class="field mb-5">
+                            <input type="text" id="confirm-password" name="confirm-password" class="floating-input w-full" placeholder=" ">
+                            <label for="confirm-password" class="floating-label">
+                                Confirm Password
+                            </label>
+                        </div>
+                        <button class="filled-button w-full" type="submit">
+                            Change Password
+                        </button>
+                    </form>
+                </div>
+                <div class="tab-content flex-col max-w-md" id="ssh-tab">
+                    <div class="w-full table-wrap border border-gray-200 rounded mb-6">
+                        <table class="w-full text-left">
+                            <thead class="h-14 border-b w-full">
+                                <tr>
+                                    <th class="px-3 w-1/3">
+                                        <p class="font-normal text-slate-400">Name</p>
+                                    </th>
+                                    <th class="px-3 w-14 md:w-2/3 hidden sm:table-cell">
+                                        <p class="font-normal text-slate-400">Date Created</p>
+                                    </th>
+                                    <th class="px-3"></th>
+                                    <th class="px-3"></th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="h-16 border-b hover:bg-blue-50 transition">
+                                    <td class="px-3">
+                                        <p class="font-normal text-sm text-slate-600">mastererp</p>
+                                    </td>
+                                    <td class="px-3 hidden sm:table-cell">
+                                        <p class="font-normal text-sm text-slate-600">2018-03-05 03:54:57</p>
+                                    </td>
+                                    <td class="px-4 hidden sm:table-cell">
+                                        <button class="menu-btn flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Edit SSH Key" data-modal="">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td class="px-4 hidden sm:table-cell">
+                                        <button class="flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Delete SSH Key">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-slate-400 group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="collapsible-wrap">
+                        <div class="collapsible flex-wrap">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-blue-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span class="">Using SSH Keys</span>
+                        </div>
+                        <div class="collapsible-content pl-7 text-gray-700">
+                            <ul class="p-4">
+                                <li>
+                                    Need help creating keys? <br>
+                                    See our tutorial on 
+                                    <a class="text-blue-600" href="">generating SSH keys</a>.
+                                </li>
+                            </ul>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content flex-col max-w-md" id="api-tab">
+                    <h3 class="text-center text-4xl">
+                        api-tab
+                    </h3>
+                </div>
+                <div class="tab-content flex-col max-w-md" id="user-tab">
+                    <h3 class="text-center text-4xl">
+                        Users
+                    </h3>
+                </div>
+                <div class="tab-content flex-col max-w-md" id="notification-tab">
+                    <h3 class="text-center text-4xl">
+                        notification-tab
+                    </h3>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        
+    </main>
+
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/select2.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        $('#country-select').select2({
+        placeholder :'',
+        width: '100%',
+        // allowClear:true,
+            
+        });
+        $('#business-catagory-select').select2({
+        placeholder :'Please Choose',
+        width: '100%',
+        // allowClear:true,
+            
+        });
+        $('#business-size-select').select2({
+        placeholder :'Please Choose',
+        width: '100%',
+        // allowClear:true,
+            
+        });
+        $('#timezone-select').select2({
+        placeholder :'Please Choose',
+        width: '100%',
+        // allowClear:true,
+            
+        });
+        $('#date-format-select').select2({
+        placeholder :'Please Choose',
+        width: '100%',
+        // allowClear:true,
+            
+        });
+
+    </script>
+</body>
+</html>

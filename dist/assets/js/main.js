@@ -96,7 +96,7 @@ innerTabWrapper.forEach(innerTabWrap => {
 })
 
 var modalTabs = document.querySelector(".modal-tab-bar");
-var modalTabButton = modalTabs.querySelectorAll(".tab-button");
+var modalTabButton = document.querySelectorAll(".modal-tab-bar .tab-button");
 var modalTabContents = document.querySelectorAll(".modal-tab-content-wrap > .modal-tab-content");
 
 if (modalTabs) {
@@ -144,6 +144,26 @@ modalButtons.forEach(modalButton => {
         }
     }
 })
+
+/* collapsible */
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        
+        } 
+    });
+};
 
 /* message */
 

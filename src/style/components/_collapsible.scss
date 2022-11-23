@@ -1,0 +1,53 @@
+.collapsible-wrap
+{
+    @apply
+    p-4
+    border 
+    border-gray-200
+    rounded-sm;
+
+    .collapsible 
+    {
+        @apply
+        flex
+        items-center
+        gap-4
+        font-medium
+        text-gray-600
+        transition-all;
+
+
+        svg 
+        {
+            rotate: 45deg;
+            transition: 0.2s ease-in-out;
+        }
+
+        &:hover 
+        {
+            @apply
+            text-blue-500;
+        }
+
+        &.active 
+        {
+            @apply
+            text-blue-500;
+            
+            svg 
+            {
+                rotate: 90deg;
+            }
+
+        }
+    }
+
+    .collapsible-content 
+    {
+        max-height: 0px;
+        overflow-y: hidden;
+        transition: 0.2s ease-in-out;
+
+        
+    }
+}
