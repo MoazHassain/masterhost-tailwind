@@ -51,6 +51,24 @@ button {
     hover:bg-blue-200;
 }
 
+.outline-button {
+  @apply h-14
+    px-4
+    flex
+    items-center
+    justify-center
+    bg-white
+    border 
+    border-gray-300
+    text-gray-600
+    font-medium
+    rounded-sm
+    transition
+
+    hover:border-blue-500
+    hover:text-blue-500;
+}
+
 input,
 textarea {
   resize: vertical;
@@ -97,10 +115,19 @@ textarea:focus,
 input:focus {
   @apply border-blue-500;
 }
-select:disabled,
+select:-moz-read-only, textarea:-moz-read-only, input:-moz-read-only {
+  @apply text-gray-600
+        bg-gray-100
+        border-gray-300;
+}
+select:disabled, select:read-only,
 textarea:disabled,
-input:disabled {
-  @apply bg-gray-100;
+textarea:read-only,
+input:disabled,
+input:read-only {
+  @apply text-gray-600
+        bg-gray-100
+        border-gray-300;
 }
 select[type=number]::-webkit-outer-spin-button, select[type=number]::-webkit-inner-spin-button,
 textarea[type=number]::-webkit-outer-spin-button,

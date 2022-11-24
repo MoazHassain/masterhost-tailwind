@@ -176,3 +176,43 @@ if(message) {
         message.classList.add("hide");
     }
 }
+
+/* copy clipboard */
+
+document.addEventListener("click", e => {
+    var isCopyBtn = e.target.matches("[data-copy-button]");
+    if(!isCopyBtn && e.target.closest("[data-copy-clipboard]") != null){
+        return;
+    }
+
+    let currentClipboard
+    if(isCopyBtn) {
+        currentClipboard = e.target.closest("[data-copy-clipboard]");
+        var copyContent = currentClipboard.querySelector(".copy-content");
+
+        // if (document.selection){
+        //     var div = currentClipboard.createTextRange();
+
+        //     div.moveToElementText(copyContent);
+        //     copyContent.select();
+        // } else {
+        //     var div = document.createRange();
+
+        //     div.setStartBefore(copyContent);
+        //     div.setEndAfter(copyContent);
+
+        //     window.getSelection().addRange(div);
+        // }
+        copyContent.select();    
+        document.execCommand("Copy");
+    }
+
+    document.querySelectorAll("[data-copy-clipboard]").forEach(clipboard => {
+        if(clipboard === currentClipboard){
+            return;
+        }
+        clipboard.classList.remove("menu-open");
+    })
+
+    
+});
