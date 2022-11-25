@@ -21,6 +21,7 @@
         font-weight: 500;
         color: white;
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &::after
@@ -37,6 +38,7 @@
         height: 21px;
         clip-path: polygon(0 0, 50% 50%, 0 100%);
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &:hover
@@ -73,6 +75,7 @@
         font-weight: 500;
         color: white;
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &::after
@@ -89,6 +92,7 @@
         height: 21px;
         clip-path: polygon(0 0, 50% 50%, 0 100%);
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &:hover
@@ -125,6 +129,7 @@
         font-weight: 500;
         color: white;
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &::after
@@ -141,6 +146,7 @@
         height: 21px;
         clip-path: polygon(0 0, 50% 50%, 0 100%);
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &:hover
@@ -177,6 +183,7 @@
         font-weight: 500;
         color: white;
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &::after
@@ -193,6 +200,7 @@
         height: 21px;
         clip-path: polygon(0 0, 50% 50%, 0 100%);
         transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
     }
 
     &:hover

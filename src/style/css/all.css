@@ -1,29 +1,38 @@
-/** scrollbar **/
-/* Works on Chrome, Edge, and Safari */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../font/Roboto-Light.ttf") format("truetype");
+/* sidebar */
+aside {
+  scrollbar-width: none;
 }
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../font/Roboto-Regular.ttf") format("truetype");
+aside:hover {
+  scrollbar-width: none;
 }
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../font/Roboto-Medium.ttf") format("truetype");
+aside::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../font/Roboto-Bold.ttf") format("truetype");
-}/*# sourceMappingURL=all.css.map */.active {
+
+nav .nav-item {
+  @apply overflow-x-clip
+        before:absolute 
+        before:bg-white 
+        before:w-6 
+        before:h-5 
+        before:invisible
+        before:top-1/2
+        before:right-0
+        transition;
+}
+nav .nav-item::before {
+  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
+          clip-path: polygon(0 0, 50% 50%, 0 100%);
+  transform: rotate(180deg) translateY(50%);
+}
+nav .nav-item img {
+  z-index: 2;
+}
+nav .nav-item:hover img {
+  @apply -translate-y-2;
+}
+nav .nav-item.active {
   @apply text-white
             bg-blue-1000
             before:visible;
@@ -139,6 +148,37 @@ textarea[type=checkbox]:checked::after,
 input[type=checkbox]:checked::after {
   box-shadow: inset 0 0 0 20px #3b82f6;
 }
+select[type=range],
+textarea[type=range],
+input[type=range] {
+  @apply resize-none
+        border-none
+        appearance-none
+        outline
+        outline-offset-2
+        outline-1
+        outline-gray-300
+        bg-white
+        rounded-full
+        max-w-lg
+        w-full
+        h-2.5
+        transition-none;
+  background-image: linear-gradient(rgb(59, 130, 246), rgb(59, 130, 246));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+select[type=range]::-webkit-slider-thumb,
+textarea[type=range]::-webkit-slider-thumb,
+input[type=range]::-webkit-slider-thumb {
+  @apply appearance-none
+            w-12
+            h-8
+            bg-blue-500
+            rounded-sm
+            relative
+            cursor-ew-resize;
+}
 select.floating-input,
 textarea.floating-input,
 input.floating-input {
@@ -252,6 +292,7 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
 }
 .switch-field .switch {
   max-width: 50px;
+  min-width: 50px;
   width: 50px;
   @apply flex-grow
         h-6
@@ -279,6 +320,21 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
 .switch-field input.custom-checkbox:checked + .switch::before {
   transform: translateY(-50%) translateX(calc(100% + 14px));
   @apply bg-white;
+}
+
+.iti.iti--allow-dropdown {
+  @apply w-24;
+}
+.iti.iti--allow-dropdown .iti__flag-container {
+  @apply w-full
+        border
+        border-gray-300
+        transition-all
+        hover:border-blue-500;
+}
+.iti.iti--allow-dropdown .iti__flag-container .iti__selected-flag {
+  @apply border-none
+            bg-transparent;
 }
 
 textarea {
@@ -512,6 +568,7 @@ body.modal-open {
   font-weight: 500;
   color: white;
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-bottom::after {
   visibility: hidden;
@@ -527,6 +584,7 @@ body.modal-open {
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-bottom:hover::before, .tooltip-bottom:hover::after {
   visibility: visible;
@@ -556,6 +614,7 @@ body.modal-open {
   font-weight: 500;
   color: white;
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-top::after {
   visibility: hidden;
@@ -571,6 +630,7 @@ body.modal-open {
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-top:hover::before, .tooltip-top:hover::after {
   visibility: visible;
@@ -600,6 +660,7 @@ body.modal-open {
   font-weight: 500;
   color: white;
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-left::after {
   visibility: hidden;
@@ -615,6 +676,7 @@ body.modal-open {
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-left:hover::before, .tooltip-left:hover::after {
   visibility: visible;
@@ -644,6 +706,7 @@ body.modal-open {
   font-weight: 500;
   color: white;
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-right::after {
   visibility: hidden;
@@ -659,6 +722,7 @@ body.modal-open {
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
+  z-index: 10;
 }
 .tooltip-right:hover::before, .tooltip-right:hover::after {
   visibility: visible;

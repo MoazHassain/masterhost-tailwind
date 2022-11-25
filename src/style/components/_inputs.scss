@@ -153,6 +153,58 @@ input
         
     }
 
+    // range checkbox
+    &[type="range"]
+    {
+        @apply
+        resize-none
+        border-none
+        appearance-none
+        outline
+        outline-offset-2
+        outline-1
+        outline-gray-300
+        bg-white
+        rounded-full
+        max-w-lg
+        w-full
+        h-2.5
+        transition-none;
+
+        background-image: linear-gradient(rgb(59 130 246), rgb(59 130 246));
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+
+        &::-webkit-slider-thumb {
+            @apply
+            appearance-none
+            w-12
+            h-8
+            bg-blue-500
+            rounded-sm
+            relative
+            cursor-ew-resize
+        }
+        // &:active::-webkit-slider-thumb {
+        //     background: #fff;
+        //     // box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+        // }
+		// Firefox
+		// &::-moz-range-progress {
+		// 	background-color: #43e5f7; 
+		// }
+		// &::-moz-range-track {  
+		// 	background-color: #9a905d;
+		// }
+		// // IE
+		// &::-ms-fill-lower {
+		// 	background-color: #43e5f7; 
+		// }
+		// &::-ms-fill-upper {  
+		// 	background-color: #9a905d;
+		// }
+    }
+
     // floating label and input
     &.floating-input
     {
@@ -302,6 +354,7 @@ input
     .switch 
     {
         max-width: 50px;
+        min-width: 50px;
         width: 50px;
         @apply
         flex-grow
@@ -352,6 +405,30 @@ input
     // {
     //     color: var(--clr-black-000);
     // }
+}
+
+.iti.iti--allow-dropdown
+{
+    @apply 
+    w-24;
+
+    .iti__flag-container
+    {
+        @apply
+        w-full
+        border
+        border-gray-300
+        transition-all
+        hover:border-blue-500;
+
+        
+        .iti__selected-flag
+        {
+            @apply
+            border-none
+            bg-transparent;
+        }
+    }
 }
 
 textarea 
