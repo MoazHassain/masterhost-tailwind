@@ -175,9 +175,12 @@ input[type=range]::-webkit-slider-thumb {
             w-12
             h-8
             bg-blue-500
-            rounded-sm
             relative
             cursor-ew-resize;
+  background-image: url(../img/arrows.svg);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 select.floating-input,
 textarea.floating-input,

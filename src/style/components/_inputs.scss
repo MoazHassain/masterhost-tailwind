@@ -70,7 +70,7 @@ input
         @apply
         text-gray-600
         bg-gray-100
-        border-gray-300 ;
+        border-gray-300;
     }
 
     // removed default number arrow
@@ -181,9 +181,13 @@ input
             w-12
             h-8
             bg-blue-500
-            rounded-sm
             relative
-            cursor-ew-resize
+            cursor-ew-resize;
+
+            background-image: url(../img/arrows.svg);
+            border-radius: 4px;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         // &:active::-webkit-slider-thumb {
         //     background: #fff;

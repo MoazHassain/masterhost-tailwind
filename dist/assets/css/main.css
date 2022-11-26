@@ -639,12 +639,12 @@ video {
   left: 0.5rem;
 }
 
-.right-14 {
-  right: 3.5rem;
+.right-11 {
+  right: 2.75rem;
 }
 
-.right-4 {
-  right: 1rem;
+.right-1 {
+  right: 0.25rem;
 }
 
 .z-50 {
@@ -767,6 +767,10 @@ video {
 
 .mb-9 {
   margin-bottom: 2.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .block {
@@ -934,6 +938,10 @@ video {
   width: 0px !important;
 }
 
+.\!w-11 {
+  width: 2.75rem !important;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -1041,6 +1049,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-x-auto {
@@ -1167,6 +1179,11 @@ video {
 .\!bg-gray-200 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity)) !important;
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .fill-white {
@@ -1869,9 +1886,12 @@ input[type=range]::-webkit-slider-thumb {
   cursor: ew-resize;
   -webkit-appearance: none;
           appearance: none;
-  border-radius: 0.125rem;
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  background-image: url(../img/arrows.svg);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 select.floating-input,
@@ -2727,6 +2747,10 @@ nav .nav-item.active::before {
 
   .sm\:inline {
     display: inline;
+  }
+
+  .sm\:flex {
+    display: flex;
   }
 
   .sm\:table-cell {
