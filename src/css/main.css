@@ -468,6 +468,67 @@ textarea {
 .dropdown.options .dropdown-content::after {
   right: 21px;
 }
+.dropdown.chat-dropdown {
+  @apply fixed
+        bottom-3 
+        right-6 
+        -translate-y-1/2;
+}
+@media (max-width: 640px) {
+  .dropdown.chat-dropdown {
+    right: unset;
+    left: 24px;
+  }
+}
+.dropdown.chat-dropdown button[data-dropdown-btn] .chat-icon {
+  @apply visible
+                opacity-100
+                transition-all;
+}
+.dropdown.chat-dropdown button[data-dropdown-btn] .close-icon {
+  @apply invisible
+                opacity-0
+                transition-all;
+}
+.dropdown.chat-dropdown .dropdown-content {
+  bottom: calc(100% + 10px);
+  @apply absolute
+            right-0;
+}
+.dropdown.chat-dropdown .dropdown-content::before {
+  top: unset;
+  @apply rotate-180
+                -bottom-4
+                right-5;
+}
+.dropdown.chat-dropdown .dropdown-content::after {
+  top: unset;
+  right: 21px;
+  @apply rotate-180
+                -bottom-4;
+}
+@media (max-width: 640px) {
+  .dropdown.chat-dropdown .dropdown-content {
+    overflow-y: scroll;
+    height: 65vh;
+    right: unset;
+    left: 0px;
+  }
+  .dropdown.chat-dropdown .dropdown-content::before, .dropdown.chat-dropdown .dropdown-content::after {
+    all: unset;
+  }
+}
+.dropdown.chat-dropdown.menu-open button[data-dropdown-btn] {
+  @apply mr-auto;
+}
+.dropdown.chat-dropdown.menu-open button[data-dropdown-btn] .chat-icon {
+  @apply invisible
+                    opacity-0;
+}
+.dropdown.chat-dropdown.menu-open button[data-dropdown-btn] .close-icon {
+  @apply visible
+                    opacity-100;
+}
 
 /* tab */
 .tab-bar::-webkit-scrollbar,
@@ -564,6 +625,11 @@ body.modal-open {
         origin-center
         transition-all;
 }
+@media (max-width: 768px) {
+  .modal-wrap .modal-content {
+    width: 90vw;
+  }
+}
 .modal-wrap .modal-closer {
   @apply absolute
         top-11
@@ -575,6 +641,11 @@ body.modal-open {
         place-items-center 
         rounded-full
         transition-all;
+}
+@media (max-width: 768px) {
+  .modal-wrap .modal-closer {
+    @apply right-8;
+  }
 }
 .modal-wrap .modal-closer:hover {
   @apply bg-blue-200;

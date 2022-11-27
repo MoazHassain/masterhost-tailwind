@@ -559,10 +559,10 @@
                         <table class="w-full text-left">
                             <thead class="h-14 border-b w-full">
                                 <tr>
-                                    <th class="px-3 w-1/3">
+                                    <th class="px-3 w-full md:w-1/3">
                                         <p class="font-normal text-slate-400">Domain</p>
                                     </th>
-                                    <th class="px-3 w-14 md:w-2/3 hidden sm:table-cell">
+                                    <th class="px-3 w-14 md:w-2/3 hidden md:table-cell">
                                         <p class="font-normal text-slate-400">Date Created</p>
                                     </th>
                                     <th class="px-3"></th>
@@ -575,17 +575,17 @@
                                     <td class="px-3">
                                         <p class="font-normal text-sm text-slate-600">cbodigital.com.bd</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3 hidden md:table-cell">
                                         <p class="font-normal text-sm text-slate-600">2018-03-05 03:54:57</p>
                                     </td>
-                                    <td class="px-4 hidden sm:table-cell">
+                                    <td class="px-4">
                                         <button class="menu-btn flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Edit Domain" data-modal="edit-dns-modal">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"/>
                                             </svg>
                                         </button>
                                     </td>
-                                    <td class="px-4 hidden sm:table-cell">
+                                    <td class="px-4">
                                         <button class="flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Delete Domain">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="fill-slate-400 group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"/>
@@ -638,6 +638,43 @@
             </div>
         </div>
 
+        <div class="dropdown chat-dropdown z-20" data-dropdown>
+            <button data-dropdown-btn class="menu-btn w-14 h-14 rounded-full shadow-lg bg-green-500 hover:bg-green-600 transition-all flex items-center justify-center z-10">
+                <svg class="chat-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-white" d="M7 14H13.025C13.3083 14 13.5417 13.904 13.725 13.712C13.9083 13.5207 14 13.2833 14 13C14 12.7167 13.9043 12.479 13.713 12.287C13.521 12.0957 13.2833 12 13 12H6.975C6.69167 12 6.45833 12.0957 6.275 12.287C6.09167 12.479 6 12.7167 6 13C6 13.2833 6.09567 13.5207 6.287 13.712C6.479 13.904 6.71667 14 7 14ZM7 11H17.025C17.3083 11 17.5417 10.904 17.725 10.712C17.9083 10.5207 18 10.2833 18 10C18 9.71667 17.904 9.479 17.712 9.287C17.5207 9.09567 17.2833 9 17 9H6.975C6.69167 9 6.45833 9.09567 6.275 9.287C6.09167 9.479 6 9.71667 6 10C6 10.2833 6.09567 10.5207 6.287 10.712C6.479 10.904 6.71667 11 7 11ZM7 8H17.025C17.3083 8 17.5417 7.90433 17.725 7.713C17.9083 7.521 18 7.28333 18 7C18 6.71667 17.904 6.479 17.712 6.287C17.5207 6.09567 17.2833 6 17 6H6.975C6.69167 6 6.45833 6.09567 6.275 6.287C6.09167 6.479 6 6.71667 6 7C6 7.28333 6.09567 7.521 6.287 7.713C6.479 7.90433 6.71667 8 7 8ZM2 19.575V4C2 3.45 2.196 2.979 2.588 2.587C2.97933 2.19567 3.45 2 4 2H20C20.55 2 21.021 2.19567 21.413 2.587C21.8043 2.979 22 3.45 22 4V16C22 16.55 21.8043 17.021 21.413 17.413C21.021 17.8043 20.55 18 20 18H6L3.7 20.3C3.38333 20.6167 3.02067 20.6873 2.612 20.512C2.204 20.3373 2 20.025 2 19.575Z" fill="black"/>
+                </svg>
+                <svg class="close-icon rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-white" d="M11.883 3.007L12 3C12.2449 3.00003 12.4813 3.08996 12.6644 3.25272C12.8474 3.41547 12.9643 3.63975 12.993 3.883L13 4V11H20C20.2449 11 20.4813 11.09 20.6644 11.2527C20.8474 11.4155 20.9643 11.6397 20.993 11.883L21 12C21 12.2449 20.91 12.4813 20.7473 12.6644C20.5845 12.8474 20.3603 12.9643 20.117 12.993L20 13H13V20C13 20.2449 12.91 20.4813 12.7473 20.6644C12.5845 20.8474 12.3603 20.9643 12.117 20.993L12 21C11.7551 21 11.5187 20.91 11.3356 20.7473C11.1526 20.5845 11.0357 20.3603 11.007 20.117L11 20V13H4C3.75507 13 3.51866 12.91 3.33563 12.7473C3.15259 12.5845 3.03566 12.3603 3.007 12.117L3 12C3.00003 11.7551 3.08996 11.5187 3.25272 11.3356C3.41547 11.1526 3.63975 11.0357 3.883 11.007L4 11H11V4C11 3.75507 11.09 3.51866 11.2527 3.33563C11.4155 3.15259 11.6397 3.03566 11.883 3.007L12 3L11.883 3.007Z" fill="black"/>
+                </svg>
+            </button>
+            <div class="dropdown-content w-80 bg-white text-gray-600 rounded-lg shadow-2xl z-10">
+                <div class="title bg-blue-900 text-white p-6 pb-16 rounded-t-lg">
+                    <p class="text-2xl mb-3">Hello, MD MOSTAIN!</p>
+                    <p class="text-sm ">
+                        Thanks for using Vultr. We have a few notifications which may interest you.
+                    </p>
+                </div>
+                <div class="mx-6 -mt-10 mb-5 shadow-md rounded p-5 bg-white">
+                    <p class="font-medium mb-2">Want some account credit? 👀</p>
+                    <p class="text-sm mb-5">Give your friends $100 and get $35!</p>
+                    <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white w-full">
+                        See Details Here
+                    </button>
+                </div>
+                <div class="mx-6 mb-10 shadow-md rounded p-5 bg-white">
+                    <p class="font-medium mb-2">We've made some renovations!</p>
+                    <p class="text-sm mb-5">
+                        Some tweaks have been added among other things... 🕶️
+                    </p>
+                    <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white w-full">
+                        Read More Here
+                    </button>
+                </div>
+
+                <button class="text-gray-400 flex mx-auto mb-4">Dismiss and Do not show again.</button>
+            </div>
+        </div>
+
         <div class="modal-wrap" id="edit-dns-modal">
             <div class="modal-content">
                 <button class="modal-closer menu-btn" data-modal-closer="">
@@ -645,9 +682,9 @@
                         <path class="stroke-blue-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </button>
-                <div class="title px-16 py-11">
+                <div class="title px-8 md:px-16 py-11">
                     <h1 class="text-4xl font-light text-gray-800">Manage DNS Domain</h1>
-                    <div class="flex gap-4 mt-3">
+                    <div class="flex flex-col md:flex-row gap-4 mt-3">
                         <p class="text-sm text-slate-400">Domain: <span class="font-medium">cbodigital.com.bd</span></p>
                         <p class="text-sm text-slate-400">Records: <span class="font-medium">6</span></p>
                         <p class="text-sm text-slate-400">Created: <span class="font-medium tooltip-top" data-tooltip="4 years ago [UTC]">2018-03-05 03:54:57</span></p>
@@ -655,7 +692,7 @@
                 </div>
 
                 <div class="w-full">
-                    <div class="modal-tab-bar w-11/12 h-10 px-16 flex gap-8 text-gray-600 items-center overflow-x-auto overflow-y-clip">
+                    <div class="modal-tab-bar w-11/12 h-10 px-8 md:px-16 flex gap-8 text-gray-600 items-center overflow-x-auto overflow-y-clip">
                         <a data-id="records-tab" class="tab-button menu-button active-tab flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                             Manage Records
                         </a>
@@ -669,37 +706,37 @@
                 
 
                 <div class="modal-tab-content-wrap">
-                    <div class="modal-tab-content active-content px-16 py-11" id="records-tab">
+                    <div class="modal-tab-content active-content px-8 md:px-16 py-11" id="records-tab">
                         <div class="table-wrap border border-gray-200 rounded w-full">
                             <table class="w-full text-left">
-                                <thead class="h-14 border-b hidden sm:table-header-group">
+                                <thead class="h-14 border-b">
                                     <tr>
-                                        <th class="w-1/12 px-3 hidden sm:table-cell">
+                                        <th class="w-1/12 px-3 hidden md:table-cell">
                                             <input type="checkbox" name="" id="">
                                         </th>
                                         <th class="px-3 w-1/6">
                                             <p class="font-normal text-slate-500">Type</p>
                                         </th>
-                                        <th class="px-3 w-14 md:w-1/5 hidden sm:table-cell">
+                                        <th class="px-3 w-14 md:w-1/5">
                                             <p class="font-normal text-slate-500">Name</p>
                                         </th>
-                                        <th class="px-3 w-1/5 hidden sm:table-cell">
+                                        <th class="px-3 w-1/5 hidden md:table-cell">
                                             <p class="font-normal text-slate-500">Data</p>
                                         </th>
-                                        <th class="px-3 w-24 md:w-1/6 hidden sm:table-cell">
-                                            <p class="font-normal text-slate-500">TTL(seconds)</p>
+                                        <th class="px-3 w-24 md:w-1/6">
+                                            <p class="font-normal text-slate-500">TTL</p>
                                         </th>
                                         <th class="px-3 w-1/6">
                                             <p class="font-normal text-slate-500">Priority</p>
                                         </th>
-                                        <th class="w-1/5 hidden sm:table-cell">
+                                        <th class="w-1/5">
                                             <p class="font-normal text-slate-500">Actions</p>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="h-16 border-b hover:bg-blue-50 transition">
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3 hidden md:table-cell">
                                             <!-- <input type="checkbox" name="t" id="t"> -->
                                         </td>
                                         <td class="px-3">
@@ -715,19 +752,19 @@
                                                 
                                             </div>
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3">
                                             <input type="text" name="dns-name-input" id="dns-name-input" placeholder="Example: www" class="w-full">
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3 hidden md:table-cell">
                                             <input type="text" name="dns-data-input" id="dns-data-input" placeholder="Example: 0.0.0.0" class="w-full">
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3">
                                             <input type="number" name="dns-ttl-input" id="dns-ttl-input" value="3600" placeholder="" class="w-full">
                                         </td>
                                         <td class="px-3">
                                             <input type="text" disabled name="dns-priority-input" id="dns-priority-input" placeholder="" class="w-full">
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3">
                                             
                                             <button class="p-3 menu-btn tooltip-top" data-tooltip="Add Record">
                                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -738,25 +775,25 @@
                                     </tr>
                                     
                                     <tr class="h-16 border-b hover:bg-blue-50 transition">
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3 hidden md:table-cell">
                                             <input type="checkbox" name="" id="">
                                         </td>
                                         <td class="px-3">
                                             <p class="text-slate-800">A</p>
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3">
                                             <p class="text-slate-800">www</p>
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3 hidden md:table-cell">
                                             <p class="text-slate-800">45.76.182.49</p>
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3">
                                             <p class="text-slate-800">3600</p>
                                         </td>
                                         <td class="px-3">
                                             
                                         </td>
-                                        <td class="px-3 hidden sm:table-cell">
+                                        <td class="px-3">
                                             
                                             <button class="p-3 menu-btn tooltip-top" data-tooltip="Edit Record">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -769,8 +806,8 @@
                             </table>
                         </div>
                     </div>
-                    <div class="modal-tab-content px-16 py-11" id="zone-tab">
-                        <div class="w-1/3">
+                    <div class="modal-tab-content px-8 md:px-16 py-11" id="zone-tab">
+                        <div class="max-w-sm w-full md:w-1/3">
                             <h3 class="text-2xl text-gray-600 mb-4">DNSSEC Settings</h3>
 
                             <div class="w-full flex items-center gap-3 border border-gray-300 px-6 py-8 mb-8">

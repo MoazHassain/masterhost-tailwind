@@ -226,8 +226,8 @@
         </header>
 
         <div class="content">
-            <div class="container max-w-7xl my-10 flex items-center justify-between">
-                <h1 class="text-4xl font-light">Billing</h1>
+            <div class="container max-w-7xl my-10 block sm:flex items-center justify-between">
+                <h1 class="text-4xl font-light mb-4 sm:mb-0">Billing</h1>
 
                 <div class="flex gap-9">
                     <div class="flex flex-col gap-1 items-center">
@@ -313,160 +313,162 @@
             <div class="w-full border-b border-b-neutral-200"></div>
 
             <div class="tab-content-wrap container max-w-7xl mt-12 mb-20">
-                <div class="tab-content active-content gap-10" id="payment">
-                    <div class="inner-tab-bar w-40 flex flex-col gap-8 text-gray-600 items-start overflow-x-auto overflow-y-clip">
-                        <a data-id="credit-tab" class="inner-tab-button menu-button active-tab flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
-                            Credit Card
-                        </a>
-                        <a data-id="tab-paypal" class="inner-tab-button menu-button flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
-                            Paypal
-                        </a>
-                        <a data-id="tab-crypto" class="inner-tab-button menu-button flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
-                            Crypto
-                        </a>
-                        <a data-id="tab-gift" class="inner-tab-button menu-button flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
-                            Gift Code
-                        </a>
-                    </div>
-                    <div class="inner-tab-content-wrap w-full">
-                        <div class="tab-content active-content w-full" id="credit-tab">
-                            <form id="credit-info" name="credit-info" action="" method="" class="w-full">
-                                <div class="field mb-5">
-                                    <input type="text" id="name-input" name="name-input" class="floating-input w-full" placeholder=" ">
-                                    <label for="name-input" class="floating-label">Your Name</label>
-                                </div>
-                                <div class="field mb-5">
-                                    <input type="text" id="address-input" name="address-input" class="floating-input w-full" placeholder=" ">
-                                    <label for="address-input" class="floating-label">Billing Address</label>
-                                </div>
-                                <div class="grid grid-cols-3 gap-4 mb-5">
-                                    <div class="field">
-                                        <input type="text" id="city-input" name="city-input" class="floating-input w-full" placeholder=" ">
-                                        <label for="city-input" class="floating-label">Billing City</label>
-                                    </div>
-                                    <div class="field">
-                                        <input type="text" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
-                                        <label for="postal-input" class="floating-label">Billing Postal Code</label>
-                                    </div>
-                                    <div class="select-field">
-                                        <label for="country-input" class="">
-                                            Billing Country
-                                        </label>
-                                        
-                                        <select id="country-input" name="country-input" class="custom-select w-full">
-                                            <option value="" disabled selected>Select Domain :</option>
-                                            <option value=""></option>
-                                            <option value="United States" selected>United States</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="India">India</option>
-                                            <option value="Pakistan">Pakistan</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <legend class="text-lg text-gray-600 mb-5">
-                                        Credit Card Details
-                                    </legend>
-                                    <div class="card-info-wrap p-4 mb-5 border border-gray-300 rounded-sm">
-                                        <div class="flex gap-4 mb-3">
-                                            <div class="field w-full">
-                                                <input type="number" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
-                                                <label for="postal-input" class="floating-label">Card Number</label>
-                                            </div>
-                                            <div class="field">
-                                                <input type="number" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
-                                                <label for="postal-input" class="floating-label">MM/YY</label>
-                                            </div>
-                                            <div class="field">
-                                                <input type="number" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
-                                                <label for="postal-input" class="floating-label">CVV</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex items-center gap-4">
-                                            <p class="text-sm text-gray-500">Credit Card brands we support:</p>
-                                            <div class="card-img-wrap flex flex-grow justify-between">
-                                                <img class="w-10" src="./assets/icon/visa.svg" alt="">
-                                                <img class="w-10" src="./assets/icon/visa.svg" alt="">
-                                                <img class="w-10" src="./assets/icon/visa.svg" alt="">
-                                                <img class="w-10" src="./assets/icon/visa.svg" alt="">
-                                                <img class="w-10" src="./assets/icon/visa.svg" alt="">
-                                                <img class="w-10" src="./assets/icon/visa.svg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mb-7">
-                                    <legend class="text-lg text-gray-600 mb-5">
-                                        Choose Payment Amount
-                                    </legend>
-                                    <div class="field flex gap-4 items-center">
-                                        <input type="checkbox" name="link-checkbox" id="link-checkbox">
-                                        <label for="link-checkbox" class="text-gray-600 mb-0">
-                                            I just want to link my credit card - <span class="font-bold">$0.00 deposit</span>
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                                <div class="flex gap-2 mb-5 radio-fields">
-                                    <label class="radio-box w-full">
-                                        <input type="radio" class="custom-radio" name="ammount" id="ammount">
-                                        <div class="box">
-                                            <p class="">$10</p>
-                                        </div>
-                                    </label>
-                                    <label class="radio-box w-full">
-                                        <input type="radio" class="custom-radio" name="ammount" id="ammount">
-                                        <div class="box">
-                                            <p class="">$10</p>
-                                        </div>
-                                    </label>
-                                    <label class="radio-box w-full">
-                                        <input type="radio" class="custom-radio" name="ammount" id="ammount">
-                                        <div class="box">
-                                            <p class="">$10</p>
-                                        </div>
-                                    </label>
-                                    <label class="radio-box w-full">
-                                        <input type="radio" class="custom-radio" name="ammount" id="ammount">
-                                        <div class="box">
-                                            <p class="">$10</p>
-                                        </div>
-                                    </label>
-                                    <label class="radio-box w-full">
-                                        <input type="radio" class="custom-radio" name="ammount" id="ammount">
-                                        <div class="box">
-                                            <p class="">$10</p>
-                                        </div>
-                                    </label>
-                                    <label class="radio-box w-full menu-btn" data-other-btn>
-                                        <input type="radio" checked class="custom-radio" name="ammount" id="ammount">
-                                        <div class="box">
-                                            <p class="">Other</p>
-                                        </div>
-                                    </label>
-                                </div>
-
-                                <div class="mb-8" id="" data-other-content>
-                                    <div class="field relative">
-                                        <input type="number" class="border-blue-500 w-full pl-10">
-                                        <div class="arrow"></div>
-                                        <span class="absolute top-1/2 -translate-y-1/2 left-5 text-lg text-blue-600 font-bold pointer-events-none">$</span>
-                                    </div>
-                                </div>
-
-                                <div class="field">
-                                    <button class="filled-button w-full" type="submit">Pay with Credit Card</button>
-                                </div>
-                            </form>
+                <div class="tab-content active-content" id="payment">
+                    <div class="block md:flex gap-10">
+                        <div class="inner-tab-bar mb-8 md:w-40 flex md:flex-col gap-8 text-gray-600 items-start overflow-x-auto overflow-y-clip">
+                            <a data-id="credit-tab" class="inner-tab-button menu-button active-tab flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                                Credit Card
+                            </a>
+                            <a data-id="tab-paypal" class="inner-tab-button menu-button flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                                Paypal
+                            </a>
+                            <a data-id="tab-crypto" class="inner-tab-button menu-button flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                                Crypto
+                            </a>
+                            <a data-id="tab-gift" class="inner-tab-button menu-button flex items-center text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                                Gift Code
+                            </a>
                         </div>
-
-                        <div class="tab-content w-full" id="tab-paypal"></div>
-                        <div class="tab-content w-full" id="tab-crypto"></div>
-                        <div class="tab-content w-full" id="tab-gift"></div>
+                        <div class="inner-tab-content-wrap w-full">
+                            <div class="tab-content active-content w-full" id="credit-tab">
+                                <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                                    <div class="field mb-5">
+                                        <input type="text" id="name-input" name="name-input" class="floating-input w-full" placeholder=" ">
+                                        <label for="name-input" class="floating-label">Your Name</label>
+                                    </div>
+                                    <div class="field mb-5">
+                                        <input type="text" id="address-input" name="address-input" class="floating-input w-full" placeholder=" ">
+                                        <label for="address-input" class="floating-label">Billing Address</label>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                                        <div class="field">
+                                            <input type="text" id="city-input" name="city-input" class="floating-input w-full" placeholder=" ">
+                                            <label for="city-input" class="floating-label">Billing City</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
+                                            <label for="postal-input" class="floating-label">Billing Postal Code</label>
+                                        </div>
+                                        <div class="select-field">
+                                            <label for="country-input" class="">
+                                                Billing Country
+                                            </label>
+                                            
+                                            <select id="country-input" name="country-input" class="custom-select w-full">
+                                                <option value="" disabled selected>Select Domain :</option>
+                                                <option value=""></option>
+                                                <option value="United States" selected>United States</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="India">India</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                    <div class="">
+                                        <legend class="text-lg text-gray-600 mb-5">
+                                            Credit Card Details
+                                        </legend>
+                                        <div class="card-info-wrap p-4 mb-5 border border-gray-300 rounded-sm">
+                                            <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                                <div class="field w-full">
+                                                    <input type="number" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
+                                                    <label for="postal-input" class="floating-label">Card Number</label>
+                                                </div>
+                                                <div class="field">
+                                                    <input type="number" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
+                                                    <label for="postal-input" class="floating-label">MM/YY</label>
+                                                </div>
+                                                <div class="field">
+                                                    <input type="number" id="postal-input" name="postal-input" class="floating-input w-full" placeholder=" ">
+                                                    <label for="postal-input" class="floating-label">CVV</label>
+                                                </div>
+                                            </div>
+    
+                                            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                                                <p class="text-sm text-gray-500">Credit Card brands we support:</p>
+                                                <div class="card-img-wrap flex flex-grow justify-between">
+                                                    <img class="w-10" src="./assets/icon/visa.svg" alt="">
+                                                    <img class="w-10" src="./assets/icon/visa.svg" alt="">
+                                                    <img class="w-10" src="./assets/icon/visa.svg" alt="">
+                                                    <img class="w-10" src="./assets/icon/visa.svg" alt="">
+                                                    <img class="w-10" src="./assets/icon/visa.svg" alt="">
+                                                    <img class="w-10" src="./assets/icon/visa.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-7">
+                                        <legend class="text-lg text-gray-600 mb-5">
+                                            Choose Payment Amount
+                                        </legend>
+                                        <div class="field flex gap-4 items-start md:items-center">
+                                            <input type="checkbox" name="link-checkbox" id="link-checkbox" class="shrink-0 mt-1.5 md:mt-0">
+                                            <label for="link-checkbox" class="text-gray-600 mb-0">
+                                                I just want to link my credit card - <span class="font-bold">$0.00 deposit</span>
+                                            </label>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="flex gap-2 mb-5 radio-fields">
+                                        <label class="radio-box w-full">
+                                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                                            <div class="box">
+                                                <p class="">$10</p>
+                                            </div>
+                                        </label>
+                                        <label class="radio-box w-full">
+                                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                                            <div class="box">
+                                                <p class="">$10</p>
+                                            </div>
+                                        </label>
+                                        <label class="radio-box w-full">
+                                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                                            <div class="box">
+                                                <p class="">$10</p>
+                                            </div>
+                                        </label>
+                                        <label class="radio-box w-full">
+                                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                                            <div class="box">
+                                                <p class="">$10</p>
+                                            </div>
+                                        </label>
+                                        <label class="radio-box w-full">
+                                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                                            <div class="box">
+                                                <p class="">$10</p>
+                                            </div>
+                                        </label>
+                                        <label class="radio-box w-full menu-btn" data-other-btn>
+                                            <input type="radio" checked class="custom-radio" name="ammount" id="ammount">
+                                            <div class="box">
+                                                <p class="">Other</p>
+                                            </div>
+                                        </label>
+                                    </div>
+    
+                                    <div class="mb-8" id="" data-other-content>
+                                        <div class="field relative">
+                                            <input type="number" class="border-blue-500 w-full pl-10">
+                                            <div class="arrow"></div>
+                                            <span class="absolute top-1/2 -translate-y-1/2 left-5 text-lg text-blue-600 font-bold pointer-events-none">$</span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="field">
+                                        <button class="filled-button w-full" type="submit">Pay with Credit Card</button>
+                                    </div>
+                                </form>
+                            </div>
+    
+                            <div class="tab-content w-full" id="tab-paypal"></div>
+                            <div class="tab-content w-full" id="tab-crypto"></div>
+                            <div class="tab-content w-full" id="tab-gift"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-content" id="limit">
@@ -475,19 +477,19 @@
                     </h3>
                 </div>
                 <div class="tab-content flex-col" id="history">
-                    <div class="flex items-center gap-9 text-center w-full mb-8">
-                        <div class="w-full py-10 px-5 shadow-xl group/wrap transition-all hover:-translate-y-4">
+                    <div class="flex items-center flex-col md:flex-row gap-2 md:gap-9 text-center w-full mb-8">
+                        <div class="w-full py-5 md:py-10 px-5 shadow-xl group/wrap transition-all hover:-translate-y-4">
                             <p class="text-4xl text-green-600 font-bold flex-grow">-$18.21</p>
                             <p class="text-slate-500 mt-4">Account Balance</p>
                             <!-- <p class="text-slate-500 overflow-y-hidden scale-0 translate-y-4 origin-bottom transition-all group-hover/wrap:-translate-y-0 group-hover/wrap:scale-100">Finalized Invoice and Payment</p> -->
                         </div>
                         <p class="text-4xl text-slate-500 font-bold ">+</p>
-                        <div class="w-full py-10 px-5 shadow-xl group/wrap transition-all hover:-translate-y-4">
+                        <div class="w-full py-5 md:py-10 px-5 shadow-xl group/wrap transition-all hover:-translate-y-4">
                             <p class="text-4xl text-red-700 font-bold">-$18.31</p>
                             <p class="text-slate-500 mt-4">Charges This Month</p>
                         </div>
                         <p class="text-4xl text-slate-500 font-bold ">=</p>
-                        <div class="w-full py-10 px-5 shadow-xl group/wrap transition-all hover:-translate-y-4">
+                        <div class="w-full py-5 md:py-10 px-5 shadow-xl group/wrap transition-all hover:-translate-y-4">
                             <p class="text-4xl text-red-700 font-bold">-$0.10</p>
                             <p class="text-slate-500 mt-4">Estimated Balance</p>
                         </div>
@@ -495,24 +497,24 @@
 
                     <div class="table-wrap border border-gray-200 rounded mb-8">
                         <table class="w-full text-left">
-                            <thead class="h-14 border-b hidden sm:table-header-group">
+                            <thead class="h-14 border-b">
                                 <tr>
                                     <th class="px-3 md:w-1/3">
                                         <p class="font-normal text-slate-500">Description</p>
                                     </th>
-                                    <th class="px-3 w-20 md:w-1/6 hidden sm:table-cell">
+                                    <th class="px-3 w-20 md:w-1/6 hidden md:table-cell">
                                         <p class="font-normal text-slate-500">Date</p>
                                     </th>
-                                    <th class="px-3 w-20 md:w-1/6 hidden sm:table-cell">
+                                    <th class="px-3 w-20 md:w-1/6">
                                         <p class="font-normal text-slate-500">Ammount</p>
                                     </th>
-                                    <th class="px-3 w-20 md:w-1/6 hidden sm:table-cell">
+                                    <th class="px-3 w-20 md:w-1/6">
                                         <p class="font-normal text-slate-500">Balance</p>
                                     </th>
-                                    <th class="px-3 w-20 md:w-1/6">
+                                    <th class="px-3 w-20 md:w-1/6 hidden md:table-cell">
                                         <!-- <p class="font-normal text-slate-500"></p> -->
                                     </th>
-                                    <th class="w-14 hidden sm:table-cell">
+                                    <th class="w-14 hidden md:table-cell">
                                         <!-- <p class=""></p> -->
                                     </th>
                                 </tr>
@@ -522,19 +524,19 @@
                                     <td class="px-3">
                                         <p class="font-medium text-slate-800 hover:text-blue-700 transition tooltip-top" data-tooltip="Show Invoice">Invoice #19631203</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3 hidden md:table-cell">
                                         <p class="text-slate-700">2022-11-01</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3">
                                         <p class="text-slate-700">$29.00</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3">
                                         <p class="text-slate-700">$-18.21</p>
                                     </td>
-                                    <td class="px-3">
+                                    <td class="px-3 hidden md:table-cell">
                                         
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3 hidden md:table-cell">
                                         <div class="options dropdown relative" data-dropdown>
                                             <button class="p-3 menu-btn" data-dropdown-btn>
                                                 <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -560,16 +562,16 @@
                                     <td class="px-3">
                                         <p class="font-medium text-slate-800 hover:text-blue-700 transition tooltip-right" data-tooltip="Show Invoice">Paypal</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3 hidden md:table-cell">
                                         <p class="text-slate-700">2022-11-01</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3">
                                         <p class="text-slate-700">$29.00</p>
                                     </td>
-                                    <td class="px-3 hidden sm:table-cell">
+                                    <td class="px-3">
                                         <p class="text-slate-700">$-18.21</p>
                                     </td>
-                                    <td class="px-3">
+                                    <td class="px-3 hidden md:table-cell">
                                         <p class="text-slate-700">Completed</p>
                                     </td>
                                     <td class="px-3 hidden sm:table-cell">
@@ -598,7 +600,7 @@
                         </table>
                     </div>
 
-                    <div class="pagination flex items-center gap-3">
+                    <div class="pagination flex items-center justify-center md:justify-start gap-3">
                         <button> < </button>
                         <button class="w-9 h-9 rounded-full border border-blue-600 flex items-center justify-center">1</button>
                         <button class="w-9 h-9 rounded-full flex items-center justify-center">2</button>

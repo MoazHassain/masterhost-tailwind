@@ -520,7 +520,7 @@
                         <table class="w-full text-left">
                             <thead class="h-14 border-b w-full">
                                 <tr>
-                                    <th class="px-3 w-1/3">
+                                    <th class="px-3 w-full sm:w-1/3">
                                         <p class="font-normal text-slate-400">Name</p>
                                     </th>
                                     <th class="px-3 w-14 md:w-2/3 hidden sm:table-cell">
@@ -539,14 +539,14 @@
                                     <td class="px-3 hidden sm:table-cell">
                                         <p class="font-normal text-sm text-slate-600">2018-03-05 03:54:57</p>
                                     </td>
-                                    <td class="px-4 hidden sm:table-cell">
+                                    <td class="px-4 ">
                                         <button class="menu-btn flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Edit SSH Key" data-modal="">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
                                             </svg>
                                         </button>
                                     </td>
-                                    <td class="px-4 hidden sm:table-cell">
+                                    <td class="px-4 ">
                                         <button class="flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Delete SSH Key">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="fill-slate-400 group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
@@ -656,7 +656,7 @@
                             </div>
                         </form>
                         <div class="field sm:flex gap-3 mb-5">
-                            <button class="filled-button" type="button">
+                            <button class="filled-button mb-3 sm:mb-0" type="button">
                                 Allow All IPv4
                             </button>
 
@@ -685,7 +685,7 @@
                             <p class="text-2xl text-gray-700 mb-5">
                                 No Users
                             </p>
-                            <p class="text-gray-700 mb-12">
+                            <p class="text-gray-700 mb-12 text-center sm:text-left">
                                 Add new users with full or limited access to your account.
                             </p>
                             <button class="filled-button">
@@ -701,8 +701,8 @@
 
                         <div class="border border-gray-200 p-6 grid place-items-center">
                             <div class="flex items-center gap-2 mb-5">
-                                <img class="w-14 h-14" src="./assets/img/icon_sso.svg" alt="">
-                                <p class="text-gray-700">
+                                <img class="w-14 h-14 hidden sm:block" src="./assets/img/icon_sso.svg" alt="">
+                                <p class="text-gray-700 text-center sm:text-left">
                                     Vultr supports third party single sign-on via OpenID Connect. Once configured, all users on the account will need to sign in via OpenID. 
                                     <a href="" class="text-blue-500">Learn more.</a>
                                 </p>
