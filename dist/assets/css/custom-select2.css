@@ -142,3 +142,14 @@ textarea.materialize-textarea {
     z-index: 1;
     pointer-events: none;
 }
+
+.select-field label.not-floating
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: unset;
+    font-size: unset;
+    color: unset;
+    font-weight: unset;
+}

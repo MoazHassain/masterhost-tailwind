@@ -238,3 +238,31 @@ function handleInputChange(e) {
 rangeInputs.forEach(input => {
     input.addEventListener('input', handleInputChange)
 });
+
+/* password toggle */
+
+document.addEventListener("click", e => {
+    let togglePassIcon = e.target.matches("[data-toggle-passicon]");
+    if( !togglePassIcon && e.target.closest("[data-toggle]") != null){
+        return;
+    }
+
+    let currentToggleField;
+    let currentPasswordField;
+    if(togglePassIcon){
+        currentToggleField = e.target.closest("[data-toggle]");
+        currentToggleField.classList.toggle("active");
+        // currentToggleField.querySelector("[data-toggle-passicon]").innerHTML = "visibility_off";
+
+        currentPasswordField = currentToggleField.querySelector("input");
+        if(currentPasswordField.type == "password"){
+            currentPasswordField.type = "text";
+        } else {
+            currentPasswordField.type = "password";
+        }
+        
+        
+    }
+
+
+})

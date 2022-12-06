@@ -235,6 +235,39 @@ input
     
 }
 
+.pass-field
+{
+    .toggole-icon
+    {
+        
+        pointer-events: fill;
+        
+        &.active-icon
+        {
+            display: block;
+        }
+        &.hidden-icon
+        {
+            display: none;
+        }
+    }
+    
+    &.active
+    {
+        .toggole-icon
+        {
+            &.active-icon
+            {
+                display: none;
+            }
+            &.hidden-icon
+            {
+                display: block;
+            }
+        }
+    }
+}
+
 .custom-radio 
 {
     @apply
@@ -439,3 +472,28 @@ textarea
 {
     height: unset;
 }
+
+
+
+[data-multi-step] 
+{
+    overflow: hidden;
+    position: relative;
+
+    [data-step]
+    {
+        display: none;
+
+        &.active-form 
+        {
+            display: block;
+        }
+    }
+
+
+    .hide-form 
+    {
+        display: none;
+    }
+}
+

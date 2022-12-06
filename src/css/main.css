@@ -264,6 +264,22 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
             top-1/3;
 }
 
+.pass-field .toggole-icon {
+  pointer-events: fill;
+}
+.pass-field .toggole-icon.active-icon {
+  display: block;
+}
+.pass-field .toggole-icon.hidden-icon {
+  display: none;
+}
+.pass-field.active .toggole-icon.active-icon {
+  display: none;
+}
+.pass-field.active .toggole-icon.hidden-icon {
+  display: block;
+}
+
 .custom-radio {
   @apply hidden;
 }
@@ -395,6 +411,20 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
 
 textarea {
   height: unset;
+}
+
+[data-multi-step] {
+  overflow: hidden;
+  position: relative;
+}
+[data-multi-step] [data-step] {
+  display: none;
+}
+[data-multi-step] [data-step].active-form {
+  display: block;
+}
+[data-multi-step] .hide-form {
+  display: none;
 }
 
 /* dropdown */
