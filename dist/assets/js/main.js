@@ -11,6 +11,19 @@ navItems.forEach(navItem => {
     }
 })
 
+/* changing sidebar active according to page */
+
+var navigations = document.querySelectorAll("aside nav > a.nav-item");
+
+navigations.forEach(navigation => {
+    var currentPageLocation = location.href;
+    // console.log(currentPageLocation);
+    
+    if(navigation.href === currentPageLocation){
+        navigation.classList.add("active")
+    }
+});
+
 /* dropdown functionality */
 
 document.addEventListener("click", e => {

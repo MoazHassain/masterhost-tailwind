@@ -1,0 +1,658 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <div class="container max-w-7xl my-10">
+            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-slate-500">pay@mateors.com</p>
+        </div>
+        
+        
+
+        <div class="tab-bar-wrap container max-w-7xl relative">
+            <div class="tab-bar w-11/12 h-10 flex gap-8 text-gray-600 items-center overflow-x-auto overflow-y-clip">
+                <a data-id="profile-tab" class="tab-button menu-button active-tab flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    Profile
+                </a>
+                <a data-id="preference-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    Preference
+                </a>
+                <a data-id="authentication-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    Authentication
+                </a>
+                <a data-id="ssh-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    SSH Keys
+                </a>
+                <a data-id="api-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    API
+                </a>
+                <a data-id="user-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    Users
+                </a>
+                <a data-id="notification-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    Notifications
+                </a>
+
+            </div>
+
+            <div class="add-bar dropdown hover-dropdown" data-dropdown>
+                <button data-dropdown-btn class="menu-btn w-14 h-14 rounded-full shadow-lg fixed bottom-3 right-6 sm:absolute sm:top-full sm:right-8 -translate-y-1/2 bg-blue-500 hover:bg-blue-900 transition-all flex items-center justify-center z-10">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-white" d="M11.883 3.007L12 3C12.2449 3.00003 12.4813 3.08996 12.6644 3.25272C12.8474 3.41547 12.9643 3.63975 12.993 3.883L13 4V11H20C20.2449 11 20.4813 11.09 20.6644 11.2527C20.8474 11.4155 20.9643 11.6397 20.993 11.883L21 12C21 12.2449 20.91 12.4813 20.7473 12.6644C20.5845 12.8474 20.3603 12.9643 20.117 12.993L20 13H13V20C13 20.2449 12.91 20.4813 12.7473 20.6644C12.5845 20.8474 12.3603 20.9643 12.117 20.993L12 21C11.7551 21 11.5187 20.91 11.3356 20.7473C11.1526 20.5845 11.0357 20.3603 11.007 20.117L11 20V13H4C3.75507 13 3.51866 12.91 3.33563 12.7473C3.15259 12.5845 3.03566 12.3603 3.007 12.117L3 12C3.00003 11.7551 3.08996 11.5187 3.25272 11.3356C3.41547 11.1526 3.63975 11.0357 3.883 11.007L4 11H11V4C11 3.75507 11.09 3.51866 11.2527 3.33563C11.4155 3.15259 11.6397 3.03566 11.883 3.007L12 3L11.883 3.007Z" fill="black"/>
+                    </svg>
+                </button>
+                <div class="dropdown-content py-1 w-56 fixed top-1/4 translate-x-1/2 right-1/2 sm:absolute sm:top-20 sm:right-8 sm:translate-x-0 bg-white text-gray-600 shadow-2xl z-10">
+                    <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                        </svg>
+                        Deploy New Servers
+                    </a>
+                    <div class="w-full my-1 border-b border-b-neutral-200"></div>
+                    <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                        </svg>
+                        Add Database
+                    </a>
+                    <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                        </svg>
+                        Add Block Storage
+                    </a>
+                    <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                        </svg>
+                        Add Kubernetes
+                    </a>
+                    <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
+                            <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
+                        </svg>
+                        Add Object Storage
+                    </a>
+                    <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-gray-700 group-hover/btn:stroke-blue-700 transition" d="M4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13Z" stroke="black" stroke-width="2"/>
+                            <path class="stroke-gray-700 group-hover/btn:stroke-blue-700 transition" d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="black" stroke-width="2"/>
+                            <path class="stroke-gray-700 group-hover/btn:stroke-blue-700 transition" d="M20 13C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13Z" stroke="black" stroke-width="2"/>
+                        </svg>
+                        View More Options
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w-full border-b border-b-neutral-200"></div>
+
+        <div class="tab-content-wrap container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content flex-col max-w-md" id="profile-tab">
+                <h5 class="text-2xl text-gray-700 mb-4">Your Details</h5>
+                
+                <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                    <div class="flex gap-3 mb-5">
+                        <div class="field w-full">
+                            <input type="text" id="fname-input" name="fname-input" class="floating-input w-full" value="MD Mostain" placeholder=" ">
+                            <label for="fname-input" class="floating-label"><span class="text-red-700">*</span> First Name</label>
+                        </div>
+
+                        <div class="field w-full">
+                            <input type="text" id="lname-input" name="lname-input" class="floating-input w-full" value="Billah" placeholder=" ">
+                            <label for="lname-input" class="floating-label"><span class="text-red-700">*</span> Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" id="email-input" name="email-input" disabled class="floating-input w-full" value="pay@mateors.com"  placeholder=" ">
+                        <label for="email-input" class="floating-label">Email</label>
+                    </div>
+                    <a href="" class="text-xs text-blue-500 flex justify-end mb-3">Change Email Address</a>
+                    
+                    
+                    <div class="flex gap-2 mb-5">
+
+                        <div class="field">
+                            <input class="intl-input !w-0 !p-0 !border-transparent !-z-10" name="intl-input" id="intl-input" type="tel">
+                        </div>
+                        <div class="field w-full">
+                            <input type="tel" id="phone-input" name="phone-input" class="floating-input w-full" value="3365822922" placeholder=" ">
+                            <label for="phone-input" class="floating-label"><span class="text-red-700">*</span> Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="address1-input" name="address1-input" class="floating-input w-full" value="35-46 74 street" placeholder=" ">
+                        <label for="address1-input" class="floating-label"><span class="text-red-700">*</span> Address</label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="address2-input" name="address2-input" class="floating-input w-full" value="Apartment # 406" placeholder=" ">
+                        <label for="address2-input" class="floating-label">Address 2 (optional)</label>
+                    </div>
+
+                    <div class="flex gap-4 mb-5">
+                        <div class="field w-full">
+                            <input type="text" id="city-input" name="city-input" class="floating-input w-full" value="Jackson Heights" placeholder=" ">
+                            <label for="city-input" class="floating-label"><span class="text-red-700">*</span> City</label>
+                        </div>
+
+                        <div class="field ">
+                            <input type="text" id="zip-input" name="zip-input" class="floating-input w-full" value="11372" placeholder=" ">
+                            <label for="zip-input" class="floating-label"><span class="text-red-700">*</span> Zip Code</label>
+                        </div>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="country-select" class="">
+                            <span class="text-red-700">*</span> Country/Region
+                        </label>
+                        
+                        <select  id="country-select" name="country-select" class="custom-select">
+                            <option value="" disabled>Select Country :</option>
+                            <option value="Bangladesh" selected>Bangladesh</option>
+                            <option value="United State">United State</option>
+                            <option value="India">India</option>
+                        </select>
+                    </div>
+
+                    <div class="field mb-5">
+                        <input type="text" id="company-input" name="company-input" class="floating-input w-full" placeholder=" ">
+                        <label for="company-input" class="floating-label">Company</label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="company-link-input" name="company-link-input" class="floating-input w-full" placeholder=" ">
+                        <label for="company-link-input" class="floating-label">Company URL (Optional)</label>
+                    </div>
+
+                    <div class="select-field mb-5 overflow-hidden">
+                        <label for="business-catagory-select" class="whitespace-nowrap">
+                            <span class="text-red-700 ">*</span> What catagory best describe your business?
+                        </label>
+                        
+                        <select  id="business-catagory-select" name="business-catagory-select" class="custom-select">
+                            <option value="0" disabled selected>Please Choose</option>
+                            <option value="Ecommerce">Ecommerce</option>
+                            <option value="Education">Education</option>
+                            <option value="Health Care">Health Care</option>
+                        </select>
+                    </div>
+                    <div class="select-field mb-5 overflow-hidden">
+                        <label for="business-size-select" class="whitespace-nowrap">
+                            <span class="text-red-700">*</span> What is the size of your business organization?
+                        </label>
+                        
+                        <select  id="business-size-select" name="business-size-select" class="custom-select">
+                            <option value="0" disabled selected>Please Choose</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Small Business">Small Business</option>
+                            <option value="Large Business">Large Business</option>
+                        </select>
+                    </div>
+
+                    <div class="field mb-5">
+                        <label for="company-link-input" class=""><span class="text-red-700">*</span> Describe the service(s) you are running with your account.</label>
+                        <textarea rows="4" id="company-link-input" name="company-link-input" class="w-full mt-2"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <button class="filled-button w-full" type="submit">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tab-content flex-col max-w-md" id="preference-tab">
+                <h5 class="text-2xl text-gray-700 mb-4">User Preferences</h5>
+
+                <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                    <div class="flex flex-col items-center gap-2 my-6 radio-fields">
+                        <label class="radio-box w-60">
+                            <input type="radio" class="custom-radio" name="ammount" id="ammount" checked>
+                            <div class="checkmark-box flex-col bg-neutral-100">
+                                <img class="w-32 mt-6" src="/resources/img/theme-preview--light.svg" alt="">
+                                <div class="w-full border-b border-b-neutral-200"></div>
+                                <p class="p-1.5">Light Mode</p>
+                            </div>
+                        </label>
+                        <label class="radio-box w-60">
+                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                            <div class="checkmark-box flex-col bg-gray-700">
+                                <img class="w-32 mt-6" src="/resources/img/theme-preview--dark.svg" alt="">
+                                <div class="w-full border-b border-b-neutral-600"></div>
+                                <p class="text-gray-200 p-1.5">Dark Mode</p>
+                            </div>
+                        </label>
+                        
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="timezone-select" class="">
+                            Display Timezone
+                        </label>
+                        
+                        <select  id="timezone-select" name="timezone-select" class="custom-select search">
+                            <!-- <option value="0" disabled selected></option> -->
+                            <option value="abidjan" selected>(GMT-0:00) - Abidjan</option>
+                            <option value="dhaka">(GMT +6:00) - Dhaka</option>
+                        </select>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="date-format-select" class="">
+                            Date Format
+                        </label>
+                        
+                        <select  id="date-format-select" name="date-format-select" class="custom-select search">
+                            <!-- <option value="0" disabled selected></option> -->
+                            <option value="y-m-d" selected>YYYY-MM-DD</option>
+                            <option value="m-d-y">MM-DD-YYYY</option>
+                            <option value="d-m-y">DD-MM-YYYY</option>
+                        </select>
+                    </div>
+
+                    <div class="field my-6">
+                        <label class="field switch-field w-full justify-between">
+                            <span class="text-gray-700">Enable screen reader enhancements</span>
+                            <input type="checkbox" class="custom-checkbox" name="enabled" id="checkbox-enabled">
+                            <div class="switch"></div>
+                        </label>
+                    </div>
+
+                    <div class="field">
+                        <button class="filled-button w-full" type="submit">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-content flex-col max-w-md" id="authentication-tab">
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Two Factor Authentication</h5>
+                    <p class="text-gray-700 mb-5">
+                        Keep your account secure by enabling two-factor authentication. Each time you log in, you’ll be required to provide your password plus a randomly generated access code.
+                    </p>
+                    <div class="field mb-5">
+                        <button class="!bg-gray-200 !text-gray-700 hover:!bg-blue-200 hover:!text-blue-600 filled-button w-full" type="submit">
+                            Manage Two Factor Authentication
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Trusted Device Security</h5>
+                    <p class="text-gray-700 mb-5">
+                        If you don't have Two Factor Authentication enabled, you can add an extra layer of security by requiring email verification when you sign in from an unknown device.
+                    </p>
+                    <div class="field mb-5">
+                        <button class="filled-button w-full" type="submit">
+                            Enable Trusted Device Security
+                        </button>
+                    </div>
+                </div>
+                <form id="reset-password" name="reset-password" action="" method="" class="w-full">
+                    <div class="field mb-5">
+                        <input type="text" id="current-password" name="current-password" class="floating-input w-full" placeholder=" ">
+                        <label for="current-password" class="floating-label">
+                            Current Password
+                        </label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="new-password" name="new-password" class="floating-input w-full" placeholder=" ">
+                        <label for="new-password" class="floating-label">
+                            New Password
+                        </label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="confirm-password" name="confirm-password" class="floating-input w-full" placeholder=" ">
+                        <label for="confirm-password" class="floating-label">
+                            Confirm Password
+                        </label>
+                    </div>
+                    <button class="filled-button w-full" type="submit">
+                        Change Password
+                    </button>
+                </form>
+            </div>
+            <div class="tab-content flex-col max-w-lg" id="ssh-tab">
+                <div class="w-full table-wrap border border-gray-200 rounded mb-6">
+                    <table class="w-full text-left">
+                        <thead class="h-14 border-b w-full">
+                            <tr>
+                                <th class="px-3 w-full sm:w-1/3">
+                                    <p class="font-normal text-slate-400">Name</p>
+                                </th>
+                                <th class="px-3 w-14 md:w-2/3 hidden sm:table-cell">
+                                    <p class="font-normal text-slate-400">Date Created</p>
+                                </th>
+                                <th class="px-3"></th>
+                                <th class="px-3"></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="h-16 border-b hover:bg-blue-50 transition">
+                                <td class="px-3">
+                                    <p class="font-normal text-sm text-slate-600">mastererp</p>
+                                </td>
+                                <td class="px-3 hidden sm:table-cell">
+                                    <p class="font-normal text-sm text-slate-600">2018-03-05 03:54:57</p>
+                                </td>
+                                <td class="px-4 ">
+                                    <button class="menu-btn flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Edit SSH Key" data-modal="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                        </svg>
+                                    </button>
+                                </td>
+                                <td class="px-4 ">
+                                    <button class="flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Delete SSH Key">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-slate-400 group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                                        </svg>
+                                    </button>
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="collapsible-wrap">
+                    <div class="collapsible flex-wrap">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-blue-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="">Using SSH Keys</span>
+                    </div>
+                    <div class="collapsible-content pl-7 text-gray-700">
+                        <ul class="p-4">
+                            <li>
+                                Need help creating keys? <br>
+                                See our tutorial on 
+                                <a class="text-blue-600" href="">generating SSH keys</a>.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content flex-col max-w-lg" id="api-tab">
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Personal Access Token</h5>
+                    <p class="text-gray-700 mb-5">
+                        Integrate with the 
+                        <a href="" class="text-blue-500">Vultr API</a> 
+                        to quickly spin up, destroy, and control your instances using this API key.
+                    </p>
+                    <div class="field mb-5" data-copy-clipboard>
+                        <input type="text" id="apikey-input" name="apikey-input" readonly class="floating-input copy-content w-full" data-copy-content value="LGB2YSKJTED7OE3ONIULGVAHKQ7" placeholder=" ">
+                        <label for="apikey-input" class="floating-label">API Key</label>
+                        <button class="menu-btn copy-button group/btn h-11 !w-11 grid place-items-center bg-gray-100 tooltip-top transition-all !absolute top-1/2 -translate-y-1/2 right-11" data-copy-button data-tooltip="Copy API key to Clipboard" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-500 group-hover/btn:fill-blue-500" d="M9 18C8.45 18 7.97933 17.8043 7.588 17.413C7.196 17.021 7 16.55 7 16V4C7 3.45 7.196 2.979 7.588 2.587C7.97933 2.19567 8.45 2 9 2H18C18.55 2 19.021 2.19567 19.413 2.587C19.8043 2.979 20 3.45 20 4V16C20 16.55 19.8043 17.021 19.413 17.413C19.021 17.8043 18.55 18 18 18H9ZM9 16H18V4H9V16ZM5 22C4.45 22 3.979 21.8043 3.587 21.413C3.19567 21.021 3 20.55 3 20V7C3 6.71667 3.096 6.479 3.288 6.287C3.47933 6.09567 3.71667 6 4 6C4.28333 6 4.521 6.09567 4.713 6.287C4.90433 6.479 5 6.71667 5 7V20H15C15.2833 20 15.521 20.096 15.713 20.288C15.9043 20.4793 16 20.7167 16 21C16 21.2833 15.9043 21.5207 15.713 21.712C15.521 21.904 15.2833 22 15 22H5ZM9 4V16V4Z" fill="black"/>
+                            </svg>
+                        </button>
+                        <button class="group/btn h-11 !w-11 grid place-items-center bg-gray-100 tooltip-top transition-all !absolute top-1/2 -translate-y-1/2 right-1" data-tooltip="Generate new API Key" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-gray-500 group-hover/btn:fill-blue-500" d="M19.33 6.69401L19.75 5.31701C19.7884 5.1914 19.8512 5.07459 19.9347 4.97324C20.0183 4.87189 20.121 4.78799 20.237 4.72633C20.3529 4.66468 20.4799 4.62647 20.6107 4.61389C20.7414 4.6013 20.8734 4.6146 20.999 4.65301C21.1246 4.69142 21.2414 4.7542 21.3427 4.83775C21.4441 4.92131 21.528 5.02401 21.5897 5.13999C21.6513 5.25597 21.6895 5.38296 21.7021 5.51371C21.7147 5.64446 21.7014 5.7764 21.663 5.90201L20.493 9.72701C20.4154 9.9805 20.2404 10.1928 20.0064 10.3173C19.7724 10.4418 19.4985 10.4683 19.245 10.391L15.42 9.22101C15.2917 9.18492 15.172 9.12356 15.0678 9.04055C14.9636 8.95754 14.8771 8.85455 14.8132 8.73762C14.7494 8.6207 14.7096 8.49219 14.6961 8.35966C14.6826 8.22713 14.6957 8.09323 14.7347 7.96584C14.7737 7.83846 14.8377 7.72014 14.923 7.61784C15.0084 7.51554 15.1133 7.43133 15.2316 7.37014C15.35 7.30895 15.4793 7.27202 15.6121 7.26153C15.7449 7.25103 15.8785 7.26717 16.005 7.30901L17.677 7.82001C16.9378 6.69891 15.9068 5.80069 14.695 5.22209C13.4832 4.6435 12.1366 4.40645 10.8 4.53649C9.4635 4.66652 8.18777 5.1587 7.11023 5.96003C6.03268 6.76135 5.19416 7.84145 4.68498 9.08401L4.42498 9.71701C4.37769 9.84197 4.30584 9.95618 4.21368 10.0529C4.12152 10.1496 4.01091 10.2269 3.88839 10.2802C3.76586 10.3334 3.63391 10.3616 3.50031 10.363C3.36672 10.3644 3.23419 10.3391 3.11056 10.2884C2.98694 10.2378 2.87471 10.1629 2.78052 10.0681C2.68633 9.97336 2.61208 9.86069 2.56215 9.73677C2.51222 9.61285 2.48764 9.48018 2.48984 9.34659C2.49204 9.21301 2.52099 9.08122 2.57498 8.95901L2.83498 8.32601C3.48121 6.74929 4.5447 5.37836 5.91125 4.36043C7.27781 3.3425 8.89583 2.71601 10.5916 2.54824C12.2873 2.38047 13.9967 2.67774 15.5362 3.40814C17.0758 4.13855 18.3873 5.27449 19.33 6.69401V6.69401ZM3.80798 17.307L3.48098 18.618C3.45172 18.748 3.39677 18.8709 3.31935 18.9794C3.24193 19.0878 3.14362 19.1798 3.03017 19.2497C2.91673 19.3196 2.79045 19.3662 2.65876 19.3866C2.52706 19.4071 2.39261 19.401 2.26331 19.3687C2.134 19.3365 2.01245 19.2787 1.90579 19.1988C1.79913 19.1189 1.70952 19.0185 1.64222 18.9034C1.57493 18.7884 1.53131 18.6611 1.51392 18.5289C1.49653 18.3968 1.50573 18.2625 1.54098 18.134L2.50798 14.254C2.5406 14.1219 2.59984 13.9978 2.68208 13.8894C2.76431 13.781 2.86781 13.6905 2.98623 13.6235C3.10465 13.5565 3.23551 13.5143 3.37079 13.4996C3.50607 13.4849 3.64292 13.498 3.77298 13.538L7.60098 14.492C7.85837 14.5562 8.07972 14.72 8.21634 14.9474C8.35296 15.1748 8.39366 15.4471 8.32948 15.7045C8.26529 15.9619 8.10149 16.1833 7.8741 16.3199C7.64671 16.4565 7.37437 16.4972 7.11698 16.433L5.33098 15.988C6.09449 17.1569 7.17373 18.0853 8.44352 18.6656C9.7133 19.246 11.1216 19.4544 12.5051 19.2668C13.8885 19.0793 15.1904 18.5033 16.2598 17.6058C17.3292 16.7083 18.1223 15.526 18.547 14.196C18.6276 13.9433 18.8053 13.7329 19.0411 13.6112C19.1578 13.5509 19.2852 13.5142 19.4161 13.5032C19.547 13.4922 19.6788 13.5071 19.804 13.547C19.9291 13.5869 20.0452 13.6511 20.1455 13.7359C20.2459 13.8207 20.3285 13.9244 20.3888 14.0411C20.4491 14.1578 20.4858 14.2853 20.4968 14.4162C20.5078 14.5471 20.4929 14.6789 20.453 14.804C20.0367 16.11 19.3392 17.3088 18.4097 18.3163C17.4802 19.3237 16.3413 20.1152 15.073 20.635C13.0968 21.4446 10.9036 21.5561 8.85553 20.951C6.80745 20.3459 5.02694 19.0605 3.80798 17.307V17.307Z" fill="black"/>
+                                </svg>
+                        </button>
+                    </div>
+                    <div class="field mb-5">
+                        <button class="outline-button w-full" type="submit">
+                            Disable API
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Access Control</h5>
+                    <p class="text-gray-700 mb-5">
+                        The following subnets are allowed to use this API key.
+                    </p>
+                    <div class="w-full table-wrap border border-gray-200 rounded mb-6">
+                        <table class="w-full text-left">
+                            <thead class="h-14 border-b w-full">
+                                <tr>
+                                    <th class="px-3 w-full">
+                                        <p class="font-normal text-slate-400">Subnet</p>
+                                    </th>
+                                    <th class="px-3 text-right">
+                                        <p class="font-normal text-slate-400">Action</p>
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="h-16 border-b hover:bg-blue-50 transition">
+                                    <td class="px-3">
+                                        <p class="font-normal text-sm text-slate-600">103.124.226.101/32</p>
+                                    </td>
+                                    <td class="px-4 text-right">
+                                        <button class="border border-gray-200 bg-white text-sm font-medium text-slate-600 px-3 py-2">
+                                            Remove
+                                        </button>
+                                    </td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <form id="credit-info" name="credit-info" action="" method="" class="flex items-center gap-2 w-full mb-6">
+                        <div class="field w-full">
+                            <input type="number" id="subnet-input" name="subnet-input" class="w-full" placeholder="203.0.113.24">
+                        </div>
+                        <p class="">/</p>
+                        <div class="field">
+                            <input type="number" id="subnet-input" name="subnet-input" class="w-full" placeholder="32">
+                        </div>
+                        <div class="field">
+                            <button class="filled-button" type="submit">
+                                ADD
+                            </button>
+                        </div>
+                    </form>
+                    <div class="field sm:flex gap-3 mb-5">
+                        <button class="filled-button mb-3 sm:mb-0" type="button">
+                            Allow All IPv4
+                        </button>
+
+                        <button class="filled-button" type="button">
+                            Allow All IPv6
+                        </button>
+                    </div>
+
+                    <div class="border border-blue-500 rounded-sm p-4 flex items-center gap-5">
+                        <p class="text-sm text-gray-500">
+                            <span class="font-medium">Integrating with cloud automation tools?</span>
+                            Visit the Vultr GitHub page for our official Terraform driver and more!
+                        </p>
+
+                        <button class="filled-button text-sm" type="button">
+                            Vultr <br> GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content flex-col max-w-lg" id="user-tab">
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Users</h5>
+                   
+                    <div class="border border-gray-200 p-6 py-14 grid place-items-center">
+                        <p class="text-2xl text-gray-700 mb-5">
+                            No Users
+                        </p>
+                        <p class="text-gray-700 mb-12 text-center sm:text-left">
+                            Add new users with full or limited access to your account.
+                        </p>
+                        <button class="filled-button">
+                            Add New User
+                        </button>
+                    </div>
+
+                    
+                </div>
+
+                <div class="">
+                    <h5 class="text-2xl text-gray-700 mb-4">Single Sign-On</h5>
+
+                    <div class="border border-gray-200 p-6 grid place-items-center">
+                        <div class="flex items-center gap-2 mb-5">
+                            <img class="w-14 h-14 hidden sm:block" src="/resources/img/icon_sso.svg" alt="">
+                            <p class="text-gray-700 text-center sm:text-left">
+                                Vultr supports third party single sign-on via OpenID Connect. Once configured, all users on the account will need to sign in via OpenID. 
+                                <a href="" class="text-blue-500">Learn more.</a>
+                            </p>
+                        </div>
+                        
+                        <button class="filled-button w-full">
+                            Add New User
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content flex-col max-w-md" id="notification-tab">
+                <div class="mb-9">
+                    <h5 class="text-2xl text-gray-700 mb-5">Maintenance and Outage Notifications</h5>
+
+                    <div class="field">
+                        <label class="field switch-field w-full justify-between" for="checkbox-send">
+                            <span class="text-gray-700">Send E-mails for Outage and Maintenance</span>
+                            <input type="checkbox" class="custom-checkbox" name="enabled" id="checkbox-send" name="checkbox-send">
+                            <div class="switch"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-9">
+                    <h5 class="text-2xl text-gray-700 mb-5">Bandwidth Preferences</h5>
+
+                    <div class="field mb-5">
+                        <label class="field switch-field w-full justify-between" for="checkbox-sendon-bandwidth">
+                            <span class="text-gray-700 flex items-center gap-2">
+                                Send E-mails on Bandwidth Usage
+                                <button class="group/btn transition-all tooltip-top" data-tooltip="Notified when any server exceeds 75% of the bandwidth.">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-gray-500 group-hover/btn:fill-blue-500 transition-all" d="M11.95 18C12.3 18 12.596 17.879 12.838 17.637C13.0793 17.3957 13.2 17.1 13.2 16.75C13.2 16.4 13.0793 16.1043 12.838 15.863C12.596 15.621 12.3 15.5 11.95 15.5C11.6 15.5 11.304 15.621 11.062 15.863C10.8207 16.1043 10.7 16.4 10.7 16.75C10.7 17.1 10.8207 17.3957 11.062 17.637C11.304 17.879 11.6 18 11.95 18ZM11.05 14.15H12.9C12.9 13.6 12.9627 13.1667 13.088 12.85C13.2127 12.5333 13.5667 12.1 14.15 11.55C14.5833 11.1167 14.925 10.704 15.175 10.312C15.425 9.92067 15.55 9.45 15.55 8.9C15.55 7.96667 15.2083 7.25 14.525 6.75C13.8417 6.25 13.0333 6 12.1 6C11.15 6 10.3793 6.25 9.788 6.75C9.196 7.25 8.78333 7.85 8.55 8.55L10.2 9.2C10.2833 8.9 10.471 8.575 10.763 8.225C11.0543 7.875 11.5 7.7 12.1 7.7C12.6333 7.7 13.0333 7.84567 13.3 8.137C13.5667 8.429 13.7 8.75 13.7 9.1C13.7 9.43333 13.6 9.74567 13.4 10.037C13.2 10.329 12.95 10.6 12.65 10.85C11.9167 11.5 11.4667 11.9917 11.3 12.325C11.1333 12.6583 11.05 13.2667 11.05 14.15V14.15ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="black"/>
+                                    </svg>
+                                </button>
+                            </span>
+                            <input type="checkbox" class="custom-checkbox" checked id="checkbox-sendon-bandwidth" name="checkbox-sendon-bandwidth">
+                            <div class="switch"></div>
+                        </label>
+                    </div>
+
+                    <div class="field mb-5">
+                        <label class="field switch-field w-full justify-between" for="checkbox-stop-bandwidth">
+                            <span class="text-gray-700 flex items-center gap-2">
+                                Stop Servers on Bandwidth Usage
+                                <button class="group/btn transition-all tooltip-top" data-tooltip="Usage checked hourly">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-gray-500 group-hover/btn:fill-blue-500 transition-all" d="M11.95 18C12.3 18 12.596 17.879 12.838 17.637C13.0793 17.3957 13.2 17.1 13.2 16.75C13.2 16.4 13.0793 16.1043 12.838 15.863C12.596 15.621 12.3 15.5 11.95 15.5C11.6 15.5 11.304 15.621 11.062 15.863C10.8207 16.1043 10.7 16.4 10.7 16.75C10.7 17.1 10.8207 17.3957 11.062 17.637C11.304 17.879 11.6 18 11.95 18ZM11.05 14.15H12.9C12.9 13.6 12.9627 13.1667 13.088 12.85C13.2127 12.5333 13.5667 12.1 14.15 11.55C14.5833 11.1167 14.925 10.704 15.175 10.312C15.425 9.92067 15.55 9.45 15.55 8.9C15.55 7.96667 15.2083 7.25 14.525 6.75C13.8417 6.25 13.0333 6 12.1 6C11.15 6 10.3793 6.25 9.788 6.75C9.196 7.25 8.78333 7.85 8.55 8.55L10.2 9.2C10.2833 8.9 10.471 8.575 10.763 8.225C11.0543 7.875 11.5 7.7 12.1 7.7C12.6333 7.7 13.0333 7.84567 13.3 8.137C13.5667 8.429 13.7 8.75 13.7 9.1C13.7 9.43333 13.6 9.74567 13.4 10.037C13.2 10.329 12.95 10.6 12.65 10.85C11.9167 11.5 11.4667 11.9917 11.3 12.325C11.1333 12.6583 11.05 13.2667 11.05 14.15V14.15ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="black"/>
+                                    </svg>
+                                </button>
+                            </span>
+                            <input type="checkbox" class="custom-checkbox" id="checkbox-stop-bandwidth" name="checkbox-stop-bandwidth">
+                            <div class="switch"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="">
+                    <h5 class="text-2xl text-gray-700 mb-5">Invoice Preference</h5>
+
+                    <div class="flex items-center gap-2">
+                        <div class="select-field w-full">
+                            <label for="invoice-select" class="">
+                                New Invoice Notification
+                            </label>
+                            
+                            <select  id="invoice-select" name="invoice-select" class="custom-select">
+                                <!-- <option value="0" disabled selected></option> -->
+                                <option value="None" selected>None</option>
+                                <option value="email">By Email</option>
+                                <option value="email-attach">By Email and Attach Invoice</option>
+                            </select>
+                        </div>
+
+                        <button class="filled-button">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#country-select').select2({
+    placeholder :'',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-catagory-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-size-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#timezone-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#date-format-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#invoice-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+
+
+    var phoneInput = document.querySelector("#intl-input");
+
+    window.intlTelInput(phoneInput, {
+        initialCountry: "bd",
+        separateDialCode: true,
+        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
+    });
+</script>
+{{end}}
