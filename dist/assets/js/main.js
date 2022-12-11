@@ -16,10 +16,14 @@ navItems.forEach(navItem => {
 var navigations = document.querySelectorAll("aside nav > a.nav-item");
 
 navigations.forEach(navigation => {
-    var currentPageLocation = location.href;
-    // console.log(currentPageLocation);
+    // var currentPageLocation = location.href;
+    var locationUrlSplit = location.pathname.split("/");
+    var rootPage = locationUrlSplit[1];
     
-    if(navigation.href === currentPageLocation){
+    var navUrlSplit = navigation.pathname.split("/");
+    var navUrl = navUrlSplit[1];
+
+    if(navUrl === rootPage){
         navigation.classList.add("active")
     }
 });

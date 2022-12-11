@@ -924,4 +924,8 @@ nav .nav-item.active {
   @apply text-white
             bg-blue-1000
             before:visible;
+}
+
+#add-package form input[type=checkbox]:checked + label {
+  @apply text-blue-600;
 }/*# sourceMappingURL=main.css.map */

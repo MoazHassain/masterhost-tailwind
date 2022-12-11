@@ -778,8 +778,8 @@ video {
   margin-top: 2.25rem;
 }
 
-.mb-7 {
-  margin-bottom: 1.75rem;
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .mt-1\.5 {
@@ -788,6 +788,10 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
 }
 
 .mt-4 {
@@ -812,6 +816,10 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .block {
@@ -955,14 +963,6 @@ video {
   width: 1.5rem;
 }
 
-.w-1\/12 {
-  width: 8.333333%;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -979,6 +979,14 @@ video {
   width: 0px;
 }
 
+.w-1\/12 {
+  width: 8.333333%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -987,12 +995,12 @@ video {
   max-width: 32rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .shrink-0 {
@@ -1106,16 +1114,8 @@ video {
   gap: 2.25rem;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-scroll {
-  overflow: scroll;
 }
 
 .overflow-x-auto {
@@ -1128,14 +1128,6 @@ video {
 
 .overflow-y-clip {
   overflow-y: clip;
-}
-
-.overflow-y-visible {
-  overflow-y: visible;
-}
-
-.overflow-x-scroll {
-  overflow-x: scroll;
 }
 
 .overflow-y-scroll {
@@ -1158,12 +1150,12 @@ video {
   border-radius: 0.25rem;
 }
 
-.\!rounded {
-  border-radius: 0.25rem !important;
-}
-
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.\!rounded {
+  border-radius: 0.25rem !important;
 }
 
 .rounded-t-lg {
@@ -1196,14 +1188,14 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
 .border-neutral-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .border-blue-500 {
@@ -1450,11 +1442,6 @@ video {
   padding-right: 1rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -1473,6 +1460,11 @@ video {
 .\!px-6 {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pl-7 {
@@ -2939,6 +2931,11 @@ nav .nav-item.active::before {
   visibility: visible;
 }
 
+#add-package form input[type=checkbox]:checked + label {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .hover\:-translate-y-4:hover {
   --tw-translate-y: -1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3144,16 +3141,16 @@ nav .nav-item.active::before {
     width: 33.333333%;
   }
 
+  .md\:w-1\/6 {
+    width: 16.666667%;
+  }
+
   .md\:w-2\/3 {
     width: 66.666667%;
   }
 
   .md\:w-1\/5 {
     width: 20%;
-  }
-
-  .md\:w-1\/6 {
-    width: 16.666667%;
   }
 
   .md\:grid-cols-3 {
@@ -3180,14 +3177,14 @@ nav .nav-item.active::before {
     gap: 2.25rem;
   }
 
-  .md\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 

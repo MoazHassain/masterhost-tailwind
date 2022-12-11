@@ -1,0 +1,103 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        
+
+        <div class="container max-w-7xl">
+            <h1 class="my-10 text-4xl font-light">Add Database User</h1>
+
+            <div class="border border-neutral-200 p-8 max-w-lg">
+                <form  action="/dashboard-home/databases" method="" name="add-domain-form" class="">
+                    <div class="field mb-5">
+                        <input type="text" id="dbuser-input" name="dbuser-input" class="floating-input w-full" placeholder=" ">
+                        <label for="dbuser-input" class="floating-label">Database Username <span class="text-red-700">*</span></label>
+                    </div>
+
+                    <div class="field pass-field relative mb-5" data-toggle>
+                        <input type="password" id="pass-input" name="pass-input" class="floating-input w-full" value=""  placeholder=" ">
+                        <label for="pass-input" class="floating-label">User Password <span class="text-red-700">*</span></label>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon active-icon" data-toggle-passicon>visibility</span>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon hidden-icon" data-toggle-passicon>visibility_off</span>
+                    </div>
+
+                    <!-- <button class="ml-auto filled-button !bg-blue-500 hover:!bg-blue-600 !text-white !rounded mb-5" type="button">
+                        Generate Password
+                    </button> -->
+
+                    <div class="field pass-field relative mb-5" data-toggle>
+                        <input type="password" id="confirm-pass-input" name="confirm-pass-input" class="floating-input w-full" value=""  placeholder=" ">
+                        <label for="confirm-pass-input" class="floating-label">Confirm Password <span class="text-red-700">*</span></label>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon active-icon" data-toggle-passicon>visibility</span>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon hidden-icon" data-toggle-passicon>visibility_off</span>
+                    </div>
+
+                    <div class="field flex gap-4 items-start md:items-center mb-5">
+                        <input type="checkbox" name="link-checkbox" id="link-checkbox" class="shrink-0 mt-1.5 md:mt-0">
+                        <label for="link-checkbox" class="text-gray-600 mb-0">
+                            Allow local connections only
+                        </label>
+                    </div>
+
+                    <div class="field mt-9">
+                        <button class="filled-button w-full" type="submit">Add Database User</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#db-name-select').select2({
+    placeholder :'ex: example@mateors.com',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#dbtype-select').select2({
+    placeholder :'ex: aaa',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+
+    var radioFields = document.querySelectorAll(".radio-fields .radio-box");
+    var otherBtn = document.querySelector("[data-other-btn] input");
+    var otherContent = document.querySelector("[data-other-content]");
+
+    radioFields.forEach(radioField => {
+        console.log(radioField)
+        radioField.addEventListener('change', () => {
+            if (otherBtn.checked == true) {
+                otherContent.style.display = "block";
+            } else {
+                otherContent.style.display = "none";
+            }
+        })
+    })
+</script>
+{{end}}

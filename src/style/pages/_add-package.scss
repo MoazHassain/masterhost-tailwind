@@ -1,0 +1,25 @@
+#add-package
+{
+    form 
+    {
+        input[type="checkbox"]
+        {
+            &:checked + label 
+            {
+                @apply
+                text-blue-600;
+            }
+        }
+
+        // .checkbox-wrap
+        // {
+        //     &.checkbox-active 
+        //     {
+        //         input[type="number"]
+        //         {
+
+        //         }
+        //     }
+        // }
+    }
+}

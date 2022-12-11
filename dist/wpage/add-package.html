@@ -1,0 +1,198 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content" id="add-package">
+        
+
+        <div class="container max-w-7xl">
+            <h1 class="my-10 text-4xl font-light">Add Package</h1>
+
+            <div data-message="" class="my-10 message px-5 py-3 border-l-4 border-l-green-800 shadow-lg text-green-600 ">
+                <p class="text-sm inline">Introducing Vultr Cloud GPUs powered by the NVIDIA A40. 
+                    <a href="" class="font-bold underline">Provision your instance now.</a>
+                </p>
+                <button data-close-message="" class="text-left sm:float-right">Dismiss</button>
+            </div>
+
+            <div class="border border-neutral-200 p-8 mb-16 max-w-lg">
+                <form  action="/dashboard-home/packages" method="" name="add-package-form" class="add-package-form">
+                    
+                    <div class="field mb-5">
+                        <input type="text" id="package-input" name="package-input" class="floating-input w-full" placeholder=" ">
+                        <label for="package-input" class="floating-label">Package Name</label>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="diskspace-input" name="diskspace-input" class="floating-input w-full" placeholder=" ">
+                            <label for="diskspace-input" class="floating-label">Disk Space (MB)</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="diskspace-checkbox" id="diskspace-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="diskspace-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="traffic-input" name="traffic-input" class="floating-input w-full" placeholder=" ">
+                            <label for="traffic-input" class="floating-label">Traffic</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="traffic-checkbox" id="traffic-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="traffic-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="domains-input" name="domains-input" class="floating-input w-full" placeholder=" ">
+                            <label for="domains-input" class="floating-label">Domains</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="domain-checkbox" id="domain-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="domain-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="subdomains-input" name="subdomains-input" class="floating-input w-full" placeholder=" ">
+                            <label for="subdomains-input" class="floating-label">Sub Domains</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="subdomain-checkbox" id="subdomain-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="subdomain-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="mailbox-input" name="mailbox-input" class="floating-input w-full" placeholder=" ">
+                            <label for="mailbox-input" class="floating-label">Mailboxes</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="mailbox-checkbox" id="mailbox-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="mailbox-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="mailsize-input" name="mailsize-input" class="floating-input w-full" placeholder=" ">
+                            <label for="mailsize-input" class="floating-label">Mailbox Size</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="mailsize-checkbox" id="mailsize-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="mailsize-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="maillimit-input" name="maillimit-input" class="floating-input w-full" placeholder=" ">
+                            <label for="maillimit-input" class="floating-label">Mail Limit (Hour)</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="maillimit-checkbox" id="maillimit-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="maillimit-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="ftp-account-input" name="ftp-account-input" class="floating-input w-full" placeholder=" ">
+                            <label for="ftp-account-input" class="floating-label">FTP Account</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="ftp-account-checkbox" id="ftp-account-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="ftp-account-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-wrap flex items-center gap-5 mb-5">
+                        <div class="field w-full">
+                            <input type="number" id="databases-input" name="databases-input" class="floating-input w-full" placeholder=" ">
+                            <label for="databases-input" class="floating-label">Databases</label>
+                        </div>
+                        <div class="field flex gap-4 items-start md:items-center">
+                            <input type="checkbox" name="databases-checkbox" id="databases-checkbox" value="unlimited" class="shrink-0 mt-1.5 md:mt-0">
+                            <label for="databases-checkbox" class="text-gray-600 mb-0 transition">
+                                Unlimited
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field mt-9">
+                        <button class="filled-button w-full" type="submit">Add Package</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    // $('.custom-select').select2({
+    // placeholder :'',
+    // width: '100%',
+    // // allowClear:true,
+        
+    // });
+
+    var checkboxWraps = document.querySelectorAll("form .checkbox-wrap");
+    
+        checkboxWraps.forEach(checkboxWrap => {
+            var checkbox = checkboxWrap.querySelector("input[type='checkbox']");
+            var textfield = checkboxWrap.querySelector("input[type='number']");
+            
+            checkboxWrap.addEventListener("change", ()=> {
+                if (checkbox.checked == true) {
+                    textfield.disabled = true;
+                } else {
+                    textfield.disabled = false;
+            }
+            })
+
+        })
+</script>
+{{end}}
