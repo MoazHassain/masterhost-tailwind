@@ -1,0 +1,150 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <div class="container max-w-7xl my-10">
+            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-slate-500">pay@mateors.com</p>
+        </div>
+        
+        {{block "tab-button" .}}
+        {{end}}
+        
+        {{block "tab-content" .}}
+        <div class="container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content flex-col max-w-md" id="preference-tab">
+                <h5 class="text-2xl text-gray-700 mb-4">User Preferences</h5>
+
+                <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                    <div class="flex flex-col items-center gap-2 my-6 radio-fields">
+                        <label class="radio-box w-60">
+                            <input type="radio" class="custom-radio" name="ammount" id="ammount" checked>
+                            <div class="checkmark-box flex-col bg-neutral-100">
+                                <img class="w-32 mt-6" src="/resources/img/theme-preview--light.svg" alt="">
+                                <div class="w-full border-b border-b-neutral-200"></div>
+                                <p class="p-1.5">Light Mode</p>
+                            </div>
+                        </label>
+                        <label class="radio-box w-60">
+                            <input type="radio" class="custom-radio" name="ammount" id="ammount">
+                            <div class="checkmark-box flex-col bg-gray-700">
+                                <img class="w-32 mt-6" src="/resources/img/theme-preview--dark.svg" alt="">
+                                <div class="w-full border-b border-b-neutral-600"></div>
+                                <p class="text-gray-200 p-1.5">Dark Mode</p>
+                            </div>
+                        </label>
+                        
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="timezone-select" class="">
+                            Display Timezone
+                        </label>
+                        
+                        <select  id="timezone-select" name="timezone-select" class="custom-select search">
+                            <!-- <option value="0" disabled selected></option> -->
+                            <option value="abidjan" selected>(GMT-0:00) - Abidjan</option>
+                            <option value="dhaka">(GMT +6:00) - Dhaka</option>
+                        </select>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="date-format-select" class="">
+                            Date Format
+                        </label>
+                        
+                        <select  id="date-format-select" name="date-format-select" class="custom-select search">
+                            <!-- <option value="0" disabled selected></option> -->
+                            <option value="y-m-d" selected>YYYY-MM-DD</option>
+                            <option value="m-d-y">MM-DD-YYYY</option>
+                            <option value="d-m-y">DD-MM-YYYY</option>
+                        </select>
+                    </div>
+
+                    <div class="field my-6">
+                        <label class="field switch-field w-full justify-between">
+                            <span class="text-gray-700">Enable screen reader enhancements</span>
+                            <input type="checkbox" class="custom-checkbox" name="enabled" id="checkbox-enabled">
+                            <div class="switch"></div>
+                        </label>
+                    </div>
+
+                    <div class="field">
+                        <button class="filled-button w-full" type="submit">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{end}}
+        
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#country-select').select2({
+    placeholder :'',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-catagory-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-size-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#timezone-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#date-format-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#invoice-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+
+
+    var phoneInput = document.querySelector("#intl-input");
+
+    window.intlTelInput(phoneInput, {
+        initialCountry: "bd",
+        separateDialCode: true,
+        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
+    });
+</script>
+{{end}}

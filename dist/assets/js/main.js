@@ -28,6 +28,23 @@ navigations.forEach(navigation => {
     }
 });
 
+/* change tab active according to page */
+
+var tabButtons = document.querySelectorAll(".tab-bar a.tab-button");
+        
+        tabButtons.forEach(tabButton => {
+            // var currentPageLocation = location.href;
+            var locationUrlSplit = location.pathname.split("/");
+            var subPage = locationUrlSplit[2];
+            // console.log(subPage)
+            var tabUrlSplit = tabButton.pathname.split("/");
+            var tabUrl = tabUrlSplit[2];
+            console.log(tabUrl)
+
+            if(tabUrl === subPage){
+                tabButton.classList.add("active-tab")
+            }
+        });
 /* dropdown functionality */
 
 document.addEventListener("click", e => {

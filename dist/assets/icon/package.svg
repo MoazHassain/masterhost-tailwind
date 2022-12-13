@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_468_196)">
+<path d="M6 12.5L24 22C24 22 24 44 24 45C24 45.8572 10.7738 38.6317 6.99634 36.5506C6.37321 36.2073 5.99107 35.5713 5.97736 34.86C5.88555 30.0983 5.56593 12.0659 6 12.5Z" fill="#2654A3"/>
+<g filter="url(#filter0_i_468_196)">
+<path d="M42 12.5L24 22C24 22 24 43.987 24 45C24 45.8684 37.2277 38.6341 41.0043 36.5509C41.6271 36.2074 42.0088 35.5714 42.0223 34.8603C42.113 30.0984 42.4288 12.0603 42 12.5Z" fill="#02A1F3"/>
+</g>
+<path d="M24.0208 3C26 3.00001 43 12 42 12.5L24 22L5.99998 12.5C5.49996 12 22.0416 2.99998 24.0208 3Z" fill="#15AFFF"/>
+<path d="M12.5 16L16.4836 17.9471L16.4963 20.6868C16.498 21.0595 16.106 21.303 15.7727 21.1363L12.7764 19.6382C12.607 19.5535 12.5 19.3804 12.5 19.191V16Z" fill="#02A1F3"/>
+<path d="M12.5 16L31 6L35 8L16.5 18L12.5 16Z" fill="#2654A3"/>
+<path d="M26.5 36.5L30.882 34.309C31.6253 33.9373 32.5 34.4779 32.5 35.309V35.309C32.5 35.7325 32.2607 36.1196 31.882 36.309L26.5 39V36.5Z" fill="#2654A3"/>
+<path d="M26.5 40L28.882 38.809C29.6253 38.4373 30.5 38.9779 30.5 39.809V39.809C30.5 40.2325 30.2607 40.6196 29.882 40.809L26.5 42.5V40Z" fill="#2654A3"/>
+</g>
+<defs>
+<filter id="filter0_i_468_196" x="24" y="12.4921" width="18.2195" height="36.5798" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.14902 0 0 0 0 0.329412 0 0 0 0 0.639216 0 0 0 0.08 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_468_196"/>
+</filter>
+<clipPath id="clip0_468_196">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

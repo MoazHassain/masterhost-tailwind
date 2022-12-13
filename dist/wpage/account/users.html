@@ -1,0 +1,125 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <div class="container max-w-7xl my-10">
+            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-slate-500">pay@mateors.com</p>
+        </div>
+        
+        {{block "tab-button" .}}
+        {{end}}
+        
+        {{block "tab-content" .}}
+        <div class="container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content flex-col max-w-lg" id="user-tab">
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Users</h5>
+                   
+                    <div class="border border-gray-200 p-6 py-14 grid place-items-center">
+                        <p class="text-2xl text-gray-700 mb-5">
+                            No Users
+                        </p>
+                        <p class="text-gray-700 mb-12 text-center sm:text-left">
+                            Add new users with full or limited access to your account.
+                        </p>
+                        <button class="filled-button">
+                            Add New User
+                        </button>
+                    </div>
+
+                    
+                </div>
+
+                <div class="">
+                    <h5 class="text-2xl text-gray-700 mb-4">Single Sign-On</h5>
+
+                    <div class="border border-gray-200 p-6 grid place-items-center">
+                        <div class="flex items-center gap-2 mb-5">
+                            <img class="w-14 h-14 hidden sm:block" src="/resources/img/icon_sso.svg" alt="">
+                            <p class="text-gray-700 text-center sm:text-left">
+                                Vultr supports third party single sign-on via OpenID Connect. Once configured, all users on the account will need to sign in via OpenID. 
+                                <a href="" class="text-blue-500">Learn more.</a>
+                            </p>
+                        </div>
+                        
+                        <button class="filled-button w-full">
+                            Add New User
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{end}}
+        
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#country-select').select2({
+    placeholder :'',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-catagory-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-size-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#timezone-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#date-format-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#invoice-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+
+
+    var phoneInput = document.querySelector("#intl-input");
+
+    window.intlTelInput(phoneInput, {
+        initialCountry: "bd",
+        separateDialCode: true,
+        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
+    });
+</script>
+{{end}}

@@ -1,0 +1,223 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <div class="container max-w-7xl my-10">
+            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-slate-500">pay@mateors.com</p>
+        </div>
+        
+        {{block "tab-button" .}}
+        {{end}}
+        <!-- {{block "buttons" .}}
+        <a href="/account/profile" data-id="profile-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Profile
+        </a>
+        <a href="/account/preference" data-id="preference-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Preference
+        </a>
+        <a href="/account/authentication" data-id="authentication-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Authentication
+        </a>
+        <a href="/account/ssh-keys" data-id="ssh-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            SSH Keys
+        </a>
+        <a href="/account/api" data-id="api-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            API
+        </a>
+        <a href="/account/users" data-id="user-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Users
+        </a>
+        <a href="/account/notification" data-id="notification-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Notifications
+        </a>
+        {{end}} -->
+        
+
+        {{block "tab-content" .}}
+        <div class="container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content flex-col max-w-md" id="profile-tab">
+                <h5 class="text-2xl text-gray-700 mb-4">Your Details</h5>
+                
+                <form id="credit-info" name="credit-info" action="" method="" class="w-full">
+                    <div class="flex gap-3 mb-5">
+                        <div class="field w-full">
+                            <input type="text" id="fname-input" name="fname-input" class="floating-input w-full" value="MD Mostain" placeholder=" ">
+                            <label for="fname-input" class="floating-label"><span class="text-red-700">*</span> First Name</label>
+                        </div>
+
+                        <div class="field w-full">
+                            <input type="text" id="lname-input" name="lname-input" class="floating-input w-full" value="Billah" placeholder=" ">
+                            <label for="lname-input" class="floating-label"><span class="text-red-700">*</span> Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" id="email-input" name="email-input" disabled class="floating-input w-full" value="pay@mateors.com"  placeholder=" ">
+                        <label for="email-input" class="floating-label">Email</label>
+                    </div>
+                    <a href="" class="text-xs text-blue-500 flex justify-end mb-3">Change Email Address</a>
+                    
+                    
+                    <div class="flex gap-2 mb-5">
+
+                        <div class="field">
+                            <input class="intl-input !w-0 !p-0 !border-transparent !-z-10" name="intl-input" id="intl-input" type="tel">
+                        </div>
+                        <div class="field w-full">
+                            <input type="tel" id="phone-input" name="phone-input" class="floating-input w-full" value="3365822922" placeholder=" ">
+                            <label for="phone-input" class="floating-label"><span class="text-red-700">*</span> Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="address1-input" name="address1-input" class="floating-input w-full" value="35-46 74 street" placeholder=" ">
+                        <label for="address1-input" class="floating-label"><span class="text-red-700">*</span> Address</label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="address2-input" name="address2-input" class="floating-input w-full" value="Apartment # 406" placeholder=" ">
+                        <label for="address2-input" class="floating-label">Address 2 (optional)</label>
+                    </div>
+
+                    <div class="flex gap-4 mb-5">
+                        <div class="field w-full">
+                            <input type="text" id="city-input" name="city-input" class="floating-input w-full" value="Jackson Heights" placeholder=" ">
+                            <label for="city-input" class="floating-label"><span class="text-red-700">*</span> City</label>
+                        </div>
+
+                        <div class="field ">
+                            <input type="text" id="zip-input" name="zip-input" class="floating-input w-full" value="11372" placeholder=" ">
+                            <label for="zip-input" class="floating-label"><span class="text-red-700">*</span> Zip Code</label>
+                        </div>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="country-select" class="">
+                            <span class="text-red-700">*</span> Country/Region
+                        </label>
+                        
+                        <select  id="country-select" name="country-select" class="custom-select">
+                            <option value="" disabled>Select Country :</option>
+                            <option value="Bangladesh" selected>Bangladesh</option>
+                            <option value="United State">United State</option>
+                            <option value="India">India</option>
+                        </select>
+                    </div>
+
+                    <div class="field mb-5">
+                        <input type="text" id="company-input" name="company-input" class="floating-input w-full" placeholder=" ">
+                        <label for="company-input" class="floating-label">Company</label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="company-link-input" name="company-link-input" class="floating-input w-full" placeholder=" ">
+                        <label for="company-link-input" class="floating-label">Company URL (Optional)</label>
+                    </div>
+
+                    <div class="select-field mb-5 overflow-hidden">
+                        <label for="business-catagory-select" class="whitespace-nowrap">
+                            <span class="text-red-700 ">*</span> What catagory best describe your business?
+                        </label>
+                        
+                        <select  id="business-catagory-select" name="business-catagory-select" class="custom-select">
+                            <option value="0" disabled selected>Please Choose</option>
+                            <option value="Ecommerce">Ecommerce</option>
+                            <option value="Education">Education</option>
+                            <option value="Health Care">Health Care</option>
+                        </select>
+                    </div>
+                    <div class="select-field mb-5 overflow-hidden">
+                        <label for="business-size-select" class="whitespace-nowrap">
+                            <span class="text-red-700">*</span> What is the size of your business organization?
+                        </label>
+                        
+                        <select  id="business-size-select" name="business-size-select" class="custom-select">
+                            <option value="0" disabled selected>Please Choose</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Small Business">Small Business</option>
+                            <option value="Large Business">Large Business</option>
+                        </select>
+                    </div>
+
+                    <div class="field mb-5">
+                        <label for="company-link-input" class=""><span class="text-red-700">*</span> Describe the service(s) you are running with your account.</label>
+                        <textarea rows="4" id="company-link-input" name="company-link-input" class="w-full mt-2"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <button class="filled-button w-full" type="submit">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{end}}
+
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#country-select').select2({
+    placeholder :'',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-catagory-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-size-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#timezone-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#date-format-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#invoice-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+
+
+    var phoneInput = document.querySelector("#intl-input");
+
+    window.intlTelInput(phoneInput, {
+        initialCountry: "bd",
+        separateDialCode: true,
+        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
+    });
+</script>
+{{end}}

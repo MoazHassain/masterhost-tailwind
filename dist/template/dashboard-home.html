@@ -23,38 +23,54 @@
 <body class="font-roboto">
 
     {{block "sidebar" .}}
-    <aside class="bg-blue-900 fixed hidden w-32 h-screen overflow-y-scroll lg:block">
+    <aside class="bg-blue-900 fixed hidden w-32 h-screen pb-10 overflow-y-scroll lg:block">
         <!-- logo -->
-        <a class="" href="/dashboard-home">
+        <a class="" href="/dashboard">
             <svg class="w-11 h-11 mx-auto my-7" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#ffffff"/>
                 <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#ffffff"/>
             </svg>
         </a>
         <nav class="flex flex-col text-blue-200">
-            <a href="/dashboard-home" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
-                <img class="w-12 h-12 transition" src="/resources/icon/products.svg" alt="products" srcset="">
-                <p class="text-lg font-medium text-center">Products</p>
+            <a href="/dashboard" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/home-icon.svg" alt="Home" srcset="">
+                <p class="text-lg font-medium text-center">Home</p>
             </a>
-            <a href="/billing" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
-                <img class="w-12 h-12 transition" src="/resources/icon/products.svg" alt="products" srcset="">
-                <p class="text-lg font-medium text-center">Billing</p>
+            <!-- <a href="/dd" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/users.svg" alt="Customer" srcset="">
+                <p class="text-lg font-medium text-center">Customer</p>
+            </a> -->
+            <a href="/domain" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/dns.svg" alt="Domain" srcset="">
+                <p class="text-lg font-medium text-center">Domain</p>
             </a>
-            <a href="javascript:void(0)" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
-                <img class="w-12 h-12 transition" src="/resources/icon/products.svg" alt="products" srcset="">
-                <p class="text-lg font-medium text-center">Support</p>
+            <a href="/database" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/database.svg" alt="Database" srcset="">
+                <p class="text-lg font-medium text-center">Database</p>
             </a>
-            <a href="javascript:void(0)" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
-                <img class="w-12 h-12 transition" src="/resources/icon/products.svg" alt="products" srcset="">
-                <p class="text-lg font-medium text-center">Referral Program</p>
+            <a href="/email" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/email-icon.svg" alt="Email" srcset="">
+                <p class="text-lg font-medium text-center">Email</p>
             </a>
-            <a href="/profile" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
-                <img class="w-12 h-12 transition" src="/resources/icon/products.svg" alt="products" srcset="">
+            <a href="/tools" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/tools.svg" alt="Tools" srcset="">
+                <p class="text-lg font-medium text-center">Tools</p>
+            </a>
+            <a href="/application" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/application.svg" alt="Application" srcset="">
+                <p class="text-lg font-medium text-center">Application</p>
+            </a>
+            <a href="/account" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/account.svg" alt="Account" srcset="">
                 <p class="text-lg font-medium text-center">Account</p>
             </a>
-            <a href="javascript:void(0)" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white hover:bg-blue-1000 transition">
-                <img class="w-12 h-12 transition" src="/resources/icon/products.svg" alt="products" srcset="">
-                <p class="text-lg font-medium text-center">Master Docs</p>
+            <a href="/packages" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/package.svg" alt="Package" srcset="">
+                <p class="text-lg font-medium text-center">Package</p>
+            </a>
+            <a href="/billing" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+                <img class="w-12 h-12 transition" src="/resources/icon/billing.svg" alt="Billing" srcset="">
+                <p class="text-lg font-medium text-center">Billing</p>
             </a>
         </nav>
     </aside>
@@ -217,12 +233,13 @@
 
         {{block "content" .}}
         <div class="content">
-            <h1 class="container max-w-7xl my-10 text-4xl font-light">Products</h1>
+            <h1 class="container max-w-7xl my-10 text-4xl font-light">Home</h1>
 
             {{block "tab-button" .}}
             <div class="tab-bar-wrap container max-w-7xl relative">
                 <div class="tab-bar w-11/12 h-10 flex gap-8 text-gray-600 items-center overflow-x-auto overflow-y-clip">
-                    <a href="/dashboard-home" data-id="instances" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    {{block "buttons" .}}
+                    <a href="/dashboard" data-id="instances" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         Instances
                     </a>
                     <!-- <a href=""  data-id="snapshots" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
@@ -234,15 +251,15 @@
                     <!-- <a data-id="scripts" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         Scripts
                     </a> -->
-                    <a href="/dashboard-home/dns" data-id="dns" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    <!-- <a href="/dashboard-home/dns" data-id="dns" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         DNS
-                    </a>
-                    <a href="/dashboard-home/packages" data-id="package" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    </a> -->
+                    <!-- <a href="/dashboard-home/packages" data-id="package" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         Package List
-                    </a>
-                    <a href="/dashboard-home/databases" data-id="databases" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+                    </a> -->
+                    <!-- <a href="/dashboard-home/databases" data-id="databases" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         Databases
-                    </a>
+                    </a> -->
                     <!-- <a data-id="firewall" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         Firewall
                     </a> -->
@@ -258,9 +275,11 @@
                     <!-- <a data-id="databases" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                         Databases
                     </a> -->
-    
+                    {{end}}
                 </div>
 
+                
+                {{block "add-bar" .}}
                 <div class="add-bar dropdown hover-dropdown" data-dropdown>
                     <button data-dropdown-btn class="menu-btn w-14 h-14 rounded-full shadow-lg fixed bottom-3 right-6 sm:absolute sm:top-full sm:right-8 -translate-y-1/2 bg-blue-500 hover:bg-blue-900 transition-all flex items-center justify-center z-10">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,21 +295,21 @@
                             Deploy New Servers
                         </a>
                         <div class="w-full my-1 border-b border-b-neutral-200"></div>
-                        <a href="/dashboard-home/dns/add" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <a href="/domain/add" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
                                 <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
                             </svg>
                             Add Domain
                         </a>
-                        <a href="" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <a href="/database/add" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
                                 <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
                             </svg>
                             Add Database
                         </a>
-                        <a href="/dashboard-home/packages/add" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
+                        <a href="/packages/add" class="px-6 py-2 flex gap-2 items-center hover:bg-blue-50 hover:text-blue-500 group/btn transition">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"/>
                                 <path class="fill-gray-700 group-hover/btn:fill-blue-700 transition" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"/>
@@ -321,6 +340,7 @@
                         </a>
                     </div>
                 </div>
+                {{end}}
             </div>
             <div class="w-full border-b border-b-neutral-200"></div>
             {{end}}
@@ -570,48 +590,6 @@
                         snapshots
                     </h3>
                 </div> -->
-                <!-- <div class="tab-content" id="ISOs">
-                    <h3 class="text-center text-4xl">
-                        ISOs
-                    </h3>
-                </div> -->
-                <!-- <div class="tab-content" id="scripts">
-                    <h3 class="text-center text-4xl">
-                        scripts
-                    </h3>
-                </div> -->
-                
-                
-                <!-- <div class="tab-content" id="objects">
-                    <h3 class="text-center text-4xl">
-                        objects
-                    </h3>
-                </div> -->
-                <!-- <div class="tab-content" id="firewall">
-                    <h3 class="text-center text-4xl">
-                        firewall
-                    </h3>
-                </div> -->
-                <!-- <div class="tab-content" id="network">
-                    <h3 class="text-center text-4xl">
-                        network
-                    </h3>
-                </div> -->
-                <!-- <div class="tab-content" id="load-balancer">
-                    <h3 class="text-center text-4xl">
-                        load balancer
-                    </h3>
-                </div> -->
-                <!-- <div class="tab-content" id="kubernetes">
-                    <h3 class="text-center text-4xl">
-                        kubernetes
-                    </h3>
-                </div> -->
-                <!-- <div class="tab-content" id="databases">
-                    <h3 class="text-center text-4xl">
-                        databases
-                    </h3>
-                </div> -->
                 
             </div>
             {{end}}
@@ -684,21 +662,21 @@
             
         });
 
-        var tabButtons = document.querySelectorAll(".tab-bar a.tab-button");
+        // var tabButtons = document.querySelectorAll(".tab-bar a.tab-button");
         
-        tabButtons.forEach(tabButton => {
-            // var currentPageLocation = location.href;
-            var locationUrlSplit = location.pathname.split("/");
-            var subPage = locationUrlSplit[2];
-            // console.log(subPage)
-            var tabUrlSplit = tabButton.pathname.split("/");
-            var tabUrl = tabUrlSplit[2];
-            console.log(tabUrl)
+        // tabButtons.forEach(tabButton => {
+        //     // var currentPageLocation = location.href;
+        //     var locationUrlSplit = location.pathname.split("/");
+        //     var subPage = locationUrlSplit[2];
+        //     // console.log(subPage)
+        //     var tabUrlSplit = tabButton.pathname.split("/");
+        //     var tabUrl = tabUrlSplit[2];
+        //     console.log(tabUrl)
 
-            if(tabUrl === subPage){
-                tabButton.classList.add("active-tab")
-            }
-        });
+        //     if(tabUrl === subPage){
+        //         tabButton.classList.add("active-tab")
+        //     }
+        // });
     </script>
     {{end}}
 </body>

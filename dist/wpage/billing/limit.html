@@ -1,0 +1,65 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <div class="container max-w-7xl my-10 block sm:flex items-center justify-between">
+            <h1 class="text-4xl font-light mb-4 sm:mb-0">Limit</h1>
+            
+            <div class="flex gap-9">
+                <div class="flex flex-col gap-1 items-center">
+                    <p class="text-4xl font-light">$17.71</p>
+                    <p class="text-sm font-light">Charges This Month</p>
+                </div>
+                <div class="flex flex-col gap-1 items-center">
+                    <p class="text-4xl text-green-600 font-light">$0.50</p>
+                    <p class="text-sm font-light">Remaining Credit</p>
+                </div>
+            </div>
+        </div>
+
+
+        {{block "tab-button" .}}
+        {{end}}
+        
+
+        {{block "tab-content" .}}
+        <div class="container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content" id="limit-tab">
+                <h3 class="text-center text-4xl">
+                    limit
+                </h3>
+            </div>
+        </div>
+        {{end}}
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('.custom-select').select2({
+    placeholder :'',
+    // width: '150px',
+    // allowClear:true,
+        
+    });
+</script>
+{{end}}

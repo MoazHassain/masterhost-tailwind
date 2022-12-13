@@ -1,0 +1,135 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <div class="container max-w-7xl my-10">
+            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-slate-500">pay@mateors.com</p>
+        </div>
+        
+        {{block "tab-button" .}}
+        {{end}}
+        
+        {{block "tab-content" .}}
+        <div class="container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content flex-col max-w-md" id="authentication-tab">
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Two Factor Authentication</h5>
+                    <p class="text-gray-700 mb-5">
+                        Keep your account secure by enabling two-factor authentication. Each time you log in, you’ll be required to provide your password plus a randomly generated access code.
+                    </p>
+                    <div class="field mb-5">
+                        <button class="!bg-gray-200 !text-gray-700 hover:!bg-blue-200 hover:!text-blue-600 filled-button w-full" type="submit">
+                            Manage Two Factor Authentication
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-7">
+                    <h5 class="text-2xl text-gray-700 mb-4">Trusted Device Security</h5>
+                    <p class="text-gray-700 mb-5">
+                        If you don't have Two Factor Authentication enabled, you can add an extra layer of security by requiring email verification when you sign in from an unknown device.
+                    </p>
+                    <div class="field mb-5">
+                        <button class="filled-button w-full" type="submit">
+                            Enable Trusted Device Security
+                        </button>
+                    </div>
+                </div>
+                <form id="reset-password" name="reset-password" action="" method="" class="w-full">
+                    <div class="field mb-5">
+                        <input type="text" id="current-password" name="current-password" class="floating-input w-full" placeholder=" ">
+                        <label for="current-password" class="floating-label">
+                            Current Password
+                        </label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="new-password" name="new-password" class="floating-input w-full" placeholder=" ">
+                        <label for="new-password" class="floating-label">
+                            New Password
+                        </label>
+                    </div>
+                    <div class="field mb-5">
+                        <input type="text" id="confirm-password" name="confirm-password" class="floating-input w-full" placeholder=" ">
+                        <label for="confirm-password" class="floating-label">
+                            Confirm Password
+                        </label>
+                    </div>
+                    <button class="filled-button w-full" type="submit">
+                        Change Password
+                    </button>
+                </form>
+            </div>
+        </div>
+        {{end}}
+        
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#country-select').select2({
+    placeholder :'',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-catagory-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#business-size-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#timezone-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#date-format-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+    $('#invoice-select').select2({
+    placeholder :'Please Choose',
+    width: '100%',
+    // allowClear:true,
+        
+    });
+
+
+    var phoneInput = document.querySelector("#intl-input");
+
+    window.intlTelInput(phoneInput, {
+        initialCountry: "bd",
+        separateDialCode: true,
+        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
+    });
+</script>
+{{end}}
