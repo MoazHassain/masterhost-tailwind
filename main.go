@@ -11,12 +11,14 @@ func main() {
 	http.HandleFunc("/component", component)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
+
 	http.HandleFunc("/dashboard", dashboardHome)
 	http.HandleFunc("/domain", domainRoot)
 	http.HandleFunc("/domain/domain-list", domain)
 	http.HandleFunc("/domain/subdomain-list", subdomain)
 	http.HandleFunc("/domain/domain-redirect", domainRedirent)
 	http.HandleFunc("/domain/add", addDomain)
+	http.HandleFunc("/domain/hosting-selection", hosting)
 	http.HandleFunc("/database", databaseRoot)
 	http.HandleFunc("/database/database-list", database)
 	http.HandleFunc("/database/database-user", databaseUser)
@@ -25,8 +27,14 @@ func main() {
 	http.HandleFunc("/email", emailRoot)
 	http.HandleFunc("/email/email-list", emailList)
 	http.HandleFunc("/email/forward-email", emailforward)
+	http.HandleFunc("/email/add", addEmail)
+
 	http.HandleFunc("/tools", toolsRoot)
 	http.HandleFunc("/tools/ssl-manager", sslManager)
+	http.HandleFunc("/tools/dns-zone-editor", dnsEditor)
+	http.HandleFunc("/tools/add-custom-ssl", addCustomssl)
+	http.HandleFunc("/tools/add-auto-ssl", addAutossl)
+	http.HandleFunc("/tools/install-ssl", installssl)
 
 	http.HandleFunc("/account", account)
 	http.HandleFunc("/account/profile", accountProfile)
@@ -176,6 +184,22 @@ func addDomain(w http.ResponseWriter, r *http.Request) {
 	ptmp.Execute(w, nil)
 
 }
+func hosting(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/domain/hosting-selection.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+
 func packageRoot(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, "/packages/package-list", http.StatusFound)
@@ -320,6 +344,21 @@ func emailforward(w http.ResponseWriter, r *http.Request) {
 	ptmp.Execute(w, nil)
 
 }
+func addEmail(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/email/add-email.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
 
 func toolsRoot(w http.ResponseWriter, r *http.Request) {
 
@@ -334,6 +373,77 @@ func sslManager(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/ssl-manager.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func dnsEditor(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/ssl-manager.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/dns-zone-editor.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func addCustomssl(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/add-custom-ssl.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func addAutossl(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/add-custom-ssl.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/add-auto-ssl.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func installssl(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/add-custom-ssl.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	ptmp, err = ptmp.ParseFiles("dist/wpage/tools/install-ssl.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}

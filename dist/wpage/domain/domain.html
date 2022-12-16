@@ -40,42 +40,142 @@
                     <table class="w-full text-left">
                         <thead class="h-14 border-b w-full">
                             <tr>
-                                <th class="px-3 w-full md:w-1/3">
-                                    <p class="font-normal text-slate-400">Domain</p>
+                                <th class="w-12 px-3 hidden sm:table-cell">
+                                    <input type="checkbox" name="" id="">
                                 </th>
-                                <th class="px-3 w-14 md:w-2/3 hidden md:table-cell">
-                                    <p class="font-normal text-slate-400">Date Created</p>
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Domain</p>
                                 </th>
-                                <th class="px-3"></th>
-                                <th class="px-3"></th>
-                                
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">User</p>
+                                </th>
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Package</p>
+                                </th>
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Date Started</p>
+                                </th>
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Disk Usage</p>
+                                </th>
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Bandwidth</p>
+                                </th>
+                                <th class="px-3">
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">SSL</p>
+                                </th>
+                                <th class="w-14 hidden sm:table-cell">
+                                    
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="h-16 border-b hover:bg-blue-50 transition">
+                                <td class="px-3 hidden sm:table-cell">
+                                    <input type="checkbox" name="t" id="t">
+                                </td>
                                 <td class="px-3">
-                                    <p class="font-normal text-sm text-slate-600">cbodigital.com.bd</p>
+                                    <p class="text-slate-800">Shamim.app</p>
                                 </td>
-                                <td class="px-3 hidden md:table-cell">
-                                    <p class="font-normal text-sm text-slate-600">2018-03-05 03:54:57</p>
+                                <td class="px-3">
+                                    <p class="text-slate-800">shamim4s</p>
                                 </td>
-                                <td class="px-4">
-                                    <button class="menu-btn flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Edit Domain" data-modal="edit-domain-modal">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"/>
-                                        </svg>
-                                    </button>
+                                <td class="px-3">
+                                    <p class="text-slate-800">package_5GB</p>
                                 </td>
-                                <td class="px-4">
-                                    <button class="flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Delete Domain">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="fill-slate-400 group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"/>
-                                        </svg>
-                                    </button>
+                                <td class="px-3">
+                                    <p class="text-slate-800">01-01-2020</p>
                                 </td>
-                                
+                                <td class="px-3">
+                                    <p class="text-slate-800">5.2GB</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">0 B / 97.7 GB</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">Yes</p>
+                                </td>
+
+                                <td class="px-3">
+                                    <div class="options dropdown relative" data-dropdown="">
+                                        <button class="p-3 menu-btn" data-dropdown-btn="">
+                                            <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-gray-600" d="M4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13Z" stroke="black" stroke-width="2"></path>
+                                                <path class="stroke-gray-600" d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="black" stroke-width="2"></path>
+                                                <path class="stroke-gray-600" d="M20 13C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13Z" stroke="black" stroke-width="2"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="dropdown-content py-1 w-56 absolute top-12 right-0 bg-white text-gray-600 z-10">
+                                            
+                                            <button class="w-full menu-btn px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 hover:text-blue-500 transition" data-modal="edit-domain-modal">
+                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                                </svg>
+                                                Edit
+                                            </button>
+                                            <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 text-gray-600 hover:text-red-600 transition">
+                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="fill-slate-400 group-hover/btn:fill-red-600 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                                                </svg>
+                                                Delete
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
-                            
+                            <tr class="h-16 border-b hover:bg-blue-50 transition">
+                                <td class="px-3 hidden sm:table-cell">
+                                    <input type="checkbox" name="t" id="t">
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">Shamim.app</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">shamim4s</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">package_5GB</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">01-01-2020</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">5.2GB</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">0 B / 97.7 GB</p>
+                                </td>
+                                <td class="px-3">
+                                    <p class="text-slate-800">Yes</p>
+                                </td>
+
+                                <td class="px-3">
+                                    <div class="options dropdown relative" data-dropdown="">
+                                        <button class="p-3 menu-btn" data-dropdown-btn="">
+                                            <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-gray-600" d="M4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13Z" stroke="black" stroke-width="2"></path>
+                                                <path class="stroke-gray-600" d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="black" stroke-width="2"></path>
+                                                <path class="stroke-gray-600" d="M20 13C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13Z" stroke="black" stroke-width="2"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="dropdown-content py-1 w-56 absolute top-12 right-0 bg-white text-gray-600 z-10">
+                                            
+                                            <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 hover:text-blue-500 transition">
+                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                                </svg>
+                                                Edit
+                                            </a>
+                                            <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 text-gray-600 hover:text-red-600 transition">
+                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="fill-slate-400 group-hover/btn:fill-red-600 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                                                </svg>
+                                                Delete
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

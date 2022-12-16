@@ -1,0 +1,109 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content">
+        <h1 class="container max-w-7xl my-10 text-4xl font-light">Add Custom SSL</h1>
+
+        {{block "tab-button" .}}
+        {{end}}
+        <!-- {{block "buttons" .}}
+        <a href="/tools/add-custom-ssl" data-id="add-custom-ssl" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Add Custom SSL
+        </a>
+        <a href="/tools/add-auto-ssl" data-id="add-auto-ssl" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Add Auto SSL
+        </a>
+        <a href="/tools/install-ssl" data-id="install-ssl" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            Install SSL
+        </a>
+        {{end}} -->
+
+        {{block "tab-content" .}}
+        <div class="container max-w-7xl mt-12 mb-20">
+            <div class="tab-content active-content flex-col" id="ssl">
+                
+                <label for="ssl-domain-input" class="mb-2">
+                    SSL Wizard
+                </label>
+                <div class="flex gap-5 mb-9">
+                    <div class="select-field">
+                        <label for="ssl-domain-input" class="">
+                            Domain/Subdomain
+                        </label>
+                        <select  id="ssl-domain-input" name="ssl-domain-input" class="custom-select">
+                            <option value=""></option>
+                            <option value="label">Label</option>
+                            <option value="location">Location</option>
+                            <option value="tag">Tag</option>
+                            <option value="date">Date Created</option>
+                        </select>
+                    </div>
+
+                    <a href="javascript:void(0)">
+                        <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white !rounded">
+                            Create
+                        </button>
+                    </a>
+                </div>
+
+                
+                <div class="flex items-center gap-10 mb-9">
+                    <label for="generate-csr" class="mb-0">
+                        Generate new Certificate Signing Request (CSR)
+                    </label>
+                    <div class="flex gap-5">
+                        <a href="javascript:void(0)">
+                            <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white !rounded">
+                                Install Certificate
+                            </button>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white !rounded">
+                                Create
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{end}}
+        
+        
+    </div>
+    {{end}}
+
+    {{block "chat-bar" .}}
+
+    {{end}}
+    
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#ssl-domain-input').select2({
+    placeholder :'Choose',
+    width: '260px',
+    // allowClear:true,
+        
+    });
+</script>
+{{end}}

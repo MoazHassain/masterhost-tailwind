@@ -24,17 +24,45 @@
         <a href="/tools/ssl-manager" data-id="ssl" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
             SSL Manager
         </a>
+        <a href="/tools/dns-zone-editor" data-id="dns-editor" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+            DNS Manager
+        </a>
         {{end}} -->
 
         {{block "tab-content" .}}
         <div class="container max-w-7xl mt-12 mb-20">
             <div class="tab-content active-content flex-col" id="ssl">
-                <a href="/packages/add">
+                
+                <label for="ssl-domain-input" class="mb-2">
+                    SSL Wizard
+                </label>
+                <div class="flex gap-5 mb-9">
+                    <div class="select-field">
+                        <label for="ssl-domain-input" class="">
+                            Domain/Subdomain
+                        </label>
+                        <select  id="ssl-domain-input" name="ssl-domain-input" class="custom-select">
+                            <option value="" disabled selected>Select Domain :</option>
+                            <option value=""></option>
+                            <option value="label" selected>Label</option>
+                            <option value="location">Location</option>
+                            <option value="tag">Tag</option>
+                            <option value="date">Date Created</option>
+                        </select>
+                    </div>
+
+                    <a href="javascript:void(0)">
+                        <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white !rounded">
+                            Create
+                        </button>
+                    </a>
+                </div>
+
+                <a href="/tools/add-custom-ssl">
                     <button class="filled-button !bg-blue-500 hover:!bg-blue-600 !text-white !rounded mb-5">
-                        Add New Package
+                        Add Custom SSL
                     </button>
                 </a>
-
                 <div class="table-wrap border border-gray-200 rounded">
                     <table class="w-full text-left">
                         <thead class="h-14 border-b hidden sm:table-header-group">
@@ -43,34 +71,13 @@
                                     <input type="checkbox" name="" id="">
                                 </th>
                                 <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">User</p>
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Domain</p>
                                 </th>
                                 <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Disk Space</p>
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">AutoRenew</p>
                                 </th>
                                 <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Traffic</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Domains</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Subdomains</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Mailboxes</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Mailboxe Size</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">Mail Limit(Hour)</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500 whitespace-nowrap">FTP Account</p>
-                                </th>
-                                <th class="px-3">
-                                    <p class="font-normal text-slate-500">Databases</p>
+                                    <p class="font-normal text-slate-400 whitespace-nowrap">Expiration</p>
                                 </th>
                                 <th class="w-14 hidden sm:table-cell">
                                     
@@ -83,35 +90,15 @@
                                     <input type="checkbox" name="t" id="t">
                                 </td>
                                 <td class="px-3">
-                                    <p class="text-slate-800">mateors.com</p>
+                                    <p class="text-slate-800">gmail.com</p>
                                 </td>
                                 <td class="px-3">
-                                    <p class="text-slate-800">5000MB</p>
+                                    <p class="text-slate-800">Yes</p>
                                 </td>
                                 <td class="px-3">
-                                    <p class="text-slate-800">5000MB</p>
+                                    <p class="text-slate-800">11-15-2022</p>
                                 </td>
-                                <td class="px-3 hidden sm:table-cell">
-                                    <p class="text-slate-800">10</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">999</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">250MB</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
+                                
 
                                 <td class="px-3 text-right">
                                     <div class="options dropdown relative" data-dropdown="">
@@ -128,53 +115,38 @@
                                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
                                                 </svg>
-                                                Edit Package
+                                                Test SSL
+                                            </a>
+                                            <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 hover:text-blue-500 transition">
+                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                                </svg>
+                                                Renew SSL
                                             </a>
                                             <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 text-gray-600 hover:text-red-600 transition">
                                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path class="fill-slate-400 group-hover/btn:fill-red-600 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
                                                 </svg>
-                                                Delete Package
+                                                Delete SSL
                                             </a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            
                             <tr class="h-16 border-b hover:bg-blue-50 transition">
                                 <td class="px-3 hidden sm:table-cell">
                                     <input type="checkbox" name="t" id="t">
                                 </td>
                                 <td class="px-3">
-                                    <p class="text-slate-800">mateors.com</p>
+                                    <p class="text-slate-800">gmail.com</p>
                                 </td>
                                 <td class="px-3">
-                                    <p class="text-slate-800">5000MB</p>
+                                    <p class="text-slate-800">No</p>
                                 </td>
                                 <td class="px-3">
-                                    <p class="text-slate-800">5000MB</p>
+                                    <p class="text-slate-800">11-15-2022</p>
                                 </td>
-                                <td class="px-3 hidden sm:table-cell">
-                                    <p class="text-slate-800">10</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">999</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">250MB</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
-                                <td class="px-3">
-                                    <p class="text-slate-800">50</p>
-                                </td>
+                                
 
                                 <td class="px-3 text-right">
                                     <div class="options dropdown relative" data-dropdown="">
@@ -191,19 +163,24 @@
                                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
                                                 </svg>
-                                                Edit Package
+                                                Test SSL
+                                            </a>
+                                            <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 hover:text-blue-500 transition">
+                                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                                </svg>
+                                                Renew SSL
                                             </a>
                                             <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 text-gray-600 hover:text-red-600 transition">
                                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path class="fill-slate-400 group-hover/btn:fill-red-600 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
                                                 </svg>
-                                                Delete Package
+                                                Delete SSL
                                             </a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            
                         </tbody>
                     </table>
                 </div>
@@ -227,5 +204,12 @@
 {{end}}
 
 {{block "custom-js" .}}
-
+<script>
+    $('#ssl-domain-input').select2({
+    placeholder :'',
+    width: '260px',
+    // allowClear:true,
+        
+    });
+</script>
 {{end}}

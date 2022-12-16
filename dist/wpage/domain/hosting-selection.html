@@ -1,0 +1,131 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+
+{{end}}
+
+{{block "sidebar" .}}
+
+{{end}}
+
+{{block "main" .}}
+<main class="ml-0 lg:ml-32">
+    {{block "header" .}}
+    
+    {{end}}
+
+    {{block "content" .}}
+    <div class="content" id="hosting-select">
+        
+
+        <div class="container max-w-7xl">
+            <h1 class="my-10 text-4xl font-light">Hosting Selection</h1>
+
+            <div data-message="" class="my-10 message px-5 py-3 border-l-4 border-l-green-800 shadow-lg text-green-600 ">
+                <p class="text-sm inline">Introducing Vultr Cloud GPUs powered by the NVIDIA A40. 
+                    <a href="" class="font-bold underline">Provision your instance now.</a>
+                </p>
+                <button data-close-message="" class="text-left sm:float-right">Dismiss</button>
+            </div>
+
+            <div class="border border-neutral-200 p-8 mb-16 max-w-lg">
+                <form  action="/dashboard-home/packages" method="" name="hosting-select-form" class="hosting-select-form">
+                    
+                    <div class="field mb-5">
+                        <input type="text" id="domain-input" name="domain-input" class="floating-input w-full" placeholder=" ">
+                        <label for="domain-input" class="floating-label">Domain Name</label>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="package-input" class="">
+                            Package Name
+                        </label>
+                        <select  id="package-input" class="custom-select">
+                            <option value="none" selected disabled>Existing Package</option>
+                            <option value="package1">Package 01</option>
+                            <option value="package2">Package 50</option>
+                        </select>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="ip-input" class="">
+                            IP Address
+                        </label>
+                        <select  id="ip-input" class="custom-select">
+                            <option value="existing-ip" selected disabled>Existing IP Address</option>
+                            <option value="mastererp">mastererp - 45.32.115.159</option>
+                            <option value="mateors.com">host.mateors.com - 207.148.125.59</option>
+                        </select>
+                    </div>
+
+                    <div class="select-field mb-5">
+                        <label for="reseller-input" class="">
+                            Select Reseller
+                        </label>
+                        <select  id="reseller-input" class="custom-select">
+                            <option value="reseller" selected disabled>Reseller</option>
+                            <option value="mastererp">mastererp - 45.32.115.159</option>
+                            <option value="mateors.com">host.mateors.com - 207.148.125.59</option>
+                        </select>
+                    </div>
+
+                    <div class="field mb-5">
+                        <input type="text" id="user-input" name="user-input" class="floating-input w-full" placeholder=" ">
+                        <label for="user-input" class="floating-label">User</label>
+                    </div>
+
+                    <div class="field pass-field relative mb-5" data-toggle>
+                        <input type="password" id="pass-input" name="pass-input" class="floating-input w-full" value=""  placeholder=" ">
+                        <label for="pass-input" class="floating-label">Password</label>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon active-icon" data-toggle-passicon>visibility</span>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon hidden-icon" data-toggle-passicon>visibility_off</span>
+                    </div>
+
+                    <div class="field flex gap-4 items-start md:items-center mb-5">
+                        <input type="checkbox" name="link-checkbox" id="link-checkbox" class="shrink-0 mt-1.5 md:mt-0">
+                        <label for="link-checkbox" class="text-gray-600 mb-0">
+                            Send Notification when Expire
+                        </label>
+                    </div>
+
+                    <div class="field mt-9">
+                        <button class="filled-button w-full" type="submit">Add Hosting</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+    {{end}}
+</main>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#package-input').select2({
+        placeholder :'',
+        width: '100%',
+        // allowClear:true,
+        
+    });
+    $('#ip-input').select2({
+        placeholder :'',
+        width: '100%',
+        // allowClear:true,
+        
+    });
+    $('#reseller-input').select2({
+        placeholder :'',
+        width: '100%',
+        // allowClear:true,
+        
+    });
+
+    
+</script>
+{{end}}
