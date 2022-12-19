@@ -695,6 +695,100 @@ body.modal-open {
             opacity-100;
 }
 
+@media (max-width: 640px) {
+  .table-wrap.responsive thead {
+    display: none;
+  }
+  .table-wrap.responsive tbody tr td {
+    width: unset;
+  }
+  .table-wrap.responsive table,
+.table-wrap.responsive table tbody,
+.table-wrap.responsive table tr,
+.table-wrap.responsive table td,
+.table-wrap.responsive table th {
+    width: 100%;
+    display: block;
+  }
+  .table-wrap.responsive table tr {
+    height: unset;
+  }
+  .table-wrap.responsive table td {
+    position: relative;
+    padding-block: 16px;
+  }
+  .table-wrap.responsive table td > * {
+    width: 60%;
+    margin-left: auto;
+    text-align: left;
+  }
+  .table-wrap.responsive table td .dropdown [data-dropdown-btn] {
+    padding: unset;
+  }
+  .table-wrap.responsive table td .dropdown .dropdown-content {
+    right: unset;
+    left: 0;
+  }
+  .table-wrap.responsive table td::before {
+    content: attr(data-thead);
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @apply font-medium
+            text-slate-400 
+            whitespace-nowrap;
+  }
+}
+@media (max-width: 1500px) {
+  .package-table-wrap.responsive thead {
+    display: none;
+  }
+  .package-table-wrap.responsive tbody tr td {
+    width: unset;
+  }
+  .package-table-wrap.responsive table,
+.package-table-wrap.responsive table tbody,
+.package-table-wrap.responsive table tr,
+.package-table-wrap.responsive table td,
+.package-table-wrap.responsive table th {
+    width: 100%;
+    display: block;
+  }
+  .package-table-wrap.responsive table tr {
+    height: unset;
+  }
+  .package-table-wrap.responsive table td {
+    position: relative;
+    padding-block: 16px;
+  }
+  .package-table-wrap.responsive table td > * {
+    width: 60%;
+    margin-left: auto;
+    text-align: left;
+  }
+  .package-table-wrap.responsive table td .dropdown [data-dropdown-btn] {
+    padding: unset;
+  }
+  .package-table-wrap.responsive table td .dropdown .dropdown-content {
+    right: unset;
+    left: 0;
+  }
+  .package-table-wrap.responsive table td::before {
+    content: attr(data-thead);
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @apply font-medium
+            text-slate-400 
+            whitespace-nowrap;
+  }
+}
 .message.active {
   display: block;
 }
@@ -901,7 +995,7 @@ aside::-webkit-scrollbar {
 nav .nav-item {
   @apply overflow-x-clip
         before:absolute 
-        before:bg-white 
+        before:bg-white
         before:w-6 
         before:h-5 
         before:invisible

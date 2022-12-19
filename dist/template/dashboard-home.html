@@ -23,7 +23,7 @@
 <body class="font-roboto">
 
     {{block "sidebar" .}}
-    <aside class="bg-blue-900 fixed hidden w-32 h-screen pb-10 overflow-y-scroll lg:block">
+    <aside class="main-sidebar bg-blue-900 fixed hidden w-32 h-screen pb-10 overflow-y-scroll lg:block z-10">
         <!-- logo -->
         <a class="" href="/dashboard">
             <svg class="w-11 h-11 mx-auto my-7" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,10 +36,10 @@
                 <img class="w-12 h-12 transition" src="/resources/icon/home-icon.svg" alt="Home" srcset="">
                 <p class="text-lg font-medium text-center">Home</p>
             </a>
-            <!-- <a href="/dd" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
+            <a href="/client" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
                 <img class="w-12 h-12 transition" src="/resources/icon/users.svg" alt="Customer" srcset="">
-                <p class="text-lg font-medium text-center">Customer</p>
-            </a> -->
+                <p class="text-lg font-medium text-center">Client</p>
+            </a>
             <a href="/domain" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-white transition">
                 <img class="w-12 h-12 transition" src="/resources/icon/dns.svg" alt="Domain" srcset="">
                 <p class="text-lg font-medium text-center">Domain</p>
@@ -74,6 +74,10 @@
             </a>
         </nav>
     </aside>
+    {{end}}
+
+    {{block "sub-sidebar" .}}
+    
     {{end}}
 
     {{block "main" .}}
@@ -140,12 +144,16 @@
                         </button>
 
                         <nav class="text-blue-1000 text-center flex flex-col gap-4 mt-5">
-                            <a href="/dashboard-home" class="font-medium">Products</a>
+                            <a href="/dashboard" class="font-medium">Home</a>
+                            <a href="/client" class="font-medium">Client</a>
+                            <a href="/domain" class="font-medium">Domain</a>
+                            <a href="/database" class="font-medium">Database</a>
+                            <a href="/email" class="font-medium">Email</a>
+                            <a href="/tools" class="font-medium">Tools</a>
+                            <a href="/application" class="font-medium">Application</a>
+                            <a href="/account" class="font-medium">Account</a>
+                            <a href="/packages" class="font-medium">Package</a>
                             <a href="/billing" class="font-medium">Billing</a>
-                            <a href="" class="font-medium">Support</a>
-                            <a href="" class="font-medium">Referral Program</a>
-                            <a href="/profile" class="font-medium">Account</a>
-                            <a href="" class="font-medium">Log Out</a>
                         </nav>
                     </div>
                     

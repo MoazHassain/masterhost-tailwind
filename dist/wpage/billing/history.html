@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="table-wrap border border-gray-200 rounded mb-8">
+                <div class="table-wrap responsive border border-gray-200 rounded mb-8">
                     <table class="w-full text-left">
                         <thead class="h-14 border-b">
                             <tr>
@@ -82,22 +82,22 @@
                         </thead>
                         <tbody>
                             <tr class="h-16 border-b hover:bg-gray-50 transition">
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Description">
                                     <p class="font-medium text-slate-800 hover:text-blue-700 transition tooltip-top" data-tooltip="Show Invoice">Invoice #19631203</p>
                                 </td>
-                                <td class="px-3 hidden md:table-cell">
+                                <td class="px-3 hidden md:table-cell" data-thead="Date">
                                     <p class="text-slate-700">2022-11-01</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Ammount">
                                     <p class="text-slate-700">$29.00</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Balance">
                                     <p class="text-slate-700">$-18.21</p>
                                 </td>
-                                <td class="px-3 hidden md:table-cell">
-                                    
+                                <td class="px-3 hidden md:table-cell" data-thead="Completed">
+                                    <p class="text-slate-700">_</p>
                                 </td>
-                                <td class="px-3 hidden md:table-cell">
+                                <td class="px-3 hidden md:table-cell text-right" data-thead="Action">
                                     <div class="options dropdown relative" data-dropdown>
                                         <button class="p-3 menu-btn" data-dropdown-btn>
                                             <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,23 +119,23 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="h-16 hover:bg-gray-50 transition">
-                                <td class="px-3">
-                                    <p class="font-medium text-slate-800 hover:text-blue-700 transition tooltip-right" data-tooltip="Show Invoice">Paypal</p>
+                            <tr class="h-16 border-b hover:bg-gray-50 transition">
+                                <td class="px-3" data-thead="Description">
+                                    <p class="font-medium text-slate-800 hover:text-blue-700 transition tooltip-top" data-tooltip="Show Invoice">Paypal</p>
                                 </td>
-                                <td class="px-3 hidden md:table-cell">
+                                <td class="px-3 hidden md:table-cell" data-thead="Date">
                                     <p class="text-slate-700">2022-11-01</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Ammount">
                                     <p class="text-slate-700">$29.00</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Balance">
                                     <p class="text-slate-700">$-18.21</p>
                                 </td>
-                                <td class="px-3 hidden md:table-cell">
-                                    <p class="text-slate-700">Completed</p>
+                                <td class="px-3 hidden md:table-cell" data-thead="Completed">
+                                    <p class="text-slate-700">_</p>
                                 </td>
-                                <td class="px-3 hidden sm:table-cell">
+                                <td class="px-3 hidden md:table-cell text-right" data-thead="Action">
                                     <div class="options dropdown relative" data-dropdown>
                                         <button class="p-3 menu-btn" data-dropdown-btn>
                                             <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -28,7 +28,7 @@
                 <label for="dns-editor-input" class="mb-2">
                     DNS Zone Editor
                 </label>
-                <div class="flex gap-5 mb-9">
+                <div class="flex gap-5 mb-9 flex-wrap">
                     <div class="select-field">
                         <label for="dns-editor-input" class="">
                             Domain
@@ -57,11 +57,11 @@
                 </div>
 
                 
-                <div class="table-wrap border border-gray-200 rounded">
+                <div class="table-wrap responsive border border-gray-200 rounded">
                     <table class="w-full text-left">
                         <thead class="h-14 border-b hidden sm:table-header-group">
                             <tr>
-                                <th class="w-12 px-3 hidden sm:table-cell">
+                                <th class="w-12 px-3 !hidden sm:!table-cell">
                                     <input type="checkbox" name="" id="">
                                 </th>
                                 <th class="px-3">
@@ -83,23 +83,23 @@
                         </thead>
                         <tbody>
                             <tr class="h-16 border-b hover:bg-blue-50 transition">
-                                <td class="px-3 hidden sm:table-cell">
+                                <td class="px-3 !hidden sm:!table-cell">
                                     <input type="checkbox" name="t" id="t">
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Record Name">
                                     <p class="text-slate-800">www</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Type">
                                     <p class="text-slate-800">CNAME</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Priority">
                                     <p class="text-slate-800">aaaaaaaa</p>
                                 </td>
-                                <td class="px-3">
+                                <td class="px-3" data-thead="Records">
                                     <p class="text-slate-800">imtiaj.com</p>
                                 </td>
                                 
-                                <td class="px-3 text-right">
+                                <td class="px-3 text-right" data-thead="Action">
                                     <div class="options dropdown relative" data-dropdown="">
                                         <button class="p-3 menu-btn" data-dropdown-btn="">
                                             <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

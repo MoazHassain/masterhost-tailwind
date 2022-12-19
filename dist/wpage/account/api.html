@@ -137,50 +137,5 @@
 
 {{block "custom-js" .}}
 <script>
-    $('#country-select').select2({
-    placeholder :'',
-    width: '100%',
-    // allowClear:true,
-        
-    });
-    $('#business-catagory-select').select2({
-    placeholder :'Please Choose',
-    width: '100%',
-    // allowClear:true,
-        
-    });
-    $('#business-size-select').select2({
-    placeholder :'Please Choose',
-    width: '100%',
-    // allowClear:true,
-        
-    });
-    $('#timezone-select').select2({
-    placeholder :'Please Choose',
-    width: '100%',
-    // allowClear:true,
-        
-    });
-    $('#date-format-select').select2({
-    placeholder :'Please Choose',
-    width: '100%',
-    // allowClear:true,
-        
-    });
-    $('#invoice-select').select2({
-    placeholder :'Please Choose',
-    width: '100%',
-    // allowClear:true,
-        
-    });
-
-
-    var phoneInput = document.querySelector("#intl-input");
-
-    window.intlTelInput(phoneInput, {
-        initialCountry: "bd",
-        separateDialCode: true,
-        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
-    });
 </script>
 {{end}}

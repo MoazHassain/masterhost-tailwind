@@ -13,6 +13,8 @@ func main() {
 	http.HandleFunc("/login", login)
 
 	http.HandleFunc("/dashboard", dashboardHome)
+	http.HandleFunc("/client", clientRoot)
+	http.HandleFunc("/client/client-list", clientList)
 	http.HandleFunc("/domain", domainRoot)
 	http.HandleFunc("/domain/domain-list", domain)
 	http.HandleFunc("/domain/subdomain-list", subdomain)
@@ -110,6 +112,28 @@ func dashboardHome(w http.ResponseWriter, r *http.Request) {
 
 	ptmp.Execute(w, nil)
 }
+
+func clientRoot(w http.ResponseWriter, r *http.Request) {
+
+	http.Redirect(w, r, "/client/client-list", http.StatusFound)
+
+}
+func clientList(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/client/clients.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+
 func domainRoot(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, "/domain/domain-list", http.StatusFound)
