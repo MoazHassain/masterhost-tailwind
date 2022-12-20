@@ -1,3 +1,55 @@
+table 
+{
+    tr 
+    {
+        td
+        {
+            position: relative;
+
+
+            .hover-content 
+            {
+                display: none;
+
+                &:checked
+                {
+                    display: grid;
+
+                    & + .content
+                    {
+                        display: none;
+                    }
+                }
+            }
+            .hover-button 
+            {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+        }
+        &:hover
+        {
+            .content
+            {
+                display: none;
+            }
+            .hover-content
+            {
+                display: grid;
+            }
+
+            .hover-button
+            {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        
+    }
+}
+
+
 @media (max-width: 640px)
 {
     .table-wrap.responsive

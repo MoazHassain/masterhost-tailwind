@@ -1,43 +1,33 @@
-/* sidebar */
-aside {
-  scrollbar-width: none;
+/** scrollbar **/
+/* Works on Chrome, Edge, and Safari */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/Roboto-Light.ttf") format("truetype");
 }
-aside:hover {
-  scrollbar-width: none;
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
 }
-aside::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
 }
-
-nav .nav-item {
-  @apply overflow-x-clip
-        before:absolute 
-        before:bg-white
-        before:w-6 
-        before:h-5 
-        before:invisible
-        before:top-1/2
-        before:right-0
-        transition;
-}
-nav .nav-item::before {
-  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
-          clip-path: polygon(0 0, 50% 50%, 0 100%);
-  transform: rotate(180deg) translateY(50%);
-}
-nav .nav-item img {
-  z-index: 2;
-}
-nav .nav-item:hover img {
-  @apply -translate-y-2;
-}
-nav .nav-item.active {
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
+}/*# sourceMappingURL=all.css.map */active {
   @apply text-white
             bg-blue-1000
             before:visible;
-}/*# sourceMappingURL=all.css.map */{
-  @apply pointer-events-none
+}/*# sourceMappingURL=all.css.map */  @apply pointer-events-none
         absolute
         top-1/2
         -translate-y-1/2
@@ -380,7 +370,7 @@ textarea {
   /* responsive sidebar menu */
 }
 .dropdown .dropdown-content {
-  box-shadow: 0px 6px 32px rgba(149, 157, 165, 0.15);
+  box-shadow: 0px 6px 26px rgba(109, 117, 124, 0.2);
   @apply invisible
         opacity-0
         translate-y-8
@@ -409,6 +399,9 @@ textarea {
   border-width: 8px;
   border-bottom-color: rgba(0, 0, 0, 0.15);
   z-index: 0;
+}
+.dropdown .dropdown-content.overlap-content::before, .dropdown .dropdown-content.overlap-content::after {
+  all: unset;
 }
 .dropdown.menu-open .dropdown-content {
   @apply visible
@@ -577,25 +570,24 @@ body.modal-open {
 }
 
 .modal-wrap {
+  width: calc(100vw - 128px);
+  height: 100vh;
   @apply fixed
-    inset-0
-    shadow-2xl
+    top-0
+    right-0
     z-50
     hidden;
 }
 .modal-wrap .modal-content {
-  width: 80vw;
-  height: 90vh;
   overflow-y: scroll;
   @apply absolute
         top-1/2
-        left-1/2
-        -translate-x-1/2
+        right-0
         -translate-y-1/2
         scale-0
+        w-full
+        h-full
         bg-white
-        shadow-2xl
-
         z-50
         invisible
         opacity-0
@@ -608,10 +600,7 @@ body.modal-open {
   }
 }
 .modal-wrap .modal-closer {
-  @apply absolute
-        top-11
-        right-16
-        w-12 
+  @apply w-12 
         h-12 
         bg-blue-100 
         grid 
@@ -640,6 +629,33 @@ body.modal-open {
   @apply scale-100
             visible
             opacity-100;
+}
+
+table tr td {
+  position: relative;
+}
+table tr td .hover-content {
+  display: none;
+}
+table tr td .hover-content:checked {
+  display: grid;
+}
+table tr td .hover-content:checked + .content {
+  display: none;
+}
+table tr td .hover-button {
+  visibility: hidden;
+  opacity: 0;
+}
+table tr:hover .content {
+  display: none;
+}
+table tr:hover .hover-content {
+  display: grid;
+}
+table tr:hover .hover-button {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 640px) {

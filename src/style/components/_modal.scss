@@ -10,29 +10,28 @@ body
 
 .modal-wrap
 {
+    width: calc(100vw - 128px);
+    height: 100vh;
     @apply
     fixed
-    inset-0
-    shadow-2xl
+    top-0
+    right-0
     z-50
     hidden;
 
     .modal-content
     {
-        width: 80vw;
-        height: 90vh;
         overflow-y: scroll;
 
         @apply
         absolute
         top-1/2
-        left-1/2
-        -translate-x-1/2
+        right-0
         -translate-y-1/2
         scale-0
+        w-full
+        h-full
         bg-white
-        shadow-2xl
-
         z-50
         invisible
         opacity-0
@@ -47,9 +46,6 @@ body
     .modal-closer
     {
         @apply
-        absolute
-        top-11
-        right-16
         w-12 
         h-12 
         bg-blue-100 
