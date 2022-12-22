@@ -23,11 +23,17 @@
   font-style: normal;
   font-weight: 700;
   src: url("../font/Roboto-Bold.ttf") format("truetype");
-}/*# sourceMappingURL=all.css.map */active {
-  @apply text-white
-            bg-blue-1000
-            before:visible;
-}/*# sourceMappingURL=all.css.map */  @apply pointer-events-none
+}/*# sourceMappingURL=all.css.map */ply relative;
+}
+
+label {
+  @apply text-base
+    text-slate-500
+    mb-3
+    transition-all;
+}
+label.floating-label {
+  @apply pointer-events-none
         absolute
         top-1/2
         -translate-y-1/2
@@ -629,6 +635,14 @@ body.modal-open {
   @apply scale-100
             visible
             opacity-100;
+}
+
+.loading-screen {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.loading-screen.active {
+  display: flex;
 }
 
 table tr td {

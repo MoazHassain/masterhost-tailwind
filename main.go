@@ -13,6 +13,7 @@ func main() {
 	http.HandleFunc("/login", login)
 
 	http.HandleFunc("/dashboard", dashboardHome)
+	http.HandleFunc("/dashboard-new", dashboardNew)
 	http.HandleFunc("/client", clientRoot)
 	http.HandleFunc("/client/client-list", clientList)
 	http.HandleFunc("/domain", domainRoot)
@@ -107,6 +108,15 @@ func login(w http.ResponseWriter, r *http.Request) {
 func dashboardHome(w http.ResponseWriter, r *http.Request) {
 
 	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+}
+func dashboardNew(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-new.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}

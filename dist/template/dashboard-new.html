@@ -168,6 +168,7 @@
                     <p class="text-sm font-extrabold text-blue-600">NEWS:</p>
                     <p class="text-sm font-normal text-neutral-600">Vultr Managed Databases now supports Redis</p>
                 </div>
+                
 
                 <div class="flex h-full gap-4 items-center">
                     <button class="h-full group/btn tooltip-bottom" data-tooltip="View Tickets">
@@ -177,18 +178,18 @@
                     </button>
 
                     <div class="notification dropdown h-full flex items-center" data-dropdown>
-                        <button class="menu-btn relative group/btn" data-dropdown-btn>
+                        <button class="menu-btn h-full relative group/btn tooltip-bottom" data-dropdown-btn data-tooltip="Notifications">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="fill-gray-400 group-hover/btn:fill-blue-600 transition" d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.37 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.64 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16ZM16 17H8V11C8 8.52 9.51 6.5 12 6.5C14.49 6.5 16 8.52 16 11V17Z" fill="black"/>
                             </svg>
-                            <span class="absolute -top-1 -right-1 w-4 h-4 bg-blue-700 text-white rounded-full text-xs flex items-center justify-center">1</span>
+                            <span class="absolute top-[1px] -right-1 w-4 h-4 bg-blue-700 text-white rounded-full text-xs flex items-center justify-center">1</span>
                         </button>
 
                         <div class="dropdown-content w-80 h-screen fixed top-0 right-0 z-50 bg-white">
                             <div class="flex items-center justify-between pl-8 pr-5 py-4 border-b">
                                 <div class="">
                                     <p class="text-blue-900 text-lg font-medium">Notifications</p>
-                                    <a href="" class=" text-blue-500 text-sm">Edit Preferences</a>
+                                    <a href="" class="text-blue-500 text-sm">Edit Preferences</a>
                                 </div>
                                 <button class="p-3 menu-btn" data-dropdown-cls>
                                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,18 +212,18 @@
                         </div>
                     </div>
 
-                    <div class="user dropdown h-full flex items-center relative" data-dropdown>
-                        <button class="menu-btn h-full flex gap-1 items-center" data-dropdown-btn>
+                    <div class="dropdown user-dropdown h-full flex items-center relative" data-dropdown>
+                        <button class="menu-btn h-full flex gap-1 items-center group/btn px-1 hover:bg-gray-100" data-dropdown-btn>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="fill-gray-400" d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
+                                <path class="fill-gray-400 group-hover/btn:fill-blue-600 transition" d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
                             </svg>
-                            <span class="text-blue-1000">MD Mostain Billah</span>
+                            <span class="text-gray-500 group-hover/btn:text-gray-900 transition">MD Mostain Billah</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="fill-gray-700" d="M12.0002 15.552L7.34424 10.896L8.01624 10.224L12.0002 14.208L15.9842 10.224L16.6562 10.896L12.0002 15.552Z" fill="black"/>
                             </svg>
                         </button>
 
-                        <div class="dropdown-content py-1 w-56 absolute top-9 -left-3 bg-white text-gray-600 z-50">
+                        <div class="dropdown-content py-1 w-56 absolute top-10 -left-2 bg-white text-gray-600 z-50">
                             <a href="/profile" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Profile</a>
                             <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Preference</a>
                             <a href="" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Authentication</a>
@@ -234,6 +235,44 @@
                             <a href="./components.html" class="px-6 py-2 block hover:bg-blue-50 hover:text-blue-500 transition">Log Out</a>
                         </div>
                     </div>
+
+                    <div class="dropdown laguage-dropdown h-full flex items-center relative" data-dropdown>
+                        <button class="menu-btn h-full flex gap-[2px] items-center group/btn px-2 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition" data-dropdown-btn>
+                            <svg class="w-5 h-5 mr-2 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/><use xlink:href="#a" y="420"/><use xlink:href="#a" y="840"/><use xlink:href="#a" y="1260"/></g><use xlink:href="#a" y="1680"/></g><use xlink:href="#b" x="247" y="210"/></g><use xlink:href="#c" x="494"/></g><use xlink:href="#d" x="988"/><use xlink:href="#c" x="1976"/><use xlink:href="#e" x="2470"/></g></svg>
+                            English (US)
+                        </button>
+
+                        <div class="dropdown-content py-1 w-40 absolute top-10 -left-5 bg-white text-gray-600 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white transition" role="menuitem">
+                                <div class="inline-flex items-center">
+                                <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full mr-2" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-us" viewBox="0 0 512 512"><g fill-rule="evenodd"><g stroke-width="1pt"><path fill="#bd3d44" d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/><path fill="#fff" d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/></g><path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)"/><path fill="#fff" d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z" transform="scale(3.9385)"/></g></svg>              
+                                English (US)
+                                </div>
+                            </a>
+                            <div class="w-full my-1 border-b border-b-neutral-200"></div>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white transition" role="menuitem">
+                                <div class="inline-flex items-center">
+                                <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-de" viewBox="0 0 512 512"><path fill="#ffce00" d="M0 341.3h512V512H0z"/><path d="M0 0h512v170.7H0z"/><path fill="#d00" d="M0 170.7h512v170.6H0z"/></svg>
+                                Deutsch
+                                </div>
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                                <div class="inline-flex items-center">
+                                    <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-it" viewBox="0 0 512 512"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>              
+                                    Italiano
+                                </div>
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white transition" role="menuitem">
+                                <div class="inline-flex items-center">
+                                <svg class="h-3.5 w-3.5 rounded-full mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icon-css-cn" viewBox="0 0 512 512"><defs><path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z"/></defs><path fill="#de2910" d="M0 0h512v512H0z"/><use width="30" height="20" transform="matrix(76.8 0 0 76.8 128 128)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-121 142.6 -47) scale(25.5827)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-98.1 198 -82) scale(25.6)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-74 272.4 -114) scale(25.6137)" xlink:href="#a"/><use width="30" height="20" transform="matrix(16 -19.968 19.968 16 256 230.4)" xlink:href="#a"/></svg>
+                                中文 (繁體)
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </header>
@@ -254,13 +293,18 @@
                 </div>
 
                 {{block "selection-bar" .}}
-                <div class="selection-bar">
-                    <button data-delete-btn class="menu-btn group/btn w-10 h-10 rounded-full shadow-lg fixed bottom-3 right-6 sm:absolute sm:top-full sm:right-28 -translate-y-1/2 bg-red-100 transition-all flex items-center justify-center z-10">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="fill-red-500 group-hover/btn:fill-red-600 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                <!-- <div class="selection-bar absolute top-full right-28 -translate-y-1/2 flex gap-5">
+                    <button data-tooltip="Delete" data-delete-btn="" type="button" class="menu-btn active group/btn tooltip-top flex justify-center items-center !w-14 h-14 text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-500 group-hover/btn:fill-gray-900 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
                         </svg>
                     </button>
-                </div>
+                    <button data-tooltip="Delete" data-delete-btn="" type="button" class="menu-btn active group/btn tooltip-top flex justify-center items-center !w-14 h-14 text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-gray-500 group-hover/btn:fill-gray-900 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                        </svg>
+                    </button>
+                </div> -->
                 {{end}}
 
                 {{block "add-bar" .}}
@@ -589,6 +633,75 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <div class="card-wrap grid grid-cols-3 gap-5 my-10">
+                        <div class="card border border-gray-200 shadow-md rounded bg-white">
+                            <div class="p-6">
+                                <p class="text-xl text-gray-900 font-bold mb-3">host.mateors.com</p>
+                                <p class="text-[14px] font-medium text-slate-400">2048.00 MB Regular Cloud Compute - 207.148.125.59</p>
+                            </div>
+                            <div class="w-full border-b border-b-neutral-200"></div>
+    
+                            <div class="p-6">
+                                <div class="flex items-center justify-between gap-4 p-2 px-3 mb-4 rounded-md bg-gray-50 hover:bg-gray-100 hover:shadow transition">
+                                    <p class="text-gray-900 font-medium">OS</p>
+                                    <img src="/resources/img/Clojure_logo.png" alt="" class="w-6">
+                                </div>
+
+                                <div class="flex items-center justify-between gap-4 p-2 px-3 mb-4 rounded-md bg-gray-50 hover:bg-gray-100 hover:shadow transition">
+                                    <p class="text-gray-900 font-medium">Location</p>
+                                    <div class="flex gap-3 items-center">
+                                        <img src="/resources/img/emojione_flag-for-singapore.png" alt="" class="w-6">
+                                        <p class="text-gray-900">Singapore</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between gap-4 p-2 px-3 mb-4 rounded-md bg-gray-50 hover:bg-gray-100 hover:shadow transition">
+                                    <p class="text-gray-900 font-medium">Charges</p>
+                                    <p class="text-gray-900 font-bold">$10.47</p>
+                                </div>
+
+                                <div class="flex items-center justify-between gap-4 p-2 px-3 mb-4 rounded-md bg-gray-50 hover:bg-gray-100 hover:shadow transition">
+                                    <p class="text-gray-900 font-medium">Status</p>
+                                    <button class="flex gap-2 items-center">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-green-600" d="M12 1.5C6.20156 1.5 1.5 6.20156 1.5 12C1.5 17.7984 6.20156 22.5 12 22.5C17.7984 22.5 22.5 17.7984 22.5 12C22.5 6.20156 17.7984 1.5 12 1.5ZM12 20.7188C7.18594 20.7188 3.28125 16.8141 3.28125 12C3.28125 7.18594 7.18594 3.28125 12 3.28125C16.8141 3.28125 20.7188 7.18594 20.7188 12C20.7188 16.8141 16.8141 20.7188 12 20.7188Z" fill="black"></path>
+                                            <path class="fill-green-600" d="M16.8609 11.6977L9.9211 6.65859C9.86544 6.61779 9.79954 6.59324 9.73075 6.58769C9.66197 6.58214 9.59299 6.5958 9.53151 6.62715C9.47002 6.6585 9.41846 6.7063 9.38255 6.76524C9.34664 6.82417 9.3278 6.89192 9.32813 6.96093V17.0391C9.32813 17.3461 9.675 17.5195 9.9211 17.3414L16.8609 12.3023C16.9089 12.2678 16.9479 12.2224 16.9748 12.1698C17.0017 12.1173 17.0157 12.0591 17.0157 12C17.0157 11.9409 17.0017 11.8827 16.9748 11.8302C16.9479 11.7776 16.9089 11.7322 16.8609 11.6977V11.6977ZM10.8234 14.8383V9.16171L14.7305 12L10.8234 14.8383V14.8383Z" fill="black"></path>
+                                        </svg>
+                                        <p class="text-gray-900 hidden sm:inline">Running</p>
+                                    </button>
+                                </div>
+
+                                <div class="flex gap-5 mt-8">
+                                    <button data-tooltip="Server Details" data-delete-btn="" type="button" class="menu-btn active group/btn tooltip-right flex justify-center items-center !w-12 h-12 text-gray-500 hover:text-gray-900 bg-blue-100 hover:bg-blue-200 rounded-full shadow-sm dark:hover:text-white dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-gray-500 group-hover/btn:fill-gray-900" d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="black"></path>
+                                            <path class="fill-gray-500 group-hover/btn:fill-gray-900" d="M11 11H13V17H11V11ZM11 7H13V9H11V7Z" fill="black"></path>
+                                        </svg>
+                                    </button>
+
+                                    <button data-tooltip="Server Stop" data-delete-btn="" type="button" class="menu-btn active group/btn tooltip-right flex justify-center items-center !w-12 h-12 text-gray-500 hover:text-gray-900 bg-blue-100 hover:bg-blue-200 rounded-full shadow-sm dark:hover:text-white dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                        <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-gray-500 group-hover/btn:fill-gray-900" d="M8 16H16V8H8V16ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="black"/>
+                                        </svg>
+                                    </button>
+
+                                    <button data-tooltip="Server Restart" data-delete-btn="" type="button" class="menu-btn active group/btn tooltip-right flex justify-center items-center !w-12 h-12 text-gray-500 hover:text-gray-900 bg-blue-100 hover:bg-blue-200 rounded-full shadow-sm dark:hover:text-white dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                        <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-gray-500 group-hover/btn:fill-gray-900" d="M19.33 6.69401L19.75 5.31701C19.7884 5.1914 19.8512 5.07459 19.9347 4.97324C20.0183 4.87189 20.121 4.78799 20.237 4.72633C20.3529 4.66468 20.4799 4.62647 20.6107 4.61389C20.7414 4.6013 20.8734 4.6146 20.999 4.65301C21.1246 4.69142 21.2414 4.7542 21.3427 4.83775C21.4441 4.92131 21.528 5.02401 21.5897 5.13999C21.6513 5.25597 21.6895 5.38296 21.7021 5.51371C21.7147 5.64446 21.7014 5.7764 21.663 5.90201L20.493 9.72701C20.4154 9.9805 20.2404 10.1928 20.0064 10.3173C19.7724 10.4418 19.4985 10.4683 19.245 10.391L15.42 9.22101C15.2917 9.18492 15.172 9.12356 15.0678 9.04055C14.9636 8.95754 14.8771 8.85455 14.8132 8.73762C14.7494 8.6207 14.7096 8.49219 14.6961 8.35966C14.6826 8.22713 14.6957 8.09323 14.7347 7.96584C14.7737 7.83846 14.8377 7.72014 14.923 7.61784C15.0084 7.51554 15.1133 7.43133 15.2316 7.37014C15.35 7.30895 15.4793 7.27202 15.6121 7.26153C15.7449 7.25103 15.8785 7.26717 16.005 7.30901L17.677 7.82001C16.9378 6.69891 15.9068 5.80069 14.695 5.22209C13.4832 4.6435 12.1366 4.40645 10.8 4.53649C9.4635 4.66652 8.18777 5.1587 7.11023 5.96003C6.03268 6.76135 5.19416 7.84145 4.68498 9.08401L4.42498 9.71701C4.37769 9.84197 4.30584 9.95618 4.21368 10.0529C4.12152 10.1496 4.01091 10.2269 3.88839 10.2802C3.76586 10.3334 3.63391 10.3616 3.50031 10.363C3.36672 10.3644 3.23419 10.3391 3.11056 10.2884C2.98694 10.2378 2.87471 10.1629 2.78052 10.0681C2.68633 9.97336 2.61208 9.86069 2.56215 9.73677C2.51222 9.61285 2.48764 9.48018 2.48984 9.34659C2.49204 9.21301 2.52099 9.08122 2.57498 8.95901L2.83498 8.32601C3.48121 6.74929 4.5447 5.37836 5.91125 4.36043C7.27781 3.3425 8.89583 2.71601 10.5916 2.54824C12.2873 2.38047 13.9967 2.67774 15.5362 3.40814C17.0758 4.13855 18.3873 5.27449 19.33 6.69401V6.69401ZM3.80798 17.307L3.48098 18.618C3.45172 18.748 3.39677 18.8709 3.31935 18.9794C3.24193 19.0878 3.14362 19.1798 3.03017 19.2497C2.91673 19.3196 2.79045 19.3662 2.65876 19.3866C2.52706 19.4071 2.39261 19.401 2.26331 19.3687C2.134 19.3365 2.01245 19.2787 1.90579 19.1988C1.79913 19.1189 1.70952 19.0185 1.64222 18.9034C1.57493 18.7884 1.53131 18.6611 1.51392 18.5289C1.49653 18.3968 1.50573 18.2625 1.54098 18.134L2.50798 14.254C2.5406 14.1219 2.59984 13.9978 2.68208 13.8894C2.76431 13.781 2.86781 13.6905 2.98623 13.6235C3.10465 13.5565 3.23551 13.5143 3.37079 13.4996C3.50607 13.4849 3.64292 13.498 3.77298 13.538L7.60098 14.492C7.85837 14.5562 8.07972 14.72 8.21634 14.9474C8.35296 15.1748 8.39366 15.4471 8.32948 15.7045C8.26529 15.9619 8.10149 16.1833 7.8741 16.3199C7.64671 16.4565 7.37437 16.4972 7.11698 16.433L5.33098 15.988C6.09449 17.1569 7.17373 18.0853 8.44352 18.6656C9.7133 19.246 11.1216 19.4544 12.5051 19.2668C13.8885 19.0793 15.1904 18.5033 16.2598 17.6058C17.3292 16.7083 18.1223 15.526 18.547 14.196C18.6276 13.9433 18.8053 13.7329 19.0411 13.6112C19.1578 13.5509 19.2852 13.5142 19.4161 13.5032C19.547 13.4922 19.6788 13.5071 19.804 13.547C19.9291 13.5869 20.0452 13.6511 20.1455 13.7359C20.2459 13.8207 20.3285 13.9244 20.3888 14.0411C20.4491 14.1578 20.4858 14.2853 20.4968 14.4162C20.5078 14.5471 20.4929 14.6789 20.453 14.804C20.0367 16.11 19.3392 17.3088 18.4097 18.3163C17.4802 19.3237 16.3413 20.1152 15.073 20.635C13.0968 21.4446 10.9036 21.5561 8.85553 20.951C6.80745 20.3459 5.02694 19.0605 3.80798 17.307V17.307Z" fill="black"/>
+                                        </svg>
+                                    </button>
+
+                                    <button data-tooltip="Server Destroy" data-delete-btn="" type="button" class="menu-btn active group/btn tooltip-right flex justify-center items-center !w-12 h-12 text-gray-500 hover:text-gray-900 bg-blue-100 hover:bg-blue-200 rounded-full shadow-sm dark:hover:text-white dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-gray-500 group-hover/btn:fill-gray-900" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
                 </div>
                 <!-- <div class="tab-content" id="snapshots">
                     <h3 class="text-center text-4xl">
@@ -642,7 +755,17 @@
         </div>
         {{end}}
         
-        
+        {{block "loading-screen" .}}
+        <div id="loading-screen" class="loading-screen items-center justify-center fixed inset-0 z-[60]">
+            <div role="status">
+                <svg aria-hidden="true" class="mr-2 w-12 h-12 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                    <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                </svg>
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        {{end}}
     </main>
     {{end}}
 

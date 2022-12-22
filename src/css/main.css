@@ -693,6 +693,14 @@ body.modal-open {
             opacity-100;
 }
 
+.loading-screen {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.loading-screen.active {
+  display: flex;
+}
+
 table tr td {
   position: relative;
 }
@@ -1045,12 +1053,12 @@ nav .nav-item.active {
             before:visible;
 }
 
-.selection-bar button[data-delete-btn] {
+.selection-bar button {
   @apply translate-x-8
         invisible
         opacity-0;
 }
-.selection-bar button[data-delete-btn].active {
+.selection-bar button.active {
   @apply translate-x-0
             visible
             opacity-100;
