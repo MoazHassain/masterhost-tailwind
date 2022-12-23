@@ -11,6 +11,7 @@ func main() {
 	http.HandleFunc("/component", component)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
+	http.HandleFunc("/login-new", loginNew)
 
 	http.HandleFunc("/dashboard", dashboardHome)
 	http.HandleFunc("/dashboard-new", dashboardNew)
@@ -81,7 +82,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/sign-up.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/signup.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -96,7 +97,22 @@ func login(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/sign-in.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/signin.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func loginNew(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/signin-new.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}

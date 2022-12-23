@@ -1065,12 +1065,12 @@ nav .nav-item.active {
             before:visible;
 }
 
-.selection-bar button {
+.selection-bar button.selection-button {
   @apply translate-x-8
         invisible
         opacity-0;
 }
-.selection-bar button.active {
+.selection-bar button.selection-button.active {
   @apply translate-x-0
             visible
             opacity-100;
