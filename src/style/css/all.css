@@ -1,38 +1,29 @@
-/* sidebar */
-aside {
-  scrollbar-width: none;
+/** scrollbar **/
+/* Works on Chrome, Edge, and Safari */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/Roboto-Light.ttf") format("truetype");
 }
-aside:hover {
-  scrollbar-width: none;
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
 }
-aside::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
 }
-
-nav .nav-item {
-  @apply overflow-x-clip
-        before:absolute 
-        before:bg-white
-        before:w-6 
-        before:h-5 
-        before:invisible
-        before:top-1/2
-        before:right-0
-        transition;
-}
-nav .nav-item::before {
-  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
-          clip-path: polygon(0 0, 50% 50%, 0 100%);
-  transform: rotate(180deg) translateY(50%);
-}
-nav .nav-item img {
-  z-index: 2;
-}
-nav .nav-item:hover img {
-  @apply -translate-y-2;
-}
-nav .nav-item.active {
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
+}/*# sourceMappingURL=all.css.map */active {
   @apply text-white
             bg-blue-1000
             before:visible;

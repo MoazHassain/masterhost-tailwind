@@ -3657,6 +3657,14 @@ nav .nav-item.active::before {
     top: 5rem;
   }
 
+  .sm\:top-16 {
+    top: 4rem;
+  }
+
+  .sm\:right-\[2px\] {
+    right: 2px;
+  }
+
   .sm\:float-right {
     float: right;
   }
