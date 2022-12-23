@@ -11,14 +11,14 @@ func main() {
 	http.HandleFunc("/component", component)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
-	http.HandleFunc("/login-new", loginNew)
+	http.HandleFunc("/login-old", loginOld)
 
 	http.HandleFunc("/dashboard", dashboardHome)
-	http.HandleFunc("/dashboard-new", dashboardNew)
+	http.HandleFunc("/dashboard-old", dashboardOld)
 	http.HandleFunc("/client", clientRoot)
 	http.HandleFunc("/client/client-list", clientList)
 	http.HandleFunc("/domain", domainRoot)
-	http.HandleFunc("/domain/domain-new", domainNew)
+	http.HandleFunc("/domain/domain-old", domainOld)
 	http.HandleFunc("/domain/domain-list", domain)
 	http.HandleFunc("/domain/subdomain-list", subdomain)
 	http.HandleFunc("/domain/domain-redirect", domainRedirent)
@@ -77,7 +77,7 @@ func component(w http.ResponseWriter, r *http.Request) {
 
 func signup(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -92,7 +92,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 }
 func login(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -105,14 +105,14 @@ func login(w http.ResponseWriter, r *http.Request) {
 	ptmp.Execute(w, nil)
 
 }
-func loginNew(w http.ResponseWriter, r *http.Request) {
+func loginOld(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/signin-new.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/signin-old.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -123,16 +123,16 @@ func loginNew(w http.ResponseWriter, r *http.Request) {
 
 func dashboardHome(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 
 	ptmp.Execute(w, nil)
 }
-func dashboardNew(w http.ResponseWriter, r *http.Request) {
+func dashboardOld(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-new.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard-old.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -147,7 +147,7 @@ func clientRoot(w http.ResponseWriter, r *http.Request) {
 }
 func clientList(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -163,17 +163,17 @@ func clientList(w http.ResponseWriter, r *http.Request) {
 
 func domainRoot(w http.ResponseWriter, r *http.Request) {
 
-	http.Redirect(w, r, "/domain/domain-new", http.StatusFound)
+	http.Redirect(w, r, "/domain/domain-list", http.StatusFound)
 
 }
-func domainNew(w http.ResponseWriter, r *http.Request) {
+func domainOld(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-new.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard-old.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/domain/domain-new.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/domain/domain-old.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -183,7 +183,7 @@ func domainNew(w http.ResponseWriter, r *http.Request) {
 }
 func domain(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -198,7 +198,7 @@ func domain(w http.ResponseWriter, r *http.Request) {
 }
 func subdomain(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -217,7 +217,7 @@ func subdomain(w http.ResponseWriter, r *http.Request) {
 }
 func domainRedirent(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -237,7 +237,7 @@ func domainRedirent(w http.ResponseWriter, r *http.Request) {
 
 func addDomain(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -252,7 +252,7 @@ func addDomain(w http.ResponseWriter, r *http.Request) {
 }
 func hosting(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -273,7 +273,7 @@ func packageRoot(w http.ResponseWriter, r *http.Request) {
 }
 func packages(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -288,7 +288,7 @@ func packages(w http.ResponseWriter, r *http.Request) {
 }
 func addPackages(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -308,7 +308,7 @@ func databaseRoot(w http.ResponseWriter, r *http.Request) {
 }
 func database(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -323,7 +323,7 @@ func database(w http.ResponseWriter, r *http.Request) {
 }
 func databaseUser(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -342,7 +342,7 @@ func databaseUser(w http.ResponseWriter, r *http.Request) {
 }
 func addDatabase(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -357,7 +357,7 @@ func addDatabase(w http.ResponseWriter, r *http.Request) {
 }
 func addDbUser(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -378,7 +378,7 @@ func emailRoot(w http.ResponseWriter, r *http.Request) {
 }
 func emailList(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -393,7 +393,7 @@ func emailList(w http.ResponseWriter, r *http.Request) {
 }
 func emailforward(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -412,7 +412,7 @@ func emailforward(w http.ResponseWriter, r *http.Request) {
 }
 func addEmail(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -433,7 +433,7 @@ func toolsRoot(w http.ResponseWriter, r *http.Request) {
 }
 func sslManager(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -448,7 +448,7 @@ func sslManager(w http.ResponseWriter, r *http.Request) {
 }
 func dnsEditor(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -467,7 +467,7 @@ func dnsEditor(w http.ResponseWriter, r *http.Request) {
 }
 func addCustomssl(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -481,7 +481,7 @@ func addCustomssl(w http.ResponseWriter, r *http.Request) {
 }
 func addAutossl(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -500,7 +500,7 @@ func addAutossl(w http.ResponseWriter, r *http.Request) {
 }
 func installssl(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -525,7 +525,7 @@ func billing(w http.ResponseWriter, r *http.Request) {
 }
 func billPayment(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -540,7 +540,7 @@ func billPayment(w http.ResponseWriter, r *http.Request) {
 }
 func billLimit(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -559,7 +559,7 @@ func billLimit(w http.ResponseWriter, r *http.Request) {
 }
 func billHistory(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -584,7 +584,7 @@ func account(w http.ResponseWriter, r *http.Request) {
 }
 func accountProfile(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -599,7 +599,7 @@ func accountProfile(w http.ResponseWriter, r *http.Request) {
 }
 func accountPreference(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -618,7 +618,7 @@ func accountPreference(w http.ResponseWriter, r *http.Request) {
 }
 func accountAuthentication(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -637,7 +637,7 @@ func accountAuthentication(w http.ResponseWriter, r *http.Request) {
 }
 func accountSSH(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -656,7 +656,7 @@ func accountSSH(w http.ResponseWriter, r *http.Request) {
 }
 func accountAPI(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -675,7 +675,7 @@ func accountAPI(w http.ResponseWriter, r *http.Request) {
 }
 func accountUser(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -694,7 +694,7 @@ func accountUser(w http.ResponseWriter, r *http.Request) {
 }
 func accountNotification(w http.ResponseWriter, r *http.Request) {
 
-	ptmp, err := template.ParseFiles("dist/template/dashboard-home.html")
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}

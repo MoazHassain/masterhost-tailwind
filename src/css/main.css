@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  max-height: 100%;
+}
+
 /** scrollbar **/
 /* Works on Chrome, Edge, and Safari */
 @font-face {
@@ -841,6 +845,37 @@ table tr:hover .hover-button {
   display: none;
 }
 
+.toast {
+  @apply fixed
+    top-20
+    left-1/2
+    -translate-x-1/2
+    translate-y-2
+
+    flex
+    items-center
+    justify-between
+    min-w-[200px]
+    max-w-xs
+    w-full
+    py-3
+    px-4
+    bg-white
+    border 
+    border-gray-200
+    rounded-lg
+    shadow-md
+    z-50
+    invisible
+    opacity-0
+    transition-all;
+}
+.toast.active {
+  @apply visible
+        opacity-100
+        translate-y-0;
+}
+
 .tooltip-bottom {
   position: relative;
   width: -webkit-fit-content;
@@ -1045,8 +1080,9 @@ nav .nav-item {
         before:h-5 
         before:invisible
         before:top-1/2
-        before:right-0
-        transition;
+        before:right-0;
+  transition: 0.3s ease-in-out;
+  scale: 1;
 }
 nav .nav-item::before {
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
@@ -1055,9 +1091,11 @@ nav .nav-item::before {
 }
 nav .nav-item img {
   z-index: 2;
+  transition: 0.3s ease-in-out;
 }
 nav .nav-item:hover img {
-  @apply -translate-y-2;
+  @apply -translate-y-1;
+  scale: 1.15;
 }
 nav .nav-item.active {
   @apply text-white

@@ -1,8 +1,9 @@
-// html
-// {
-//     -webkit-overflow-scrolling: touch;
-//     overflow-y: scroll;
-// }
+html
+{
+    // -webkit-overflow-scrolling: touch;
+    // overflow-y: scroll;
+    max-height: 100%;
+}
 // body
 // {
 //     height: 120vh;

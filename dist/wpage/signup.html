@@ -14,9 +14,13 @@
     {
         width: 0;
     }
-    .select-no-label + .select2-container .select2-selection.select2-selection--single
+    /* .select-no-label + .select2-container .select2-selection.select2-selection--single
     {
         background-color: transparent;
+    } */
+    .iti.iti--allow-dropdown .iti__flag-container .iti__selected-flag
+    {
+        background-color: white;
     }
 </style>
 {{end}}
@@ -49,7 +53,7 @@
     <div class="w-full  sm:max-w-lg mx-auto mt-32" id="signup">
         <form data-multi-step id="signup-form" name="signup-form" action="/dashboard" method="" class="w-full">
             <div class="step-1" data-step>
-                <div class="progress-bar flex gap-10 mb-6">
+                <div class="progress-bar flex justify-between gap-10 mb-6">
                     <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">1</p>
                     <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">2</p>
                     <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">3</p>
@@ -61,25 +65,25 @@
                 <div class="flex gap-3 mb-5">
                     <div class="field w-full">
                         <label for="fname-input" class="text-sm block mb-1">First Name <span class="text-red-700">*</span></label>
-                        <input type="text" id="fname-input" name="fname-input" class="w-full bg-transparent" value="" placeholder="First Name">
+                        <input type="text" id="fname-input" name="fname-input" class="w-full" value="" placeholder="First Name">
                     </div>
 
                     <div class="field w-full">
                         <label for="lname-input" class="text-sm block mb-1">Last Name <span class="text-red-700">*</span></label>
-                        <input type="text" id="lname-input" name="lname-input" class="w-full bg-transparent" value="" placeholder="Last Name">
+                        <input type="text" id="lname-input" name="lname-input" class="w-full" value="" placeholder="Last Name">
                         
                     </div>
                 </div>
 
                 <div class="field mb-5">
                     <label for="email-input" class="text-sm block mb-1">Email Address <span class="text-red-700">*</span></label>
-                    <input type="email" id="email-input" name="email-input" class="w-full bg-transparent" value=""  placeholder="Email Address">
+                    <input type="email" id="email-input" name="email-input" class="w-full" value=""  placeholder="Email Address">
                 </div>
                 
                 <div class="field mb-5">
                     <label for="pass-input" class="text-sm block mb-1">Password <span class="text-red-700">*</span></label>
                     <div class="pass-field relative" data-toggle>
-                        <input type="password" id="pass-input" name="pass-input" class="w-full bg-transparent" value=""  placeholder="Password">
+                        <input type="password" id="pass-input" name="pass-input" class="w-full" value=""  placeholder="Password">
                         <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon active-icon" data-toggle-passicon>visibility</span>
                         <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon hidden-icon" data-toggle-passicon>visibility_off</span>
                     </div>
@@ -91,7 +95,7 @@
             </div>
             
             <div class="step-2" data-step>
-                <div class="progress-bar flex gap-10 mb-6">
+                <div class="progress-bar flex justify-between gap-10 mb-6">
                     <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
                     <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full">2</p>
                     <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">3</p>
@@ -107,31 +111,31 @@
                             <input class="intl-input !w-0 !p-0 !border-transparent !-z-10" name="intl-input" id="intl-input" type="tel">
                         </div>
                         <div class="field w-full">
-                            <input type="tel" id="phone-input" name="phone-input" class="w-full bg-transparent" value="" placeholder="Phone Number">
+                            <input type="tel" id="phone-input" name="phone-input" class="w-full" value="" placeholder="Phone Number">
                         </div>
                     </div>
                 </div>
 
                 <div class="field mb-5">
                     <label for="address1-input" class="text-sm block mb-1">Address <span class="text-red-700">*</span></label>
-                    <input type="text" id="address1-input" name="address1-input" class="w-full bg-transparent" value="" placeholder="Address">
+                    <input type="text" id="address1-input" name="address1-input" class="w-full" value="" placeholder="Address">
                 </div>
 
                 <div class="field mb-5">
                     <label for="address2-input" class="text-sm block mb-1">Address 2 (optional)</label>
-                    <input type="text" id="address2-input" name="address2-input" class="w-full bg-transparent" value="" placeholder="Address 2">
+                    <input type="text" id="address2-input" name="address2-input" class="w-full" value="" placeholder="Address 2">
                 </div>
 
                 <div class="flex gap-4 mb-5">
                     <div class="field w-full">
                         <label for="city-input" class="text-sm block mb-1">City <span class="text-red-700">*</span></label>
-                        <input type="text" id="city-input" name="city-input" class="w-full bg-transparent" value="" placeholder="City">
+                        <input type="text" id="city-input" name="city-input" class="w-full" value="" placeholder="City">
                         
                     </div>
 
                     <div class="field ">
                         <label for="zip-input" class="text-sm block mb-1">Zip Code <span class="text-red-700">*</span></label>
-                        <input type="text" id="zip-input" name="zip-input" class="w-full bg-transparent" value="" placeholder="Zip Code">
+                        <input type="text" id="zip-input" name="zip-input" class="w-full" value="" placeholder="Zip Code">
                     </div>
                 </div>
 
@@ -149,13 +153,13 @@
                 </div>
 
                 <div class="field flex gap-5 mt-9">
-                    <button data-previous class="filled-button !bg-blue-50" type="button">Back</button>
+                    <button data-previous class="filled-button !bg-transparent hover:!bg-blue-100" type="button">Back</button>
                     <button data-next class="filled-button w-full" type="button">continue</button>
                 </div>
             </div>
 
             <div class="step-3" data-step>
-                <div class="progress-bar flex gap-10 mb-6">
+                <div class="progress-bar flex justify-between gap-10 mb-6">
                     <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
                     <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
                     <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full">3</p>
@@ -166,11 +170,11 @@
 
                 <div class="field mb-5">
                     <label for="company-input" class="text-sm block mb-1">Company</label>
-                    <input type="text" id="company-input" name="company-input" class="w-full bg-transparent" placeholder="Company Name">
+                    <input type="text" id="company-input" name="company-input" class="w-full" placeholder="Company Name">
                 </div>
                 <div class="field mb-5">
                     <label for="company-link-input" class="text-sm block mb-1">Company URL (Optional)</label>
-                    <input type="text" id="company-link-input" name="company-link-input" class="w-full bg-transparent" placeholder="Company URL">
+                    <input type="text" id="company-link-input" name="company-link-input" class="w-full" placeholder="Company URL">
                 </div>
 
                 <div class="select-field mb-5 overflow-hidden">
@@ -205,7 +209,7 @@
                 </div> -->
 
                 <div class="field flex gap-5 mt-9">
-                    <button data-previous class="filled-button !bg-blue-50" type="button">Back</button>
+                    <button data-previous class="filled-button !bg-transparent hover:!bg-blue-100" type="button">Back</button>
                     <button class="filled-button w-full" type="submit">Submit</button>
                 </div>
             </div>

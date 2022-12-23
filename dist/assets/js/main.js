@@ -166,13 +166,13 @@ modalButtons.forEach(modalButton => {
 
             var modalContent = document.getElementById(modalId);
             modalContent.classList.add("active-modal");
-            document.querySelector("body").classList.add("modal-open");
+            // document.querySelector("body").classList.add("modal-open");
 
             var closeModal = modalContent.querySelector("[data-modal-closer]");
             if(closeModal) {
                 closeModal.onclick = () => {
                     modalContent.classList.remove("active-modal");
-                    document.querySelector("body").classList.remove("modal-open");
+                    // document.querySelector("body").classList.remove("modal-open");
                 }
             }
         }
@@ -209,6 +209,34 @@ if(message) {
     clsMessage.onclick = () => {
         message.classList.add("hide");
     }
+}
+
+/* toast */
+var toast = document.querySelector("[data-toast]");
+var clsToast = document.querySelector("[data-toast-cls]");
+
+function openToast(){
+    toast.classList.add("active");
+
+    setTimeout(() => {
+        toast.classList.remove("active");
+    }, 3000)
+}
+
+if(toast){
+    clsToast.onclick = () => {
+        toast.classList.remove("active");
+    }
+}
+
+/* loading screen */
+function formSubmit(){
+    var loading = document.getElementById("loading-screen");
+    loading.classList.add("active");
+
+    setTimeout(() => {
+        loading.classList.remove("active");
+    }, 3000)
 }
 
 /* copy clipboard */
