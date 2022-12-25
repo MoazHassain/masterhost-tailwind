@@ -11,12 +11,16 @@ func main() {
 	http.HandleFunc("/component", component)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
+	http.HandleFunc("/reset-password-step-1", resetPassOne)
+	http.HandleFunc("/reset-password-step-2", resetPassTwo)
+	http.HandleFunc("/reset-password-step-3", resetPassThree)
 	http.HandleFunc("/login-old", loginOld)
 
 	http.HandleFunc("/dashboard", dashboardHome)
 	http.HandleFunc("/dashboard-old", dashboardOld)
 	http.HandleFunc("/client", clientRoot)
 	http.HandleFunc("/client/client-list", clientList)
+	http.HandleFunc("/client/subscription", subscription)
 	http.HandleFunc("/domain", domainRoot)
 	http.HandleFunc("/domain/domain-old", domainOld)
 	http.HandleFunc("/domain/domain-list", domain)
@@ -53,6 +57,8 @@ func main() {
 	http.HandleFunc("/packages", packageRoot)
 	http.HandleFunc("/packages/package-list", packages)
 	http.HandleFunc("/packages/add", addPackages)
+	http.HandleFunc("/applications", applicationRoot)
+	http.HandleFunc("/applications/application-list", application)
 	http.HandleFunc("/billing", billing)
 	http.HandleFunc("/billing/payment", billPayment)
 	http.HandleFunc("/billing/limit", billLimit)
@@ -82,7 +88,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/signup.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/registration/signup.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -97,7 +103,52 @@ func login(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/signin.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/registration/signin.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func resetPassOne(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/registration/forget-pass-s1.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func resetPassTwo(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/registration/forget-pass-s2.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func resetPassThree(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/registration/forget-pass-s3.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -112,7 +163,7 @@ func loginOld(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("dist/wpage/signin-old.html")
+	ptmp, err = ptmp.ParseFiles("dist/wpage/registration/signin-old.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -153,6 +204,21 @@ func clientList(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ptmp, err = ptmp.ParseFiles("dist/wpage/client/clients.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+func subscription(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/client/subscription.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -294,6 +360,27 @@ func addPackages(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ptmp, err = ptmp.ParseFiles("dist/wpage/package/add-package.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+
+func applicationRoot(w http.ResponseWriter, r *http.Request) {
+
+	http.Redirect(w, r, "/applications/application-list", http.StatusFound)
+
+}
+func application(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/application/application.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}

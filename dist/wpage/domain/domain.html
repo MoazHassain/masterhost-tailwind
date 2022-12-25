@@ -110,69 +110,6 @@
         <a href="/domain/domain-redirect"  data-id="domain-redirect" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
             Domain Redirect
         </a>
-        {{end}} -->   
-
-        <!-- 
-        <div class="selection-bar absolute top-full right-28 -translate-y-1/2 flex gap-5 z-10">
-            <div class="filter dropdown relative" data-dropdown="">
-                <button data-tooltip="Search" data-dropdown-btn="" type="button" class="menu-btn selection-button active group/btn tooltip-top flex justify-center items-center !w-14 h-14 text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 shadow-sm hover:bg-gray-50">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-gray-500 group-hover/btn:fill-gray-900 transition" d="M10 18C11.775 17.9996 13.4988 17.4054 14.897 16.312L19.293 20.708L20.707 19.294L16.311 14.898C17.405 13.4997 17.9996 11.7754 18 10C18 5.589 14.411 2 10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18ZM10 4C13.309 4 16 6.691 16 10C16 13.309 13.309 16 10 16C6.691 16 4 13.309 4 10C4 6.691 6.691 4 10 4Z" fill="black"/>
-                    </svg>
-                </button>
-                <div class="dropdown-content p-6 p-7 w-[520px] absolute top-16 -right-2.5 rounded-md bg-white text-gray-600 z-10">
-                    <form id="filter" name="filter" action="">
-                        <div class="field flex gap-5 items-center mb-3">
-                            <label for="domain-input" class="min-w-[100px] mb-0">Domain</label>
-                            <input type="text" id="domain-input" name="domain-input" class="w-full border-0 border-b-[1px] p-1 h-auto" placeholder=" ">
-                        </div>
-
-                        <div class="field flex gap-5 items-center mb-3">
-                            <label for="user-input" class="min-w-[100px] mb-0">User</label>
-                            <input type="text" id="user-input" name="user-input" class="w-full border-0 border-b-[1px] p-1 h-auto" placeholder=" ">
-                        </div>
-
-                        <div class="select-field flex gap-5 items-center mb-3">
-                            <label for="package-select" class="not-floating !text-sm !text-slate-500 min-w-[100px] block mb-0">
-                                Package
-                            </label>
-                            
-                            <select id="package-select" name="package-select" class="custom-select select-no-label">
-                                <option value="package1">Package 01</option>
-                                <option value="package500">Package 500</option>
-                            </select>
-                            
-                        </div>
-
-                        <div class="field flex gap-5 items-center mb-3">
-                            <label for="date-input" class="min-w-[100px] mb-0">Date Created</label>
-                            <input type="date" id="date-input" name="date-input" class="w-full border-0 border-b-[1px] p-1 h-auto resize-none" placeholder=" ">
-                            
-                        </div>
-
-                        <div class="field flex gap-4 items-start md:items-center my-5 mb-6">
-                            <input type="checkbox" name="checkbox-diskspace" id="checkbox-diskspace" class="shrink-0 mt-1.5 md:mt-0">
-                            <label for="checkbox-diskspace" class="text-gray-600 mb-0">
-                                Has free Disk space
-                            </label>
-                        </div>
-
-                        <div class="field ">
-                            <button class="filled-button ml-auto" type="submit">Search</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <button data-tooltip="Delete" data-delete-btn="" type="button" class="menu-btn selection-button active group/btn tooltip-top flex justify-center items-center !w-14 h-14 text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 shadow-sm hover:bg-gray-50">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="fill-gray-500 group-hover/btn:fill-gray-900 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
-                </svg>
-            </button>
-        </div>
-        -->
-
-        <!-- {{block "add-bar" .}}
-        <div></div>
         {{end}} -->
 
         {{block "tab-content" .}}
@@ -302,9 +239,6 @@
                         <a data-id="records-tab" class="tab-button menu-button active-tab flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
                             Manage Records
                         </a>
-                        <a data-id="zone-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
-                            Zone Settings
-                        </a>
                         
                     </div>
                     <div class="w-full border-b border-b-neutral-200"></div>
@@ -423,37 +357,6 @@
                             </form>
                         </div>
                     </div>
-                    <div class="modal-tab-content" id="zone-tab">
-                        <div class="max-w-sm w-full md:w-1/3">
-                            <h3 class="text-2xl text-gray-600 mb-4">DNSSEC Settings</h3>
-
-                            <div class="w-full flex items-center gap-3 border border-gray-300 px-6 py-8 mb-8">
-                                <p class="">Status:</p>
-                                <label class="field switch-field">
-                                    <input type="checkbox" class="custom-checkbox" name="enabled" id="checkbox-enabled">
-                                    <div class="switch"></div>
-                                    <!-- <span class="headline3">Notify me when list verification completes</span> -->
-                                </label>
-                            </div>
-
-                            <h3 class="text-2xl text-gray-600 mb-4">SOA Information</h3>
-
-                            <form id="soa-info" name="soa-info" action="" method="" class="w-full">
-                                <div class="field mb-5">
-                                    <input type="text" id="name-input" name="name-input" class="floating-input w-full" value="ns1.vultr.com" placeholder=" ">
-                                    <label for="name-input" class="floating-label">Primary Nameserver</label>
-                                </div>
-                                <div class="field mb-5">
-                                    <input type="text" id="address-input" name="address-input" class="floating-input w-full" value="dnsadm@choopa.com" placeholder=" ">
-                                    <label for="address-input" class="floating-label">Email Address</label>
-                                </div>
-
-                                <div class="field">
-                                    <button class="filled-button" type="submit">Update SOA Record</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- <div class="modal-scrim"></div> -->
@@ -520,6 +423,9 @@
     {{block "toast-message" .}}{{end}}
 
     {{block "delete-confirmation" .}}{{end}}
+    <!-- {{block "message" .}}
+    Delete Domain
+    {{end}} -->
     
     {{block "loading-screen" .}}
 

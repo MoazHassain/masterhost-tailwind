@@ -9,7 +9,7 @@
 {{end}}
 
 {{block "main" .}}
-<main class="ml-0 lg:ml-32">
+<main class="ml-0 lg:ml-32 min-h-screen">
     {{block "header" .}}
     {{end}}
 
@@ -24,7 +24,7 @@
         {{end}}
         
         {{block "tab-content" .}}
-        <div class="container max-w-7xl mt-12 mb-20">
+        <div class="container max-w-7xl mt-12 pb-20">
             <div class="tab-content active-content flex-col" id="user-tab">
                 <div class="table-wrap responsive border border-gray-200 rounded mb-20">
                     <table class="w-full text-left">
@@ -65,7 +65,12 @@
                         <tbody>
                             <tr class="h-16 border-b hover:bg-blue-50 transition">
                                 <td class="px-3 !hidden lg:!table-cell">
-                                    <input type="checkbox" name="t" id="t">
+                                    <input class="hover-content" type="checkbox" name="t" id="t">
+                                    <div class="content">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
+                                        </svg>
+                                    </div>
                                 </td>
                                 <td class="px-3" data-thead="User">
                                     <p class="text-slate-800">Ariful Islam</p>
@@ -93,14 +98,14 @@
                                 </td>
                                 <td class="px-3" data-thead="Action">
                                     <div class="options dropdown relative" data-dropdown="">
-                                        <button class="p-3 menu-btn" data-dropdown-btn="">
+                                        <button class="p-3 menu-btn hover-button" data-dropdown-btn="">
                                             <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="stroke-gray-600" d="M4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13Z" stroke="black" stroke-width="2"></path>
                                                 <path class="stroke-gray-600" d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="black" stroke-width="2"></path>
                                                 <path class="stroke-gray-600" d="M20 13C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13Z" stroke="black" stroke-width="2"></path>
                                             </svg>
                                         </button>
-                                        <div class="dropdown-content py-1 w-56 absolute top-12 right-0 bg-white text-gray-600 z-10">
+                                        <div class="dropdown-content overlap-content py-1 w-56 absolute top-3 right-0 rounded-md bg-white text-gray-600 z-10">
                                             
                                             <a href="" class="px-6 py-2 flex gap-2 items-center group/btn hover:bg-blue-50 hover:text-blue-500 transition">
                                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

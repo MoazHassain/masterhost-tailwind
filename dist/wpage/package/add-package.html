@@ -181,18 +181,18 @@
 
     var checkboxWraps = document.querySelectorAll("form .checkbox-wrap");
     
-        checkboxWraps.forEach(checkboxWrap => {
-            var checkbox = checkboxWrap.querySelector("input[type='checkbox']");
-            var textfield = checkboxWrap.querySelector("input[type='number']");
-            
-            checkboxWrap.addEventListener("change", ()=> {
-                if (checkbox.checked == true) {
-                    textfield.disabled = true;
-                } else {
-                    textfield.disabled = false;
-            }
-            })
-
+    checkboxWraps.forEach(checkboxWrap => {
+        var checkbox = checkboxWrap.querySelector("input[type='checkbox']");
+        var textfield = checkboxWrap.querySelector("input[type='number']");
+        
+        checkboxWrap.addEventListener("change", ()=> {
+            if (checkbox.checked == true) {
+                textfield.disabled = true;
+            } else {
+                textfield.disabled = false;
+        }
         })
+
+    })
 </script>
 {{end}}

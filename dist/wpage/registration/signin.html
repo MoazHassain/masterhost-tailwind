@@ -1,0 +1,78 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}{{end}}
+
+{{block "sidebar" .}}
+<div></div>
+{{end}}
+
+{{block "main" .}}
+<div class="signing flex h-screen overflow-hidden">
+    <div class="w-0 sm:w-32 shrink-0 bg-blue-900">
+        
+    </div>
+
+    <main class="w-full px-12 py-10 overflow-y-scroll">
+    
+
+    {{block "content" .}}
+    <div class="w-full h-full sm:max-w-md flex items-center mx-auto" id="signin">
+        <form id="signup-form" name="signup-form" action="/dashboard" method="" class="w-full h-auto border border-gray-300 shadow-md rounded-md p-9 px-10">
+            <div class="text-center mb-10">
+                <h5 class="text-2xl font-medium text-gray-700 mb-4">Login</h5>
+
+                <div class="w-fit mx-auto flex gap-4 items-center border border-gray-200 rounded-full p-2 pr-5">
+                    <div class="logo">
+                        <svg class="w-8 h-8" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#0069FF"/>
+                            <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#0069FF"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 text-lg">Login to <span class="font-medium text-blue-700">MasterHost</span></p>
+                </div>
+                
+            </div>
+
+            <div class="field mb-5">
+                <label for="email-input" class="text-sm block mb-1">Email Address <span class="text-red-700">*</span></label>
+                <input type="email" id="email-input" name="email-input" class="w-full" value=""  placeholder="Email Address">
+            </div>
+
+            <div class="field mb-1">
+                <label for="pass-input" class="text-sm block mb-1">Password <span class="text-red-700">*</span></label>
+                <div class="pass-field relative" data-toggle>
+                    <input type="password" id="pass-input" name="pass-input" class="w-full" value=""  placeholder="Password">
+                    <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon active-icon cursor-pointer" data-toggle-passicon>visibility</span>
+                    <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon hidden-icon cursor-pointer" data-toggle-passicon>visibility_off</span>
+                </div>
+            </div>
+
+            <a href="/reset-password-step-1" class="w-fit text-sm text-blue-400 flex justify-end mb-3 ml-auto">Forgot Password?</a>
+
+            <div class="field my-9">
+                <button data-next class="filled-button w-full" type="submit">Login to Dashboard</button>
+            </div>
+
+            <p class="w-fit text-base text-gray-500 flex gap-3 items-center justify-end mb-3 mx-auto">
+                Don't have an account yet?  
+                <a href="/signup" class="text-blue-400 font-medium"> SIGN UP</a>
+            </p>
+        </form>
+    </div>
+    {{end}}
+
+    </main>
+
+    
+    
+</div>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script></script>
+{{end}}
+

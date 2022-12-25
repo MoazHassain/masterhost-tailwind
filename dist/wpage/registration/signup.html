@@ -1,0 +1,308 @@
+{{block "title" .}}{{end}}
+
+{{block "custom-css" .}}
+<style>
+    div.header 
+    {
+        width: calc(100% - 320px);
+    }
+    main 
+    {
+        scrollbar-width: 0px;
+    }
+    main::-webkit-scrollbar
+    {
+        width: 0;
+    }
+    /* .select-no-label + .select2-container .select2-selection.select2-selection--single
+    {
+        background-color: transparent;
+    } */
+    .iti.iti--allow-dropdown .iti__flag-container .iti__selected-flag
+    {
+        background-color: white;
+    }
+</style>
+{{end}}
+
+{{block "sidebar" .}}
+<div></div>
+{{end}}
+
+{{block "main" .}}
+<div class="signing flex h-screen overflow-hidden">
+    <main class="w-full overflow-y-scroll bg-gray-50">
+    {{block "header" .}}
+    <div class="header fixed top-0 bg-white h-14 px-5 flex justify-between items-center shadow z-50">
+        <div class="logo">
+            <svg class="w-9 h-9" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#0069FF"/>
+                <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#0069FF"/>
+            </svg>
+        </div>
+        <div class="flex items-center gap-9">
+            <a href="" class="text-sm font-medium text-blue-500 hover:text-blue-700 transition">Need Help?</a>
+            <a href="/login" class="">
+                <button class="outline-button !h-auto !p-4 !py-2">LOG IN</button>
+            </a>
+        </div>
+    </div>
+    {{end}}
+
+    {{block "content" .}}
+    <div class="w-full  sm:max-w-lg mx-auto mt-32" id="signup">
+        <form data-multi-step id="signup-form" name="signup-form" action="/dashboard" method="" class="w-full">
+            <div class="step-1" data-step>
+                <div class="progress-bar flex justify-between gap-10 mb-6">
+                    <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">1</p>
+                    <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">2</p>
+                    <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">3</p>
+                </div>
+
+                <h5 class="text-2xl font-medium text-gray-700 mb-2">Create Account</h5>
+                <p class="text-gray-700 mb-6">Create your free account to continue.</p>
+
+                <div class="flex gap-3 mb-5">
+                    <div class="field w-full">
+                        <label for="fname-input" class="text-sm block mb-1">First Name <span class="text-red-700">*</span></label>
+                        <input type="text" id="fname-input" name="fname-input" class="w-full" value="" placeholder="First Name">
+                    </div>
+
+                    <div class="field w-full">
+                        <label for="lname-input" class="text-sm block mb-1">Last Name <span class="text-red-700">*</span></label>
+                        <input type="text" id="lname-input" name="lname-input" class="w-full" value="" placeholder="Last Name">
+                        
+                    </div>
+                </div>
+
+                <div class="field mb-5">
+                    <label for="email-input" class="text-sm block mb-1">Email Address <span class="text-red-700">*</span></label>
+                    <input type="email" id="email-input" name="email-input" class="w-full" value=""  placeholder="Email Address">
+                </div>
+                
+                <div class="field mb-5">
+                    <label for="pass-input" class="text-sm block mb-1">Password <span class="text-red-700">*</span></label>
+                    <div class="pass-field relative" data-toggle>
+                        <input type="password" id="pass-input" name="pass-input" class="w-full" value=""  placeholder="Password">
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon active-icon cursor-pointer" data-toggle-passicon>visibility</span>
+                        <span class="material-icons absolute top-1/2 right-5 -translate-y-1/2 text-gray-500 toggole-icon hidden-icon cursor-pointer" data-toggle-passicon>visibility_off</span>
+                    </div>
+                </div>
+
+                <div class="field mt-9">
+                    <button data-next class="filled-button w-full" type="button">continue</button>
+                </div>
+            </div>
+            
+            <div class="step-2" data-step>
+                <div class="progress-bar flex justify-between gap-10 mb-6">
+                    <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
+                    <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full">2</p>
+                    <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">3</p>
+                </div>
+
+                <h5 class="text-2xl font-medium text-gray-700 mb-2">Create Account</h5>
+                <p class="text-gray-700 mb-6">Enter your information to continue.</p>
+
+                <div class="phone-field">
+                    <label for="phone-input" class="text-sm block mb-1">Phone Number <span class="text-red-700">*</span></label>
+                    <div class="flex gap-2 mb-5">
+                        <div class="field">
+                            <input class="intl-input !w-0 !p-0 !border-transparent !-z-10" name="intl-input" id="intl-input" type="tel">
+                        </div>
+                        <div class="field w-full">
+                            <input type="tel" id="phone-input" name="phone-input" class="w-full" value="" placeholder="Phone Number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field mb-5">
+                    <label for="address1-input" class="text-sm block mb-1">Address <span class="text-red-700">*</span></label>
+                    <input type="text" id="address1-input" name="address1-input" class="w-full" value="" placeholder="Address">
+                </div>
+
+                <div class="field mb-5">
+                    <label for="address2-input" class="text-sm block mb-1">Address 2 (optional)</label>
+                    <input type="text" id="address2-input" name="address2-input" class="w-full" value="" placeholder="Address 2">
+                </div>
+
+                <div class="flex gap-4 mb-5">
+                    <div class="field w-full">
+                        <label for="city-input" class="text-sm block mb-1">City <span class="text-red-700">*</span></label>
+                        <input type="text" id="city-input" name="city-input" class="w-full" value="" placeholder="City">
+                        
+                    </div>
+
+                    <div class="field ">
+                        <label for="zip-input" class="text-sm block mb-1">Zip Code <span class="text-red-700">*</span></label>
+                        <input type="text" id="zip-input" name="zip-input" class="w-full" value="" placeholder="Zip Code">
+                    </div>
+                </div>
+
+                <div class="select-field mb-5">
+                    <label for="country-select" class="not-floating !text-sm !text-slate-500 block mb-1">
+                        Country/Region <span class="text-red-700">*</span> 
+                    </label>
+                    
+                    <select  id="country-select" name="country-select" class="custom-select select-no-label">
+                        <option value="" disabled selected>Select Country :</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="United State">United State</option>
+                        <option value="India">India</option>
+                    </select>
+                </div>
+
+                <div class="field flex gap-5 mt-9">
+                    <button data-previous class="filled-button !bg-transparent hover:!bg-blue-100" type="button">Back</button>
+                    <button data-next class="filled-button w-full" type="button">continue</button>
+                </div>
+            </div>
+
+            <div class="step-3" data-step>
+                <div class="progress-bar flex justify-between gap-10 mb-6">
+                    <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
+                    <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
+                    <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full">3</p>
+                </div>
+
+                <h5 class="text-2xl font-medium text-gray-700 mb-2">Create Account</h5>
+                <p class="text-gray-700 mb-6">Enter company information to continue.</p>
+
+                <div class="field mb-5">
+                    <label for="company-input" class="text-sm block mb-1">Company</label>
+                    <input type="text" id="company-input" name="company-input" class="w-full" placeholder="Company Name">
+                </div>
+                <div class="field mb-5">
+                    <label for="company-link-input" class="text-sm block mb-1">Company URL (Optional)</label>
+                    <input type="text" id="company-link-input" name="company-link-input" class="w-full" placeholder="Company URL">
+                </div>
+
+                <div class="select-field mb-5 overflow-hidden">
+                    <label for="business-catagory-select" class="not-floating !text-sm !text-slate-500 block mb-1 whitespace-nowrap">
+                        What catagory best describe your business? <span class="text-red-700 ">*</span> 
+                    </label>
+                    
+                    <select  id="business-catagory-select" name="business-catagory-select" class="custom-select select-no-label">
+                        <option value="0" disabled selected>Please Choose</option>
+                        <option value="Ecommerce">Ecommerce</option>
+                        <option value="Education">Education</option>
+                        <option value="Health Care">Health Care</option>
+                    </select>
+                </div>
+
+                <div class="select-field mb-5 overflow-hidden">
+                    <label for="business-size-select" class="not-floating !text-sm !text-slate-500 block mb-1  whitespace-nowrap">
+                        What is the size of your business organization? <span class="text-red-700">*</span> 
+                    </label>
+                    
+                    <select  id="business-size-select" name="business-size-select" class="custom-select select-no-label">
+                        <option value="0" disabled selected>Please Choose</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Small Business">Small Business</option>
+                        <option value="Large Business">Large Business</option>
+                    </select>
+                </div>
+
+                <!-- <div class="field mb-5">
+                    <label for="company-link-input" class="">Describe the service(s) you are running with your account. <span class="text-red-700">*</span> </label>
+                    <textarea rows="4" id="company-link-input" name="company-link-input" class="w-full mt-2"></textarea>
+                </div> -->
+
+                <div class="field flex gap-5 mt-9">
+                    <button data-previous class="filled-button !bg-transparent hover:!bg-blue-100" type="button">Back</button>
+                    <button class="filled-button w-full" type="submit">Submit</button>
+                </div>
+            </div>
+            
+            
+        </form>
+    </div>
+    {{end}}
+    </main>
+
+    <div class="w-0 sm:w-80 shrink-0">
+        <img class="h-screen w-80 object-cover object-center" src="/resources/img/signing-img.png" alt="">
+    </div>
+    
+</div>
+{{end}}
+
+{{block "chat-bar" .}}
+
+{{end}}
+
+{{block "custom-js" .}}
+<script>
+    $('#country-select').select2({
+        placeholder :'Country',
+        width: '100%',
+        // allowClear:true,
+        
+    });
+
+    $('#business-catagory-select').select2({
+        placeholder :'Please Choose',
+        width: '100%',
+        // allowClear:true,
+        
+    });
+    $('#business-size-select').select2({
+        placeholder :'Please Choose',
+        width: '100%',
+        // allowClear:true,
+        
+    });
+
+    var phoneInput = document.querySelector("#intl-input");
+
+    window.intlTelInput(phoneInput, {
+        initialCountry: "bd",
+        separateDialCode: true,
+        utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
+    });
+
+
+    const multiStepForm = document.querySelector("[data-multi-step]")
+    const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
+
+    let currentStep = formSteps.findIndex(step => {
+        return step.classList.contains("active-form")
+    })
+
+    if (currentStep < 0) {
+        currentStep = 0
+        showCurrentStep()
+    }
+
+    multiStepForm.addEventListener("click", e => {
+    let incrementor
+    if (e.target.matches("[data-next]")) {
+        incrementor = 1
+    } else if (e.target.matches("[data-previous]")) {
+        incrementor = -1
+    }
+
+    if (incrementor == null) return
+
+    const inputs = [...formSteps[currentStep].querySelectorAll("input")]
+    const allValid = inputs.every(input => input.reportValidity())
+    if (allValid) {
+        currentStep += incrementor
+        showCurrentStep()
+    }
+    })
+
+    formSteps.forEach(step => {
+    step.addEventListener("animationend", e => {
+        formSteps[currentStep].classList.remove("hide-form")
+        e.target.classList.toggle("hide-form", !e.target.classList.contains("active-form"))
+    })
+    })
+
+    function showCurrentStep() {
+    formSteps.forEach((step, index) => {
+        step.classList.toggle("active-form", index === currentStep)
+    })
+    }
+</script>
+{{end}}

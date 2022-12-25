@@ -125,19 +125,6 @@
         
     });
 
-    var radioFields = document.querySelectorAll(".radio-fields .radio-box");
-    var otherBtn = document.querySelector("[data-other-btn] input");
-    var otherContent = document.querySelector("[data-other-content]");
 
-    radioFields.forEach(radioField => {
-        console.log(radioField)
-        radioField.addEventListener('change', () => {
-            if (otherBtn.checked == true) {
-                otherContent.style.display = "block";
-            } else {
-                otherContent.style.display = "none";
-            }
-        })
-    })
 </script>
 {{end}}
