@@ -26,6 +26,7 @@ func main() {
 	http.HandleFunc("/domain/domain-list", domain)
 	http.HandleFunc("/domain/subdomain-list", subdomain)
 	http.HandleFunc("/domain/domain-redirect", domainRedirent)
+	http.HandleFunc("/domain/domain-service", domainService)
 	http.HandleFunc("/domain/add", addDomain)
 	http.HandleFunc("/domain/hosting-selection", hosting)
 	http.HandleFunc("/database", databaseRoot)
@@ -293,6 +294,22 @@ func domainRedirent(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 	ptmp, err = ptmp.ParseFiles("dist/wpage/domain/domain-redirect.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+
+func domainService(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("dist/template/dashboard.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("dist/wpage/domain/domain-service.html")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
