@@ -177,6 +177,21 @@ modalButtons.forEach(modalButton => {
                     document.querySelector("body").classList.remove("modal-open");
                 }
             }
+            var doneModal = modalContent.querySelector("[data-modal-done]");
+            if(doneModal) {
+                doneModal.onclick = () => {
+                    modalContent.classList.remove("active-modal");
+                    document.querySelector("body").classList.remove("modal-open");
+
+                    var toast = document.querySelector("[data-toast]");
+                    toast.classList.add("active");
+                    setTimeout(() => {
+                        toast.classList.remove("active");
+                    }, 3000)
+                }
+            }
+
+
         }
     }
 })

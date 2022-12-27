@@ -39,7 +39,8 @@ nav .nav-item.active {
   @apply text-white
             bg-blue-1000
             before:visible;
-}/*# sourceMappingURL=all.css.map */  width: 100%;
+}/*# sourceMappingURL=all.css.map */in-width: 100px;
+  width: 100%;
 }
 
 .field {

@@ -28,6 +28,25 @@ button
     hover:bg-blue-200;
 }
 
+// .outline-button
+// {
+//     @apply
+//     h-14
+//     px-4
+//     flex
+//     items-center
+//     justify-center
+//     bg-white
+//     border 
+//     border-gray-300
+//     text-gray-600
+//     font-medium
+//     rounded-sm
+//     transition
+//     hover:border-blue-500
+//     hover:text-blue-500;
+// }
+
 .outline-button
 {
     @apply
@@ -38,13 +57,14 @@ button
     justify-center
     bg-white
     border 
-    border-gray-300
-    text-gray-600
+    border-blue-500
+    text-blue-500
     font-medium
-    rounded-sm
+    rounded
     transition
+    hover:bg-blue-500
     hover:border-blue-500
-    hover:text-blue-500;
+    hover:text-white;
 }
 
 button 

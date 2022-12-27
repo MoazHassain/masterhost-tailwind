@@ -62,13 +62,14 @@ button {
     justify-center
     bg-white
     border 
-    border-gray-300
-    text-gray-600
+    border-blue-500
+    text-blue-500
     font-medium
-    rounded-sm
+    rounded
     transition
+    hover:bg-blue-500
     hover:border-blue-500
-    hover:text-blue-500;
+    hover:text-white;
 }
 
 button.active-function {
