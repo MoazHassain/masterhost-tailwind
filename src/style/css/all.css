@@ -605,6 +605,11 @@ body.modal-open {
     z-50
     hidden;
 }
+@media (max-width: 768px) {
+  .modal-wrap {
+    @apply w-screen;
+  }
+}
 .modal-wrap .modal-content {
   overflow-y: scroll;
   @apply absolute
@@ -623,7 +628,7 @@ body.modal-open {
 }
 @media (max-width: 768px) {
   .modal-wrap .modal-content {
-    width: 90vw;
+    width: 100%;
   }
 }
 .modal-wrap .modal-closer {
@@ -637,7 +642,9 @@ body.modal-open {
 }
 @media (max-width: 768px) {
   .modal-wrap .modal-closer {
-    @apply right-8;
+    @apply absolute
+            top-10
+            right-8;
   }
 }
 .modal-wrap .modal-closer:hover {
@@ -684,6 +691,12 @@ table tr td .hover-content:checked + .content {
 table tr td .hover-button {
   visibility: hidden;
   opacity: 0;
+}
+@media (max-width: 768px) {
+  table tr td .hover-button {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 table tr:hover .content {
   display: none;

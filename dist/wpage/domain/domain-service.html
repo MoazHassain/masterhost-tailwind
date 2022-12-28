@@ -25,6 +25,14 @@
         column-gap: 20px;
         row-gap: 4px;
     } */
+
+    @media (max-width: 640px)
+    {
+        .content > .container.grid
+        {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 {{end}}
 
@@ -41,7 +49,7 @@
     {{block "content" .}}
     <div class="content">
         <div class="container max-w-7xl my-10 grid gap-8">
-            <div class="left-content grid gap-4 grid-cols-3 h-fit">
+            <div class="left-content grid gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 h-fit">
                 <a class="menu-btn flex items-center py-4 px-5 gap-4 border border-gray-200 shadow rounded bg-white hover:bg-gray-50 transition">
                     <img class="w-9 h-9 rounded-full" src="/resources/icon/package.svg" alt="">
                     <p class="text-lg text-gray-600 mb-1">Web Hosting Access</p>

@@ -25,6 +25,12 @@ table
             {
                 visibility: hidden;
                 opacity: 0;
+
+                @media (max-width: 768px) 
+                {
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
 
         }
