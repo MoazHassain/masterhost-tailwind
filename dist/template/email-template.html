@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterHost</title>
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    :root
+    {
+        --primary-color: rgb(16, 97, 210);
+        --black-100: rgb(97, 99, 100);
+        --black-200: rgb(47, 48, 49);
+    }
+    body
+    {
+        background-color: rgb(230, 230, 230);
+        
+    }
+    .content
+    {
+        max-width: 580px;
+        width: 100%;
+        min-height: 100vh;
+        margin-inline: auto;
+        background-color: white;
+    }
+    .line 
+    {
+        height: 4px;
+        width: 100%;
+        background-color: var(--primary-color);
+    }
+    header
+    {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 32px;
+    }
+    a 
+    {
+        text-decoration: none;
+        color: rgb(45, 46, 47);
+    }
+    button
+    {
+        cursor: pointer;
+        background-color: white;
+        border: none;
+        outline: none;
+    }
+    .outline-button 
+    {
+        border: 1px solid var(--primary-color);
+        height: 48px;
+        border-radius: 2px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--primary-color);
+
+        transition: 0.2s ease-in-out;
+    }
+
+    .outline-button:hover
+    {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    header .logo 
+    {
+        width: 46px;
+        height: 46px;
+    }
+
+    .flex 
+    {
+        display: flex;
+    }
+
+    .card
+    {
+        margin-top: 46px;
+        margin-inline: 32px;
+        border: 1px solid rgb(221, 220, 220);
+        border-radius: 4px;
+
+    }
+
+    .card .header 
+    {
+        padding: 16px 24px;
+        background-color: rgb(249, 250,  251);
+    }
+    .card .header .flex
+    {
+        gap: 26px;
+    }
+
+    .card .header .flex .text-part p
+    {
+        color: var(--black-100);
+    }
+    .card .header .flex .text-part p:first-child
+    {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+    .card .divider 
+    {
+        width: 100%;
+        border-bottom: 1px solid rgb(221, 220, 220);
+    }
+
+    .card .card-content 
+    {
+        padding: 20px 24px;
+    }
+
+    .card .card-content > .flex 
+    {
+        justify-content: space-between;
+        color: var(--black-100);
+        padding: 8px 16px;
+    }
+
+    .card .card-content > .flex:hover
+    {
+        background-color: rgb(249, 250,  251);
+    }
+    .card .card-content > .flex p:last-child
+    {
+        font-weight: 500;
+    }
+    .card .card-content > .flex button p
+    {
+        color: var(--black-100);
+    }
+
+    footer .line 
+    {
+        height: 20px;
+    }
+
+    main 
+    {
+        height: calc(100vh - 56px);
+    }
+    @media (max-width: 400px) 
+    {
+        main 
+        {
+            height: calc(100vh - 80px);
+        }
+    }
+    footer p 
+    {
+        text-align: center;
+        margin-bottom: 16px;
+        color: var(--black-100);
+    } 
+
+    @media (max-width: 400px) 
+    {
+        main 
+        {
+            height: calc(100vh - 80px);
+        }
+
+        .card .card-content 
+        {
+            padding: 16px;
+        }
+    }
+</style>
+<body>
+    <div class="content">
+        <main>
+            <div class="line"></div>
+            <header class="">
+                <svg class="logo" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#0069FF"/>
+                    <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#0069FF"/>
+                </svg>     
+                
+                <a href="">
+                    <button class="outline-button">Go to Website</button>
+                </a>
+            </header>
+            <div class="card">
+                <div class="header flex">
+                    <div class="flex">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45 31.5C45 33.9853 35.598 36 24 36C12.402 36 3 33.9853 3 31.5C3 29.0147 12.402 27 24 27C35.598 27 45 29.0147 45 31.5Z" fill="#2654A3"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 31.5V39.5C4.66667 40.8333 9 43.5 24 43.5C39 43.5 43.3333 40.8333 45 39.5V31.5C43.6667 33 37.6 36 24 36C10.4 36 4.33333 33 3 31.5ZM6.13043 38.0353C6.68272 38.0353 7.13043 37.5876 7.13043 37.0353C7.13043 36.483 6.68272 36.0353 6.13043 36.0353C5.57815 36.0353 5.13043 36.483 5.13043 37.0353C5.13043 37.5876 5.57815 38.0353 6.13043 38.0353Z" fill="#008CD5"/>
+                            <path d="M45 20C45 22.4853 35.598 24.5 24 24.5C12.402 24.5 3 22.4853 3 20C3 17.5147 12.402 15.5 24 15.5C35.598 15.5 45 17.5147 45 20Z" fill="#2654A3"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 20V28C4.66667 29.3333 9 32 24 32C39 32 43.3333 29.3333 45 28V20C43.6667 21.5 37.6 24.5 24 24.5C10.4 24.5 4.33333 21.5 3 20ZM6 26.5089C6.55228 26.5089 7 26.0612 7 25.5089C7 24.9566 6.55228 24.5089 6 24.5089C5.44772 24.5089 5 24.9566 5 25.5089C5 26.0612 5.44772 26.5089 6 26.5089Z" fill="#02A1F3"/>
+                            <ellipse cx="24" cy="8.5" rx="21" ry="4.5" fill="#15AFFF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8.5V16.5C4.66667 17.8333 9 20.5 24 20.5C39 20.5 43.3333 17.8333 45 16.5V8.5C43.6667 10 37.6 13 24 13C10.4 13 4.33333 10 3 8.5ZM6 15C6.55228 15 7 14.5523 7 14C7 13.4477 6.55228 13 6 13C5.44772 13 5 13.4477 5 14C5 14.5523 5.44772 15 6 15Z" fill="#02A1F3"/>
+                        </svg>
+                        <div class="text-part">
+                            <p class="">Database</p>
+                            <p class="">
+                                All Database
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="card-content">
+                    <div class="flex">
+                        <p class="">Domain</p>
+                        <p class="">Shamim.app</p>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="flex">
+                        <p class="">Status</p>
+                        <button class="flex" style="gap: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1.5C6.20156 1.5 1.5 6.20156 1.5 12C1.5 17.7984 6.20156 22.5 12 22.5C17.7984 22.5 22.5 17.7984 22.5 12C22.5 6.20156 17.7984 1.5 12 1.5ZM12 20.7188C7.18594 20.7188 3.28125 16.8141 3.28125 12C3.28125 7.18594 7.18594 3.28125 12 3.28125C16.8141 3.28125 20.7188 7.18594 20.7188 12C20.7188 16.8141 16.8141 20.7188 12 20.7188Z" fill="#16a34a"></path>
+                                <path d="M16.8609 11.6977L9.9211 6.65859C9.86544 6.61779 9.79954 6.59324 9.73075 6.58769C9.66197 6.58214 9.59299 6.5958 9.53151 6.62715C9.47002 6.6585 9.41846 6.7063 9.38255 6.76524C9.34664 6.82417 9.3278 6.89192 9.32813 6.96093V17.0391C9.32813 17.3461 9.675 17.5195 9.9211 17.3414L16.8609 12.3023C16.9089 12.2678 16.9479 12.2224 16.9748 12.1698C17.0017 12.1173 17.0157 12.0591 17.0157 12C17.0157 11.9409 17.0017 11.8827 16.9748 11.8302C16.9479 11.7776 16.9089 11.7322 16.8609 11.6977V11.6977ZM10.8234 14.8383V9.16171L14.7305 12L10.8234 14.8383V14.8383Z" fill="#16a34a"></path>
+                            </svg>
+                            <p class="" style="font-size: 16px; font-weight: 500;">Running</p>
+                        </button>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="flex">
+                        <p class="">Disk Used</p>
+                        <p class="">5.2GB</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+
+        
+
+        <footer>
+            <p class="">
+                © 2017 - 2022 MasterHost.com, All Rights Reserved.
+            </p>
+            <div class="line"></div>
+        </footer>
+    </div>
+
+    
+</body>
+</html>
