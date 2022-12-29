@@ -22,6 +22,14 @@
     {
         background-color: white;
     }
+
+    @media (max-width: 640px) 
+    {
+        div.header 
+        {
+            width: 100%;
+        }
+    }
 </style>
 {{end}}
 
@@ -40,7 +48,7 @@
                 <path d="M46.6686 35.3874C44.9832 31.1389 42.7079 28.6269 39.9102 27.9188C35.2753 26.7386 30.472 30.6668 30.4214 30.7005L29.0562 31.8301L27.9944 30.3971C27.8259 30.1779 27.6237 29.8913 27.4046 29.5541C25.7023 27.059 22.1798 21.8832 15.6574 21.8663C15.6405 21.8663 15.6068 21.8663 15.5899 21.8663C8.98321 21.8663 3.28658 26.5026 0.876465 33.7352C3.87646 45.3849 14.4102 54 26.9832 54C38.5619 54 48.4046 46.6999 52.2472 36.4495H47.0899L46.6686 35.3874Z" fill="#0069FF"/>
             </svg>
         </div>
-        <div class="flex items-center gap-9">
+        <div class="flex items-center gap-4 sm:gap-9">
             <a href="" class="text-sm font-medium text-blue-500 hover:text-blue-700 transition">Need Help?</a>
             <a href="/login" class="">
                 <button class="outline-button !h-auto !p-4 !py-2">LOG IN</button>
@@ -51,7 +59,7 @@
 
     {{block "content" .}}
     <div class="w-full  sm:max-w-lg mx-auto mt-32" id="signup">
-        <form data-multi-step id="signup-form" name="signup-form" action="/dashboard" method="" class="w-full">
+        <form data-multi-step id="signup-form" name="signup-form" action="/dashboard" method="" class="w-full p-5">
             <div class="step-1" data-step>
                 <div class="progress-bar flex justify-between gap-10 mb-6">
                     <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">1</p>
