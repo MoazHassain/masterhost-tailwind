@@ -3,9 +3,11 @@
 {
     .dropdown-content
     {
-        box-shadow: 0px 6px 26px rgba(109, 117, 124, 0.2);
+        // box-shadow: 0px 6px 26px rgba(109, 117, 124, 0.2);
         @apply
         invisible
+        shadow-lg
+        shadow-skin-muted
         opacity-0
         translate-y-8
         transition-all;
@@ -20,7 +22,7 @@
             right: 30px;
             border-color: rgba(0,0,0, 0.15);
             border: solid transparent;
-            border-bottom-color: white;
+            border-bottom-color: var(--color-fill-base);
             border-width: 9px;
             /* margin-left: -10px; */
             

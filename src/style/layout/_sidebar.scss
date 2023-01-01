@@ -21,7 +21,7 @@ nav
         @apply
         overflow-x-clip
         before:absolute 
-        before:bg-white
+        before:bg-skin-base
         before:w-6 
         before:h-5 
         before:invisible
@@ -56,8 +56,8 @@ nav
         &.active
         {
             @apply
-            text-white
-            bg-blue-1000
+            text-skin-base-inverted
+            bg-skin-sidebar-fill-active
             before:visible;
         }
     }

@@ -219,6 +219,11 @@ func subscription(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
+	ptmp, err = ptmp.ParseFiles("dist/wpage/client/clients.html")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
 	ptmp, err = ptmp.ParseFiles("dist/wpage/client/subscription.html")
 	if err != nil {
 		fmt.Println(err.Error())

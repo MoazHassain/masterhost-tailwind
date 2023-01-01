@@ -23,7 +23,7 @@ label
 {
     @apply
     text-base
-    text-slate-500
+    text-skin-base
     mb-3
     transition-all;
 
@@ -43,9 +43,10 @@ textarea,
 input 
 {
     @apply
-    border 
+    border-2
     outline-0 
-    border-gray-300 
+    border-skin-muted 
+    text-skin-base
     rounded-sm
     px-4 
     py-3 
@@ -57,7 +58,7 @@ input
     &:focus
     {
         @apply
-        border-blue-500;
+        border-skin-base;
 
     }
 
@@ -68,9 +69,9 @@ input
     &:read-only
     {
         @apply
-        text-gray-600
-        bg-gray-100
-        border-gray-300;
+        text-skin-base
+        bg-skin-amplify
+        border-skin-muted;
     }
 
     // removed default number arrow
@@ -97,7 +98,7 @@ input
         w-5
         h-5
         border-2
-        border-gray-500
+        border-gray-400
         rounded-sm
         grid
         place-items-center
@@ -107,7 +108,7 @@ input
         &:checked
         {
             @apply
-            border-blue-500;
+            border-skin-base;
         }
 
         
@@ -122,15 +123,18 @@ input
             h-3
             rounded-sm
             scale-0
-            bg-white;
+            bg-skin-base;
 
         }
         &::after 
         {
             content: "";
-            box-shadow: inset 0 0 0 0px #3b82f6;
+            // box-shadow: inset 0 0 0 0px #3b82f6;
+            --tw-shadow-colored: inset 0 0 0 0px var(--tw-shadow-color);
+            
             @apply
             absolute
+            shadow-skin-base
             inset-0
             z-0
             transition-all;
@@ -146,7 +150,10 @@ input
             }
             &::after
             {
-                box-shadow: inset 0 0 0 20px #3b82f6;
+                // box-shadow: inset 0 0 0 20px #3b82f6;
+                --tw-shadow-colored: inset 0 0 0 20px var(--tw-shadow-color);
+                --tw-shadow-color: rgba(var(--color-boxshadow-base), 1);
+                box-shadow: var(--tw-shadow-colored);
             }
         }
 
@@ -162,16 +169,16 @@ input
         appearance-none
         outline
         outline-offset-2
-        outline-1
-        outline-gray-300
-        bg-white
+        outline-2
+        outline-skin-muted
+        bg-skin-base
         rounded-full
         max-w-lg
         w-full
         h-2.5
         transition-none;
 
-        background-image: linear-gradient(rgb(59 130 246), rgb(59 130 246));
+        background-image: linear-gradient(var(--color-button-base), var(--color-button-base));
         background-size: 50% 100%;
         background-repeat: no-repeat;
 
@@ -180,7 +187,7 @@ input
             appearance-none
             w-12
             h-8
-            bg-blue-500
+            bg-skin-button-base
             relative
             cursor-ew-resize;
 
@@ -215,17 +222,14 @@ input
         @apply
         pt-6
         pb-2.5;
-
         
-        
-
         &:focus + .floating-label,
         &:not(:placeholder-shown) + .floating-label
         {
             @apply
-            text-slate-400
+            text-skin-muted
             scale-75
-            font-bold
+            font-medium
             top-1/3;
         }
     }
@@ -281,9 +285,9 @@ input
         flex 
         items-center 
         justify-center 
-        text-gray-700 
-        border-gray-300 
-        hover:border-blue-500 
+        text-skin-base 
+        border-skin-muted
+        hover:border-skin-base
         rounded-sm 
         
         transition;
@@ -298,9 +302,9 @@ input
     &:checked + .box 
     {
         @apply
-        bg-blue-500
-        border-blue-500
-        text-white
+        bg-skin-button-base
+        border-skin-base
+        text-skin-base-inverted
         shadow-lg;
     }
 
@@ -311,7 +315,7 @@ input
         flex 
         items-center 
         justify-center 
-        text-gray-700 
+        text-skin-base
         rounded-sm 
         transition;
 
@@ -328,8 +332,8 @@ input
             z-index: 0;
 
             @apply
-            border-t-blue-500
-            border-r-blue-500
+            border-t-skin-base
+            border-r-skin-base
             opacity-0
             transition-all;
         }
@@ -347,7 +351,7 @@ input
 
             @apply
             opacity-0
-            bg-white
+            bg-skin-base
             transition-all;
         }
 
@@ -393,11 +397,12 @@ input
         max-width: 50px;
         min-width: 50px;
         width: 50px;
+        background-color: var(--color-text-muted);
+
         @apply
         flex-grow
         h-6
         rounded-full
-        bg-blue-300
         relative
         transition-all;
 
@@ -413,7 +418,7 @@ input
             w-4
             h-4
             rounded-full
-            bg-white
+            bg-skin-base
             transition-all;
 
         }
@@ -428,13 +433,13 @@ input
     input.custom-checkbox:checked + .switch
     {
         @apply
-        bg-blue-500;
+        bg-skin-button-base;
         
         &::before
         {
             transform: translateY(-50%) translateX(calc(100% + 14px));
             @apply
-            bg-white;
+            bg-skin-base;
         }
     }
 
@@ -453,10 +458,10 @@ input
     {
         @apply
         w-full
-        border
-        border-gray-300
+        border-2
+        border-skin-muted
         transition-all
-        hover:border-blue-500;
+        hover:border-skin-base;
 
         
         .iti__selected-flag
@@ -497,3 +502,189 @@ textarea
     }
 }
 
+// select2 custom
+
+.select2 .selection .select2-selection--single, 
+.select2-container--default .select2-search--dropdown .select2-search__field 
+{
+    @apply 
+    border-2
+    border-skin-muted
+    rounded-none
+    h-12;
+}
+
+.select2-search--dropdown
+{
+    @apply
+    hidden
+    p-0;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field
+{
+    @apply 
+    p-4
+    border-0
+    border-b-[1px];
+}
+
+.select2-selection.select2-selection--single
+{
+    @apply 
+    flex
+    items-end;
+}
+
+.select-no-label + .select2-container .select2-selection.select2-selection--single
+{
+    @apply 
+    items-center;
+}
+
+.select2-container--default .select2-selection--multiple, 
+.select2-container--default.select2-container--focus .select2-selection--multiple 
+{
+    @apply 
+    rounded-none
+    border-b-[1px];
+}
+
+.select2-results__option {
+    @apply 
+    text-skin-base
+    text-base
+    py-2
+    px-4;
+    
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] 
+{
+    @apply 
+    bg-skin-fill-hover
+    text-skin-base;
+   
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] 
+{
+    @apply 
+    bg-skin-button-base
+    text-skin-base-inverted;
+}
+
+.select2-dropdown {
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
+
+.select2-container--default .select2-results__option[role=group] .select2-results__group 
+{
+    @apply 
+    bg-skin-base-inverted
+    text-skin-base;
+}
+
+.select2-container .select2-search--inline .select2-search__field 
+{
+    @apply
+    mt-0;
+}
+
+.select2-container .select2-search--inline .select2-search__field:focus 
+{
+    @apply
+    border-none
+    shadow-none;
+}
+
+.select2-container .select2-selection--multiple 
+{
+    @apply
+    min-h-[2.05rem];
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single {
+    @apply
+    bg-skin-amplify
+    text-skin-base
+    border-b-[1px]
+    border-skin-muted;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered
+{
+    @apply
+    pl-4;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow
+{
+    transition: transform 150ms cubic-bezier(.4, 0, .2, 1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+}
+
+
+/* 
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+  &.valid + label::after,
+  &.invalid + label::after,
+  &:focus.valid + label::after,
+  &:focus.invalid + label::after {
+    white-space: pre;
+  }
+  &.empty {
+    &:not(:focus).valid + label::after,
+    &:not(:focus).invalid + label::after {
+      top: 2.8rem;
+
+    } 
+  }
+} */
+
+.select-field
+{
+    @apply
+    relative;
+}
+
+.select-field label 
+{
+    @apply
+    text-xs
+    font-medium
+    text-skin-muted
+    absolute
+    top-[30%]
+    -translate-y-1/2
+    left-4
+    z-[1]
+    pointer-events-none;
+}
+
+.select-field label.not-floating
+{
+    transform: unset;
+    font-size: unset;
+    color: unset;
+    font-weight: unset;
+
+    @apply 
+    relative
+    top-0
+    left-0;
+}

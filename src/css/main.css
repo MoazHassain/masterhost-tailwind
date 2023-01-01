@@ -1,6 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  :root {
+    --color-text-base: #475569;
+    --color-text-muted: #64748b;
+    --color-text-base-inverted: #ffffff;
+    --color-text-muted-inverted: rgba(255, 255, 255, 0.9);
+    --color-text-message: #10b981;
+    --color-text-hover: #3b82f6;
+    --color-sidebar-fill: #1e3a8a;
+    --color-sidebar-fill-active: #010c38;
+    --color-fill-base: #ffffff;
+    --color-fill-muted: #f9fafb;
+    --color-fill-amplify: #f3f4f6;
+    --color-fill-base-inverted: #1f2937;
+    --color-fill-muted-inverted: #374151;
+    --color-fill-amplify-inverted: #4b5563;
+    --color-fill-hover: #eff6ff;
+    --color-button-base: #3b82f6;
+    --color-button-base-hover: #2563eb;
+    --color-button-inverted: #eff6ff;
+    --color-button-inverted-hover: #dbeafe;
+    --color-border-base: #3b82f6;
+    --color-border-muted: #e5e7eb;
+    --color-boxshadow-base: 59, 130, 246;
+    --color-boxshadow-muted: 71, 85, 105;
+  }
+  .dark-theme {
+    --color-text-base: #f3f4f6;
+    --color-text-muted: #d1d5db;
+    --color-text-base-inverted: rgba(31, 41, 55, 0.9);
+    --color-text-muted-inverted: #1f2937;
+    --color-text-message: #059669;
+    --color-text-hover: #60a5fa;
+    --color-sidebar-fill: #374151;
+    --color-sidebar-fill-active: #1f2937;
+    --color-fill-base: #4b5563;
+    --color-fill-muted: #374151;
+    --color-fill-amplify: #1f2937;
+    --color-fill-base-inverted: #e5e7eb;
+    --color-fill-muted-inverted: #d1d5db;
+    --color-fill-amplify-inverted: #9ca3af;
+    --color-fill-hover: #374151;
+    --color-button-base: #60a5fa;
+    --color-button-base-hover: #2563eb;
+    --color-button-inverted: #374151;
+    --color-button-inverted-hover: #dbeafe;
+    --color-border-base: #60a5fa;
+    --color-border-muted: #374151;
+    --color-boxshadow-base: 96, 165, 250;
+    --color-boxshadow-muted: 243, 244, 246;
+  }
+}
 html {
   max-height: 100%;
 }
@@ -46,12 +98,13 @@ button {
     flex
     items-center
     justify-center
-    bg-blue-100
-    text-blue-600
+    bg-skin-button-base
+    text-skin-muted-inverted
     font-medium
     rounded-md
     transition
-    hover:bg-blue-200;
+    hover:bg-skin-button-base-hover
+    hover:text-skin-base-inverted;
 }
 
 .outline-button {
@@ -60,29 +113,29 @@ button {
     flex
     items-center
     justify-center
-    bg-white
+    bg-skin-base
     border 
-    border-blue-500
-    text-blue-500
+    border-skin-base
+    text-skin-hover
     font-medium
     rounded
     transition
-    hover:bg-blue-500
-    hover:border-blue-500
-    hover:text-white;
+    hover:bg-skin-button-base
+    hover:border-skin-base
+    hover:text-skin-base-inverted;
 }
 
 button.active-function {
-  @apply bg-blue-700;
+  @apply bg-skin-button-base;
 }
 button.active-function svg path {
-  @apply fill-white;
+  @apply fill-skin-inverted;
 }
 button.active-function:hover {
-  @apply bg-blue-900;
+  @apply bg-skin-button-base-hover;
 }
 button.active-function:hover svg path {
-  @apply fill-white;
+  @apply fill-skin-inverted;
 }
 
 input,
@@ -101,7 +154,7 @@ textarea {
 
 label {
   @apply text-base
-    text-slate-500
+    text-skin-base
     mb-3
     transition-all;
 }
@@ -117,9 +170,10 @@ label.floating-label {
 select,
 textarea,
 input {
-  @apply border 
+  @apply border-2
     outline-0 
-    border-gray-300 
+    border-skin-muted 
+    text-skin-base
     rounded-sm
     px-4 
     py-3 
@@ -129,21 +183,21 @@ input {
 select:focus,
 textarea:focus,
 input:focus {
-  @apply border-blue-500;
+  @apply border-skin-base;
 }
 select:-moz-read-only, textarea:-moz-read-only, input:-moz-read-only {
-  @apply text-gray-600
-        bg-gray-100
-        border-gray-300;
+  @apply text-skin-base
+        bg-skin-amplify
+        border-skin-muted;
 }
 select:disabled, select:read-only,
 textarea:disabled,
 textarea:read-only,
 input:disabled,
 input:read-only {
-  @apply text-gray-600
-        bg-gray-100
-        border-gray-300;
+  @apply text-skin-base
+        bg-skin-amplify
+        border-skin-muted;
 }
 select[type=number]::-webkit-outer-spin-button, select[type=number]::-webkit-inner-spin-button,
 textarea[type=number]::-webkit-outer-spin-button,
@@ -170,7 +224,7 @@ input[type=checkbox] {
         w-5
         h-5
         border-2
-        border-gray-500
+        border-gray-400
         rounded-sm
         grid
         place-items-center
@@ -181,7 +235,7 @@ textarea[type=checkbox]:hover,
 textarea[type=checkbox]:checked,
 input[type=checkbox]:hover,
 input[type=checkbox]:checked {
-  @apply border-blue-500;
+  @apply border-skin-base;
 }
 select[type=checkbox]::before,
 textarea[type=checkbox]::before,
@@ -194,14 +248,15 @@ input[type=checkbox]::before {
             h-3
             rounded-sm
             scale-0
-            bg-white;
+            bg-skin-base;
 }
 select[type=checkbox]::after,
 textarea[type=checkbox]::after,
 input[type=checkbox]::after {
   content: "";
-  box-shadow: inset 0 0 0 0px #3b82f6;
+  --tw-shadow-colored: inset 0 0 0 0px var(--tw-shadow-color);
   @apply absolute
+            shadow-skin-base
             inset-0
             z-0
             transition-all;
@@ -215,7 +270,9 @@ input[type=checkbox]:checked::before {
 select[type=checkbox]:checked::after,
 textarea[type=checkbox]:checked::after,
 input[type=checkbox]:checked::after {
-  box-shadow: inset 0 0 0 20px #3b82f6;
+  --tw-shadow-colored: inset 0 0 0 20px var(--tw-shadow-color);
+  --tw-shadow-color: rgba(var(--color-boxshadow-base), 1);
+  box-shadow: var(--tw-shadow-colored);
 }
 select[type=range],
 textarea[type=range],
@@ -225,15 +282,15 @@ input[type=range] {
         appearance-none
         outline
         outline-offset-2
-        outline-1
-        outline-gray-300
-        bg-white
+        outline-2
+        outline-skin-muted
+        bg-skin-base
         rounded-full
         max-w-lg
         w-full
         h-2.5
         transition-none;
-  background-image: linear-gradient(rgb(59, 130, 246), rgb(59, 130, 246));
+  background-image: linear-gradient(var(--color-button-base), var(--color-button-base));
   background-size: 50% 100%;
   background-repeat: no-repeat;
 }
@@ -243,7 +300,7 @@ input[type=range]::-webkit-slider-thumb {
   @apply appearance-none
             w-12
             h-8
-            bg-blue-500
+            bg-skin-button-base
             relative
             cursor-ew-resize;
   background-image: url(../img/arrows.svg);
@@ -258,15 +315,15 @@ input.floating-input {
         pb-2.5;
 }
 select.floating-input:not(:-moz-placeholder-shown) + .floating-label, textarea.floating-input:not(:-moz-placeholder-shown) + .floating-label, input.floating-input:not(:-moz-placeholder-shown) + .floating-label {
-  @apply text-slate-400
+  @apply text-skin-muted
             scale-75
-            font-bold
+            font-medium
             top-1/3;
 }
 select.floating-input:not(:-ms-input-placeholder) + .floating-label, textarea.floating-input:not(:-ms-input-placeholder) + .floating-label, input.floating-input:not(:-ms-input-placeholder) + .floating-label {
-  @apply text-slate-400
+  @apply text-skin-muted
             scale-75
-            font-bold
+            font-medium
             top-1/3;
 }
 select.floating-input:focus + .floating-label, select.floating-input:not(:placeholder-shown) + .floating-label,
@@ -274,9 +331,9 @@ textarea.floating-input:focus + .floating-label,
 textarea.floating-input:not(:placeholder-shown) + .floating-label,
 input.floating-input:focus + .floating-label,
 input.floating-input:not(:placeholder-shown) + .floating-label {
-  @apply text-slate-400
+  @apply text-skin-muted
             scale-75
-            font-bold
+            font-medium
             top-1/3;
 }
 
@@ -305,9 +362,9 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
         flex 
         items-center 
         justify-center 
-        text-gray-700 
-        border-gray-300 
-        hover:border-blue-500 
+        text-skin-base 
+        border-skin-muted
+        hover:border-skin-base
         rounded-sm 
         
         transition;
@@ -316,9 +373,9 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
   @apply pointer-events-none;
 }
 .custom-radio:checked + .box {
-  @apply bg-blue-500
-        border-blue-500
-        text-white
+  @apply bg-skin-button-base
+        border-skin-base
+        text-skin-base-inverted
         shadow-lg;
 }
 .custom-radio + .checkmark-box {
@@ -326,7 +383,7 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
         flex 
         items-center 
         justify-center 
-        text-gray-700 
+        text-skin-base
         rounded-sm 
         transition;
 }
@@ -340,8 +397,8 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
   border: solid transparent;
   border-width: 16px;
   z-index: 0;
-  @apply border-t-blue-500
-            border-r-blue-500
+  @apply border-t-skin-base
+            border-r-skin-base
             opacity-0
             transition-all;
 }
@@ -356,7 +413,7 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
           clip-path: polygon(0% 40%, 0 60%, 50% 100%, 100% 18%, 100% 0%, 43% 62%);
   z-index: 1;
   @apply opacity-0
-            bg-white
+            bg-skin-base
             transition-all;
 }
 .custom-radio + .checkmark-box * {
@@ -382,10 +439,10 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
   max-width: 50px;
   min-width: 50px;
   width: 50px;
+  background-color: var(--color-text-muted);
   @apply flex-grow
         h-6
         rounded-full
-        bg-blue-300
         relative
         transition-all;
 }
@@ -399,15 +456,15 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
             w-4
             h-4
             rounded-full
-            bg-white
+            bg-skin-base
             transition-all;
 }
 .switch-field input.custom-checkbox:checked + .switch {
-  @apply bg-blue-500;
+  @apply bg-skin-button-base;
 }
 .switch-field input.custom-checkbox:checked + .switch::before {
   transform: translateY(-50%) translateX(calc(100% + 14px));
-  @apply bg-white;
+  @apply bg-skin-base;
 }
 
 .iti.iti--allow-dropdown {
@@ -415,10 +472,10 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
 }
 .iti.iti--allow-dropdown .iti__flag-container {
   @apply w-full
-        border
-        border-gray-300
+        border-2
+        border-skin-muted
         transition-all
-        hover:border-blue-500;
+        hover:border-skin-base;
 }
 .iti.iti--allow-dropdown .iti__flag-container .iti__selected-flag {
   @apply border-none
@@ -443,14 +500,160 @@ textarea {
   display: none;
 }
 
+.select2 .selection .select2-selection--single,
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  @apply border-2
+    border-skin-muted
+    rounded-none
+    h-12;
+}
+
+.select2-search--dropdown {
+  @apply hidden
+    p-0;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  @apply p-4
+    border-0
+    border-b-[1px];
+}
+
+.select2-selection.select2-selection--single {
+  @apply flex
+    items-end;
+}
+
+.select-no-label + .select2-container .select2-selection.select2-selection--single {
+  @apply items-center;
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  @apply rounded-none
+    border-b-[1px];
+}
+
+.select2-results__option {
+  @apply text-skin-base
+    text-base
+    py-2
+    px-4;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  @apply bg-skin-fill-hover
+    text-skin-base;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  @apply bg-skin-button-base
+    text-skin-base-inverted;
+}
+
+.select2-dropdown {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.select2-container--default .select2-results__option[role=group] .select2-results__group {
+  @apply bg-skin-base-inverted
+    text-skin-base;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+  @apply mt-0;
+}
+
+.select2-container .select2-search--inline .select2-search__field:focus {
+  @apply border-none
+    shadow-none;
+}
+
+.select2-container .select2-selection--multiple {
+  @apply min-h-[2.05rem];
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single {
+  @apply bg-skin-amplify
+    text-skin-base
+    border-b-[1px]
+    border-skin-muted;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  @apply pl-4;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
+}
+
+/* 
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+  &.valid + label::after,
+  &.invalid + label::after,
+  &:focus.valid + label::after,
+  &:focus.invalid + label::after {
+    white-space: pre;
+  }
+  &.empty {
+    &:not(:focus).valid + label::after,
+    &:not(:focus).invalid + label::after {
+      top: 2.8rem;
+
+    } 
+  }
+} */
+.select-field {
+  @apply relative;
+}
+
+.select-field label {
+  @apply text-xs
+    font-medium
+    text-skin-muted
+    absolute
+    top-[30%]
+    -translate-y-1/2
+    left-4
+    z-[1]
+    pointer-events-none;
+}
+
+.select-field label.not-floating {
+  transform: unset;
+  font-size: unset;
+  color: unset;
+  font-weight: unset;
+  @apply relative
+    top-0
+    left-0;
+}
+
 /* dropdown */
 .dropdown {
   /* notification dropdown */
   /* responsive sidebar menu */
 }
 .dropdown .dropdown-content {
-  box-shadow: 0px 6px 26px rgba(109, 117, 124, 0.2);
   @apply invisible
+        shadow-lg
+        shadow-skin-muted
         opacity-0
         translate-y-8
         transition-all;
@@ -462,7 +665,7 @@ textarea {
   right: 30px;
   border-color: rgba(0, 0, 0, 0.15);
   border: solid transparent;
-  border-bottom-color: white;
+  border-bottom-color: var(--color-fill-base);
   border-width: 9px;
   /* margin-left: -10px; */
   z-index: 1;
@@ -592,7 +795,7 @@ textarea {
 .inner-tab-bar .inner-tab-button.active-tab,
 .modal-tab-bar .tab-button.active-tab,
 .modal-tab-bar .inner-tab-button.active-tab {
-  @apply border-b-blue-600;
+  @apply border-b-skin-base;
 }
 
 .tab-content,
@@ -613,7 +816,7 @@ textarea {
 .collapsible-wrap {
   @apply p-4
     border 
-    border-gray-200
+    border-skin-muted
     rounded-sm;
 }
 .collapsible-wrap .collapsible {
@@ -621,7 +824,7 @@ textarea {
         items-center
         gap-4
         font-medium
-        text-gray-600
+        text-skin-base
         transition-all;
 }
 .collapsible-wrap .collapsible svg {
@@ -629,10 +832,10 @@ textarea {
   transition: 0.2s ease-in-out;
 }
 .collapsible-wrap .collapsible:hover {
-  @apply text-blue-500;
+  @apply text-skin-hover;
 }
 .collapsible-wrap .collapsible.active {
-  @apply text-blue-500;
+  @apply text-skin-hover;
 }
 .collapsible-wrap .collapsible.active svg {
   rotate: 90deg;
@@ -671,7 +874,7 @@ body.modal-open {
         scale-0
         w-full
         h-full
-        bg-white
+        bg-skin-base
         z-50
         invisible
         opacity-0
@@ -686,7 +889,7 @@ body.modal-open {
 .modal-wrap .modal-closer {
   @apply w-12 
         h-12 
-        bg-blue-100 
+        bg-skin-button-inverted
         grid 
         place-items-center 
         rounded-full
@@ -700,12 +903,12 @@ body.modal-open {
   }
 }
 .modal-wrap .modal-closer:hover {
-  @apply bg-blue-200;
+  @apply bg-skin-button-inverted-hover;
 }
 .modal-wrap .modal-scrim {
   @apply absolute
         inset-0
-        bg-gray-800
+        bg-skin-base-inverted
         opacity-60;
 }
 .modal-wrap.active-modal {
@@ -717,11 +920,11 @@ body.modal-open {
             opacity-100;
 }
 .modal-wrap.delete-confirmation {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(var(--color-boxshadow-muted), 0.05);
 }
 
 .loading-screen {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(var(--color-boxshadow-muted), 0.15);
   display: none;
 }
 .loading-screen.active {
@@ -803,8 +1006,8 @@ table tr:hover .hover-button {
     text-align: left;
     text-overflow: ellipsis;
     overflow: hidden;
-    @apply font-medium
-            text-slate-400 
+    @apply font-normal
+            text-skin-muted
             whitespace-nowrap;
   }
 }
@@ -850,8 +1053,8 @@ table tr:hover .hover-button {
     text-align: left;
     text-overflow: ellipsis;
     overflow: hidden;
-    @apply font-medium
-            text-slate-400 
+    @apply font-normal
+            text-skin-muted
             whitespace-nowrap;
   }
 }
@@ -877,9 +1080,9 @@ table tr:hover .hover-button {
     w-full
     py-3
     px-4
-    bg-white
+    bg-skin-base
     border 
-    border-gray-200
+    border-skin-muted
     rounded-lg
     shadow-md
     z-50
@@ -908,15 +1111,15 @@ table tr:hover .hover-button {
   top: calc(100% + 20px);
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: #3f3f46;
   white-space: nowrap;
   padding: 6px 10px;
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
-  color: white;
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted
+        text-skin-base-inverted;
 }
 .tooltip-bottom::after {
   visibility: hidden;
@@ -926,13 +1129,13 @@ table tr:hover .hover-button {
   top: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%) translateY(-100%) rotate(270deg);
-  background-color: #3f3f46;
   width: 22px;
   height: 21px;
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted;
 }
 .tooltip-bottom:hover::before, .tooltip-bottom:hover::after {
   visibility: visible;
@@ -954,15 +1157,15 @@ table tr:hover .hover-button {
   top: -30px;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: #3f3f46;
   white-space: nowrap;
   padding: 6px 10px;
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
-  color: white;
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted
+        text-skin-base-inverted;
 }
 .tooltip-top::after {
   visibility: hidden;
@@ -972,13 +1175,13 @@ table tr:hover .hover-button {
   top: 6px;
   left: 50%;
   transform: translateX(-50%) translateY(-100%) rotate(90deg);
-  background-color: #3f3f46;
   width: 22px;
   height: 21px;
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted;
 }
 .tooltip-top:hover::before, .tooltip-top:hover::after {
   visibility: visible;
@@ -1000,15 +1203,15 @@ table tr:hover .hover-button {
   top: 50%;
   right: calc(100% + 17px);
   transform: translateY(-50%);
-  background-color: #3f3f46;
   white-space: nowrap;
   padding: 6px 10px;
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
-  color: white;
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted
+        text-skin-base-inverted;
 }
 .tooltip-left::after {
   visibility: hidden;
@@ -1018,13 +1221,13 @@ table tr:hover .hover-button {
   top: 50%;
   left: -9px;
   transform: translateX(-50%) translateY(-50%) rotate(360deg);
-  background-color: #3f3f46;
   width: 22px;
   height: 21px;
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted;
 }
 .tooltip-left:hover::before, .tooltip-left:hover::after {
   visibility: visible;
@@ -1046,15 +1249,15 @@ table tr:hover .hover-button {
   top: 50%;
   left: calc(100% + 17px);
   transform: translateY(-50%);
-  background-color: #3f3f46;
   white-space: nowrap;
   padding: 6px 10px;
   border-radius: 2px;
   font-size: 14px;
   font-weight: 500;
-  color: white;
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted
+        text-skin-base-inverted;
 }
 .tooltip-right::after {
   visibility: hidden;
@@ -1064,13 +1267,13 @@ table tr:hover .hover-button {
   top: 50%;
   right: -9px;
   transform: translateX(50%) translateY(-50%) rotate(180deg);
-  background-color: #3f3f46;
   width: 22px;
   height: 21px;
   -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
           clip-path: polygon(0 0, 50% 50%, 0 100%);
   transition: visibility opacity 0.2s ease-in-out;
   z-index: 10;
+  @apply bg-skin-amplify-inverted;
 }
 .tooltip-right:hover::before, .tooltip-right:hover::after {
   visibility: visible;
@@ -1092,7 +1295,7 @@ aside::-webkit-scrollbar {
 nav .nav-item {
   @apply overflow-x-clip
         before:absolute 
-        before:bg-white
+        before:bg-skin-base
         before:w-6 
         before:h-5 
         before:invisible
@@ -1115,8 +1318,8 @@ nav .nav-item:hover img {
   scale: 1.15;
 }
 nav .nav-item.active {
-  @apply text-white
-            bg-blue-1000
+  @apply text-skin-base-inverted
+            bg-skin-sidebar-fill-active
             before:visible;
 }
 
@@ -1132,5 +1335,5 @@ nav .nav-item.active {
 }
 
 #add-package form input[type=checkbox]:checked + label {
-  @apply text-blue-600;
+  @apply text-skin-hover;
 }/*# sourceMappingURL=main.css.map */

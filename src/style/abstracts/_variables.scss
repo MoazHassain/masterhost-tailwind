@@ -1,3 +1,72 @@
+@layer base {
+    :root
+    {
+        // text
+        --color-text-base: #475569;
+        --color-text-muted: #64748b;
+        --color-text-base-inverted: #ffffff;
+        --color-text-muted-inverted: rgba(255, 255, 255, 0.9);
+        --color-text-message: #10b981;
+        --color-text-hover: #3b82f6;
+
+        // backgraound
+        --color-sidebar-fill: #1e3a8a;
+        --color-sidebar-fill-active: #010c38;
+        --color-fill-base: #ffffff;
+        --color-fill-muted: #f9fafb;
+        --color-fill-amplify: #f3f4f6;
+        --color-fill-base-inverted: #1f2937;
+        --color-fill-muted-inverted: #374151;
+        --color-fill-amplify-inverted: #4b5563;
+        --color-fill-hover: #eff6ff;
+        --color-button-base: #3b82f6;
+        --color-button-base-hover: #2563eb;
+        --color-button-inverted: #eff6ff;
+        --color-button-inverted-hover: #dbeafe;
+
+        // border
+        --color-border-base: #3b82f6;
+        --color-border-muted: #e5e7eb;
+
+        --color-boxshadow-base: 59, 130, 246; //button-base-rgb
+        --color-boxshadow-muted: 71, 85, 105; //text-base-rgba
+    }
+
+    .dark-theme
+    {
+        // text
+        --color-text-base: #f3f4f6;
+        --color-text-muted: #d1d5db;
+        --color-text-base-inverted: rgba(31, 41, 55, 0.9);
+        --color-text-muted-inverted: #1f2937;
+        --color-text-message: #059669;
+        --color-text-hover: #60a5fa;
+
+        // backgraound
+        --color-sidebar-fill: #374151;
+        --color-sidebar-fill-active: #1f2937;
+        --color-fill-base: #4b5563;
+        --color-fill-muted: #374151;
+        --color-fill-amplify: #1f2937;
+        --color-fill-base-inverted: #e5e7eb;
+        --color-fill-muted-inverted: #d1d5db;
+        --color-fill-amplify-inverted: #9ca3af;
+        --color-fill-hover: #374151;
+        --color-button-base: #60a5fa;
+        --color-button-base-hover: #2563eb;
+        --color-button-inverted: #374151;
+        --color-button-inverted-hover: #dbeafe;
+
+        // border
+        --color-border-base: #60a5fa;
+        --color-border-muted: #374151;
+
+        --color-boxshadow-base: 96, 165, 250; //button-base-rgb
+        --color-boxshadow-muted: 243, 244, 246; //text-base-rgba
+    }
+}
+
+
 // :root
 // {
 //     --clr-primary-solid: #1BB899;
@@ -19,46 +88,6 @@
 //     --clr-danger: #dc3545;
 // }
 
-
-
-// $primarySolidClr : var(--clr-primary-solid);
-// $secondarySolidClr : var(--clr-secondary-solid);
-
-// $primaryGradientClr : var(--clr-primary-gradient);
-// $clr-secondary-gradient : var(--clr-secondary-gradient);
-
-// $primaryWhite: var(--clr-primary-white);
-// $secindaryWhite: var(--clr-secondary-white);
-// $tertiaryWhite: var(--clr-tertiary-white);
-
-// $primaryDark: var(--clr-primary-dark);
-// $secindaryDark: var(--clr-secondary-dark);
-// $tertiaryDark: var(--clr-tertiary-dark);
-
-// $clrSuccess: var(--clr-success);
-// $clrWarning: var(--clr-warning);
-// $clrDanger: var(--clr-danger);
-
-// $hoverSolidClr : linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
-
-
-// $primaryBlack : #000;
-// $secondaryBlack : #262626;
-// $thirdBlack: #404040;
-// $forthBlack: #606060;
-
-// $primaryWhite : #ffffff;
-// $secondaryWhite : #FAFAFA;
-// $thirdWhite: #cacaca;
-// $forthWhite: #f3f3f3;
-
-// $primaryGradClr : linear-gradient(to right, #CC2B5E 0%, #F48400 100%);
-// $hoverGradClr : linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
-// $secondaryGradClr : linear-gradient(to right, #24243E 0%, #302B63 50%, #24243E 100%);
-// $thirdGradClr : linear-gradient(to right, #00417C, #1CB5E0);
-
-
-// $ratingClr: #FFB800;
 
 
 // .test

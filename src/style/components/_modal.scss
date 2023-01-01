@@ -38,7 +38,7 @@ body
         scale-0
         w-full
         h-full
-        bg-white
+        bg-skin-base
         z-50
         invisible
         opacity-0
@@ -57,7 +57,7 @@ body
         @apply
         w-12 
         h-12 
-        bg-blue-100 
+        bg-skin-button-inverted
         grid 
         place-items-center 
         rounded-full
@@ -73,7 +73,7 @@ body
         &:hover
         {
             @apply
-            bg-blue-200;
+            bg-skin-button-inverted-hover;
         }
     }
     .modal-scrim 
@@ -81,7 +81,7 @@ body
         @apply
         absolute
         inset-0
-        bg-gray-800
+        bg-skin-base-inverted
         opacity-60;
     }
 
@@ -103,14 +103,14 @@ body
 
     &.delete-confirmation
     {
-        background-color: rgba(0, 0, 0, 0.05);
-        // width: calc(100vw);
+        background-color: rgba(var(--color-boxshadow-muted), 0.05);
+        
     }
 }
 
 .loading-screen
 {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--color-boxshadow-muted), 0.15);
     // background-color: rgba(0, 0, 0, 0.05); 
     display: none;
 

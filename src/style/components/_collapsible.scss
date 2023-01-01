@@ -3,7 +3,7 @@
     @apply
     p-4
     border 
-    border-gray-200
+    border-skin-muted
     rounded-sm;
 
     .collapsible 
@@ -13,7 +13,7 @@
         items-center
         gap-4
         font-medium
-        text-gray-600
+        text-skin-base
         transition-all;
 
 
@@ -26,13 +26,13 @@
         &:hover 
         {
             @apply
-            text-blue-500;
+            text-skin-hover;
         }
 
         &.active 
         {
             @apply
-            text-blue-500;
+            text-skin-hover;
             
             svg 
             {
