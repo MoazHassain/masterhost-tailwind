@@ -172,6 +172,7 @@ textarea,
 input {
   @apply border-2
     outline-0 
+    bg-transparent
     border-skin-muted 
     text-skin-base
     rounded-sm
@@ -439,7 +440,7 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
   max-width: 50px;
   min-width: 50px;
   width: 50px;
-  background-color: var(--color-text-muted);
+  background-color: var(--color-border-muted);
   @apply flex-grow
         h-6
         rounded-full
@@ -456,7 +457,7 @@ input.floating-input:not(:placeholder-shown) + .floating-label {
             w-4
             h-4
             rounded-full
-            bg-skin-base
+            bg-skin-button-base
             transition-all;
 }
 .switch-field input.custom-checkbox:checked + .switch {
@@ -502,7 +503,8 @@ textarea {
 
 .select2 .selection .select2-selection--single,
 .select2-container--default .select2-search--dropdown .select2-search__field {
-  @apply border-2
+  @apply bg-transparent
+    border-2
     border-skin-muted
     rounded-none
     h-12;
@@ -532,6 +534,10 @@ textarea {
 .select2-container--default.select2-container--focus .select2-selection--multiple {
   @apply rounded-none
     border-b-[1px];
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  @apply bg-skin-base;
 }
 
 .select2-results__option {
@@ -582,7 +588,8 @@ textarea {
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
-  @apply pl-4;
+  @apply pl-4
+    text-skin-base;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {

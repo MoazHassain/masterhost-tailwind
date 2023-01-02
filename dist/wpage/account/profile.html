@@ -9,39 +9,39 @@
 {{end}}
 
 {{block "main" .}}
-<main class="ml-0 lg:ml-32 min-h-screen">
+<main class="ml-0 lg:ml-32 min-h-screen bg-skin-base">
     {{block "header" .}}
     {{end}}
 
     {{block "content" .}}
     <div class="content">
         <div class="container max-w-7xl my-10">
-            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
-            <p class="text-sm text-slate-500">pay@mateors.com</p>
+            <h1 class="text-4xl font-light mb-2 text-skin-base">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-skin-muted">pay@mateors.com</p>
         </div>
         
         {{block "tab-button" .}}
         {{end}}
         <!-- {{block "buttons" .}}
-        <a href="/account/profile" data-id="profile-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/profile" data-id="profile-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             Profile
         </a>
-        <a href="/account/preference" data-id="preference-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/preference" data-id="preference-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             Preference
         </a>
-        <a href="/account/authentication" data-id="authentication-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/authentication" data-id="authentication-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             Authentication
         </a>
-        <a href="/account/ssh-keys" data-id="ssh-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/ssh-keys" data-id="ssh-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             SSH Keys
         </a>
-        <a href="/account/api" data-id="api-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/api" data-id="api-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             API
         </a>
-        <a href="/account/users" data-id="user-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/users" data-id="user-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             Users
         </a>
-        <a href="/account/notification" data-id="notification-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-neutral-900 whitespace-nowrap transition-all" type="button">
+        <a href="/account/notification" data-id="notification-tab" class="tab-button menu-button flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
             Notifications
         </a>
         {{end}} -->
@@ -50,7 +50,7 @@
         {{block "tab-content" .}}
         <div class="container max-w-7xl mt-12 pb-20">
             <div class="tab-content active-content flex-col max-w-md" id="profile-tab">
-                <h5 class="text-2xl text-gray-700 mb-4">Your Details</h5>
+                <h5 class="text-2xl text-skin-base mb-4">Your Details</h5>
                 
                 <form id="credit-info" name="credit-info" action="" method="" class="w-full">
                     <div class="flex gap-3 mb-5">
@@ -69,7 +69,7 @@
                         <input type="text" id="email-input" name="email-input" disabled class="floating-input w-full" value="pay@mateors.com"  placeholder=" ">
                         <label for="email-input" class="floating-label">Email</label>
                     </div>
-                    <a href="" class="text-xs text-blue-500 flex justify-end mb-3">Change Email Address</a>
+                    <a href="" class="text-xs text-skin-hover flex justify-end mb-3">Change Email Address</a>
                     
                     
                     <div class="flex gap-2 mb-5">

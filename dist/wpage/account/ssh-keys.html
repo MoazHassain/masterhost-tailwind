@@ -9,15 +9,15 @@
 {{end}}
 
 {{block "main" .}}
-<main class="ml-0 lg:ml-32 min-h-screen">
+<main class="ml-0 lg:ml-32 min-h-screen bg-skin-base">
     {{block "header" .}}
     {{end}}
 
     {{block "content" .}}
     <div class="content">
         <div class="container max-w-7xl my-10">
-            <h1 class="text-4xl font-light mb-2">MD MOSTAIN BILLAH</h1>
-            <p class="text-sm text-slate-500">pay@mateors.com</p>
+            <h1 class="text-4xl font-light mb-2 text-skin-base">MD MOSTAIN BILLAH</h1>
+            <p class="text-sm text-skin-muted">pay@mateors.com</p>
         </div>
         
         {{block "tab-button" .}}
@@ -26,15 +26,15 @@
         {{block "tab-content" .}}
         <div class="container max-w-7xl mt-12 pb-20">
             <div class="tab-content active-content flex-col max-w-lg" id="ssh-tab">
-                <div class="w-full table-wrap border border-gray-200 rounded mb-6">
+                <div class="w-full table-wrap border border-skin-muted rounded mb-6">
                     <table class="w-full text-left">
                         <thead class="h-14 border-b w-full">
                             <tr>
                                 <th class="px-3 w-full sm:w-1/3">
-                                    <p class="font-normal text-slate-400">Name</p>
+                                    <p class="font-normal text-skin-muted">Name</p>
                                 </th>
                                 <th class="px-3 hidden sm:table-cell">
-                                    <p class="font-normal text-slate-400">Date Created</p>
+                                    <p class="font-normal text-skin-muted">Date Created</p>
                                 </th>
                                 <th class="px-3"></th>
                                 <th class="px-3"></th>
@@ -42,24 +42,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="h-16 border-b hover:bg-blue-50 transition">
+                            <tr class="h-16 border-b hover:bg-skin-button-inverted transition">
                                 <td class="px-3">
-                                    <p class="font-normal text-sm text-slate-600">mastererp</p>
+                                    <p class="font-normal text-skin-base">mastererp</p>
                                 </td>
                                 <td class="px-3 hidden sm:table-cell">
-                                    <p class="font-normal text-sm text-slate-600">2018-03-05 03:54:57</p>
+                                    <p class="font-normal text-skin-base">2018-03-05 03:54:57</p>
                                 </td>
                                 <td class="px-4 ">
                                     <button class="menu-btn flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Edit SSH Key" data-modal="">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="fill-slate-400 group-hover/btn:fill-blue-500 transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
+                                            <path class="fill-skin-muted group-hover/btn:fill-skin-hover transition" d="M19.3 8.925L15.05 4.725L16.45 3.325C16.8333 2.94167 17.3043 2.75 17.863 2.75C18.421 2.75 18.8917 2.94167 19.275 3.325L20.675 4.725C21.0583 5.10833 21.2583 5.571 21.275 6.113C21.2917 6.65433 21.1083 7.11667 20.725 7.5L19.3 8.925ZM17.85 10.4L7.25 21H3V16.75L13.6 6.15L17.85 10.4Z" fill="black"></path>
                                         </svg>
                                     </button>
                                 </td>
                                 <td class="px-4 ">
                                     <button class="flex gap-2 items-center group/btn transition-all tooltip-top" data-tooltip="Delete SSH Key">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="fill-slate-400 group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
+                                            <path class="fill-skin-muted group-hover/btn:fill-red-700 transition" d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black"></path>
                                         </svg>
                                     </button>
                                 </td>
@@ -73,16 +73,16 @@
                 <div class="collapsible-wrap">
                     <div class="collapsible flex-wrap">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-blue-600" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                            <path class="stroke-skin-hover" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         <span class="">Using SSH Keys</span>
                     </div>
-                    <div class="collapsible-content pl-7 text-gray-700">
+                    <div class="collapsible-content pl-7 text-skin-base">
                         <ul class="p-4">
                             <li>
                                 Need help creating keys? <br>
                                 See our tutorial on 
-                                <a class="text-blue-600" href="">generating SSH keys</a>.
+                                <a class="text-skin-hover" href="">generating SSH keys</a>.
                             </li>
                         </ul>
 

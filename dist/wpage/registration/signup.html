@@ -39,9 +39,9 @@
 
 {{block "main" .}}
 <div class="signing flex h-screen overflow-hidden">
-    <main class="w-full overflow-y-scroll bg-gray-50">
+    <main class="w-full overflow-y-scroll bg-skin-muted">
     {{block "header" .}}
-    <div class="header fixed top-0 bg-white h-14 px-5 flex justify-between items-center shadow z-50">
+    <div class="header fixed top-0 bg-skin-base h-14 px-5 flex justify-between items-center shadow z-50">
         <div class="logo">
             <svg class="w-9 h-9" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27 0C12.0843 0 0 12.088 0 27.0084C0 27.2107 0.0337079 27.4299 0.0337079 27.6322C3.57303 21.9001 9.28652 18.444 15.691 18.5114C23.4101 18.5451 27.7247 24.0918 29.7809 27.059C31.9719 25.6597 36.2865 23.5186 40.7697 24.665C44.4101 25.5923 47.2921 28.4246 49.382 33.0946H53.2921C53.7472 31.1389 54 29.1158 54 27.0084C53.9831 12.088 41.8989 0 27 0Z" fill="#0069FF"/>
@@ -49,7 +49,7 @@
             </svg>
         </div>
         <div class="flex items-center gap-4 sm:gap-9">
-            <a href="" class="text-sm font-medium text-blue-500 hover:text-blue-700 transition">Need Help?</a>
+            <a href="" class="text-sm font-medium text-skin-base hover:text-skin-hover transition">Need Help?</a>
             <a href="/login" class="">
                 <button class="outline-button !h-auto !p-4 !py-2">LOG IN</button>
             </a>
@@ -62,13 +62,13 @@
         <form data-multi-step id="signup-form" name="signup-form" action="/dashboard" method="" class="w-full p-5">
             <div class="step-1" data-step>
                 <div class="progress-bar flex justify-between gap-10 mb-6">
-                    <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">1</p>
-                    <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">2</p>
-                    <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">3</p>
+                    <p class="bg-skin-button-base text-xs font-bold text-skin-base-inverted w-6 h-6 grid place-items-center rounded-full ">1</p>
+                    <p class="bg-skin-button-inverted-hover text-xs font-bold text-skin-base w-6 h-6 grid place-items-center rounded-full">2</p>
+                    <p class="bg-skin-button-inverted-hover text-xs font-bold text-skin-base w-6 h-6 grid place-items-center rounded-full">3</p>
                 </div>
 
-                <h5 class="text-2xl font-medium text-gray-700 mb-2">Create Account</h5>
-                <p class="text-gray-700 mb-6">Create your free account to continue.</p>
+                <h5 class="text-2xl font-medium text-skin-base mb-2">Create Account</h5>
+                <p class="text-skin-base mb-6">Create your free account to continue.</p>
 
                 <div class="flex gap-3 mb-5">
                     <div class="field w-full">
@@ -104,13 +104,13 @@
             
             <div class="step-2" data-step>
                 <div class="progress-bar flex justify-between gap-10 mb-6">
-                    <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
-                    <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full">2</p>
-                    <p class="bg-slate-200 text-xs font-bold text-slate-600 w-6 h-6 grid place-items-center rounded-full">3</p>
+                    <p class="material-icons bg-skin-button-base text-xs font-bold text-skin-base-inverted w-6 h-6 grid place-items-center rounded-full ">check</p>
+                    <p class="bg-skin-button-base text-xs font-bold text-skin-base-inverted w-6 h-6 grid place-items-center rounded-full">2</p>
+                    <p class="bg-skin-button-inverted-hover text-xs font-bold text-skin-base w-6 h-6 grid place-items-center rounded-full">3</p>
                 </div>
 
-                <h5 class="text-2xl font-medium text-gray-700 mb-2">Create Account</h5>
-                <p class="text-gray-700 mb-6">Enter your information to continue.</p>
+                <h5 class="text-2xl font-medium text-skin-base mb-2">Create Account</h5>
+                <p class="text-skin-base mb-6">Enter your information to continue.</p>
 
                 <div class="phone-field">
                     <label for="phone-input" class="text-sm block mb-1">Phone Number <span class="text-red-700">*</span></label>
@@ -148,7 +148,7 @@
                 </div>
 
                 <div class="select-field mb-5">
-                    <label for="country-select" class="not-floating !text-sm !text-slate-500 block mb-1">
+                    <label for="country-select" class="not-floating !text-sm !text-skin-muted block mb-1">
                         Country/Region <span class="text-red-700">*</span> 
                     </label>
                     
@@ -161,20 +161,20 @@
                 </div>
 
                 <div class="field flex gap-5 mt-9">
-                    <button data-previous class="filled-button !bg-transparent hover:!bg-blue-100" type="button">Back</button>
+                    <button data-previous class="filled-button !text-skin-hover !bg-skin-button-inverted hover:!bg-skin-button-inverted-hover" type="button">Back</button>
                     <button data-next class="filled-button w-full" type="button">continue</button>
                 </div>
             </div>
 
             <div class="step-3" data-step>
                 <div class="progress-bar flex justify-between gap-10 mb-6">
-                    <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
-                    <p class="material-icons bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full ">check</p>
-                    <p class="bg-slate-500 text-xs font-bold text-white w-6 h-6 grid place-items-center rounded-full">3</p>
+                    <p class="material-icons bg-skin-button-base text-xs font-bold text-skin-base-inverted w-6 h-6 grid place-items-center rounded-full ">check</p>
+                    <p class="material-icons bg-skin-button-base text-xs font-bold text-skin-base-inverted w-6 h-6 grid place-items-center rounded-full ">check</p>
+                    <p class="bg-skin-button-base text-xs font-bold text-skin-base-inverted w-6 h-6 grid place-items-center rounded-full">3</p>
                 </div>
 
-                <h5 class="text-2xl font-medium text-gray-700 mb-2">Create Account</h5>
-                <p class="text-gray-700 mb-6">Enter company information to continue.</p>
+                <h5 class="text-2xl font-medium text-skin-base mb-2">Create Account</h5>
+                <p class="text-skin-base mb-6">Enter company information to continue.</p>
 
                 <div class="field mb-5">
                     <label for="company-input" class="text-sm block mb-1">Company</label>
@@ -186,7 +186,7 @@
                 </div>
 
                 <div class="select-field mb-5 overflow-hidden">
-                    <label for="business-catagory-select" class="not-floating !text-sm !text-slate-500 block mb-1 whitespace-nowrap">
+                    <label for="business-catagory-select" class="not-floating !text-sm !text-skin-muted block mb-1 whitespace-nowrap">
                         What catagory best describe your business? <span class="text-red-700 ">*</span> 
                     </label>
                     
@@ -199,7 +199,7 @@
                 </div>
 
                 <div class="select-field mb-5 overflow-hidden">
-                    <label for="business-size-select" class="not-floating !text-sm !text-slate-500 block mb-1  whitespace-nowrap">
+                    <label for="business-size-select" class="not-floating !text-sm !text-skin-muted block mb-1  whitespace-nowrap">
                         What is the size of your business organization? <span class="text-red-700">*</span> 
                     </label>
                     
@@ -217,7 +217,7 @@
                 </div> -->
 
                 <div class="field flex gap-5 mt-9">
-                    <button data-previous class="filled-button !bg-transparent hover:!bg-blue-100" type="button">Back</button>
+                    <button data-previous class="filled-button !text-skin-hover !bg-skin-button-inverted hover:!bg-skin-button-inverted-hover" type="button">Back</button>
                     <button class="filled-button w-full" type="submit">Submit</button>
                 </div>
             </div>
