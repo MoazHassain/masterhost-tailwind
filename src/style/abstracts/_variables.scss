@@ -2,33 +2,33 @@
     :root
     {
         // text
-        --color-text-base: #475569;
-        --color-text-muted: #64748b;
+        --color-text-base: #4b5563;
+        --color-text-muted: #6b7280;
         --color-text-base-inverted: #ffffff;
         --color-text-muted-inverted: rgba(255, 255, 255, 0.9);
         --color-text-message: #10b981;
-        --color-text-hover: #3b82f6;
+        --color-text-hover: #374151;
 
         // backgraound
-        --color-sidebar-fill: #1e3a8a;
-        --color-sidebar-fill-active: #010c38;
+        --color-sidebar-fill: #374151;
+        --color-sidebar-fill-active: #1f2937;
         --color-fill-base: #ffffff;
         --color-fill-muted: #f9fafb;
         --color-fill-amplify: #f3f4f6;
         --color-fill-base-inverted: #1f2937;
         --color-fill-muted-inverted: #374151;
         --color-fill-amplify-inverted: #4b5563;
-        --color-fill-hover: #eff6ff;
-        --color-button-base: #3b82f6;
-        --color-button-base-hover: #2563eb;
-        --color-button-inverted: #eff6ff;
-        --color-button-inverted-hover: #dbeafe;
+        --color-fill-hover: #f3f4f6;
+        --color-button-base: #4b5563;
+        --color-button-base-hover: #374151;
+        --color-button-inverted: #f3f4f6;
+        --color-button-inverted-hover: #e5e7eb;
 
         // border
-        --color-border-base: #3b82f6;
+        --color-border-base: #374151;
         --color-border-muted: #e5e7eb;
 
-        --color-boxshadow-base: 59, 130, 246; //button-base-rgb
+        --color-boxshadow-base: 75, 85, 99; //button-base-rgb
         --color-boxshadow-muted: 71, 85, 105; //text-base-rgba
     }
 

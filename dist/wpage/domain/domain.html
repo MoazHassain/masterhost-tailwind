@@ -2,12 +2,15 @@
 
 {{block "custom-css" .}}
 <style>
+    header:not(.responsive-header)
+    {
+        width: calc(100% - 128px);
+    }
     .filter .select-no-label + .select2-container .select2-selection.select2-selection--single
     {
-        border-width: 0px !important;
-        border-bottom-width: 1px !important;
+        border-bottom-width: 2px !important;
         height: auto;
-        padding: 4px;
+        padding: 4px 8px;
     }
 
     .filter .select2-container .select2-selection--single .select2-selection__rendered
@@ -28,7 +31,7 @@
     {{end}}
 
     {{block "content" .}}
-    <div class="content">
+    <div class="content sm:pt-12">
         <div class="container max-w-7xl my-10 flex justify-between gap-10 items-center">
             <h1 class="text-4xl font-light text-skin-base">Domain</h1>
             
@@ -43,12 +46,12 @@
                         <form id="filter" name="filter" action="">
                             <div class="field flex gap-5 items-center mb-3">
                                 <label for="domain-input" class="min-w-[100px] mb-0">Domain</label>
-                                <input type="text" id="domain-input" name="domain-input" class="w-full border-0 border-b-2 p-1 h-auto" placeholder=" ">
+                                <input type="text" id="domain-input" name="domain-input" class="w-full border-b-2 p-1 px-2 h-auto" placeholder=" ">
                             </div>
     
                             <div class="field flex gap-5 items-center mb-3">
                                 <label for="user-input" class="min-w-[100px] mb-0">User</label>
-                                <input type="text" id="user-input" name="user-input" class="w-full border-0 border-b-2 p-1 h-auto" placeholder=" ">
+                                <input type="text" id="user-input" name="user-input" class="w-full border-b-2 p-1 px-2 h-auto" placeholder=" ">
                             </div>
     
                             <div class="select-field flex gap-5 items-center mb-3">
@@ -65,7 +68,7 @@
     
                             <div class="field flex gap-5 items-center mb-3">
                                 <label for="date-input" class="min-w-[100px] mb-0">Date Created</label>
-                                <input type="date" id="date-input" name="date-input" class="w-full border-0 border-b-2 p-1 h-auto resize-none" placeholder=" ">
+                                <input type="date" id="date-input" name="date-input" class="w-full border-b-2 p-1 px-2 h-auto resize-none" placeholder=" ">
                                 
                             </div>
     
@@ -154,7 +157,7 @@
                                     <input class="hover-content" type="checkbox" name="t" id="t">
                                     <div class="content">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
+                                            <path class="fill-skin-muted" d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
                                         </svg>
                                     </div>
                                 </td>
@@ -218,25 +221,26 @@
         
         <div class="modal-wrap" id="edit-modal">
             <div class="modal-content">
-                <div class="container max-w-7xl flex gap-4 justify-between pt-16 pb-10">
-                    <div class="title">
-                        <h1 class="text-xl sm:text-4xl sm:font-light text-skin-base">Manage DNS Domain</h1>
-                        <div class="flex flex-col md:flex-row gap-4 mt-3">
-                            <p class="text-sm text-skin-muted">Domain: <span class="font-medium">cbodigital.com.bd</span></p>
-                            <p class="text-sm text-skin-muted">Records: <span class="font-medium">6</span></p>
-                            <p class="text-sm text-skin-muted">Created: <span class="font-medium tooltip-top" data-tooltip="4 years ago [UTC]">2018-03-05 03:54:57</span></p>
+                <div class="w-full bg-skin-muted">
+                    <div class="container max-w-7xl flex gap-4 justify-between pt-16 pb-10">
+                        <div class="title">
+                            <h1 class="text-xl sm:text-4xl sm:font-light text-skin-base">Manage DNS Domain</h1>
+                            <div class="flex flex-col md:flex-row gap-4 mt-3">
+                                <p class="text-sm text-skin-muted">Domain: <span class="font-medium">cbodigital.com.bd</span></p>
+                                <p class="text-sm text-skin-muted">Records: <span class="font-medium">6</span></p>
+                                <p class="text-sm text-skin-muted">Created: <span class="font-medium tooltip-top" data-tooltip="4 years ago [UTC]">2018-03-05 03:54:57</span></p>
+                            </div>
                         </div>
+                        <button class="modal-closer menu-btn" data-modal-closer>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-skin-hover" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="modal-closer menu-btn" data-modal-closer>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-skin-hover" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
                 </div>
                 
                 
-
-                <div class="w-full">
+                <div class="w-full bg-skin-muted">
                     <div class="modal-tab-bar container max-w-7xl h-10 flex gap-8 text-skin-base items-center overflow-x-auto overflow-y-clip">
                         <a data-id="records-tab" class="tab-button menu-button active-tab flex items-center h-full text-sm border-b-2 border-b-transparent hover:text-skin-hover whitespace-nowrap transition-all" type="button">
                             Manage Records
@@ -361,23 +365,19 @@
 
         <div class="modal-wrap" id="add-modal">
             <div class="modal-content">
+                <div class="w-full bg-skin-muted border border-b-skin-muted mb-16">
+                    <div class="container max-w-7xl">
+                        <div class="flex justify-between gap-4 pt-16 pb-4 sm:pb-12">
+                            <h1 class="text-xl sm:text-4xl sm:font-light text-skin-base">Add Domain to DNS</h1>
+                            <button class="modal-closer menu-btn" data-modal-closer>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="stroke-skin-hover" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="container max-w-7xl">
-                    <div class="flex justify-between gap-4 pt-16 pb-8">
-                        <h1 class="text-xl sm:text-4xl sm:font-light text-skin-base">Add Domain to DNS</h1>
-                        <button class="modal-closer menu-btn" data-modal-closer>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="stroke-skin-hover" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-        
-                    <div data-message="" class="my-6 sm:my-10 message px-5 py-3 border-l-4 border-l-skin-base shadow-lg text-skin-muted ">
-                        <p class="text-sm inline">Introducing Vultr Cloud GPUs powered by the NVIDIA A40. 
-                            <a href="" class="font-bold underline text-skin-message">Provision your instance now.</a>
-                        </p>
-                        <button data-close-message="" class="text-left sm:float-right text-skin-base hover:text-skin-hover">Dismiss</button>
-                    </div>
-        
                     <div class="sm:border sm:border-skin-muted sm:p-8 max-w-lg">
                         <form  action="" method="" name="add-domain-form" class="">
                             

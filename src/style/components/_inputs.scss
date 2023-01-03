@@ -23,7 +23,7 @@ label
 {
     @apply
     text-base
-    text-skin-base
+    text-skin-muted
     mb-3
     transition-all;
 
@@ -43,9 +43,10 @@ textarea,
 input 
 {
     @apply
-    border-2
+    bg-skin-base
+    border
+    border-b-4
     outline-0 
-    bg-transparent
     border-skin-muted 
     text-skin-base
     rounded-sm
@@ -459,7 +460,9 @@ input
     {
         @apply
         w-full
-        border-2
+        bg-skin-base
+        border
+        border-b-4
         border-skin-muted
         transition-all
         hover:border-skin-base;
@@ -509,8 +512,9 @@ textarea
 .select2-container--default .select2-search--dropdown .select2-search__field 
 {
     @apply 
-    bg-transparent
-    border-2
+    bg-skin-base
+    border
+    border-b-4
     border-skin-muted
     rounded-none
     h-12;

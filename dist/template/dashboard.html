@@ -16,12 +16,17 @@
 </head>
 {{block "custom-css" .}}
 <style>
+    header:not(.responsive-header)
+    {
+        width: calc(100% - 128px);
+    }
+    
     .filter .select-no-label + .select2-container .select2-selection.select2-selection--single
     {
-        border-width: 0px !important;
-        border-bottom-width: 1px !important;
+        
+        border-bottom-width: 2px !important;
         height: auto;
-        padding: 4px;
+        padding: 4px 8px;
     }
 
     .filter .select2-container .select2-selection--single .select2-selection__rendered
@@ -31,10 +36,10 @@
 </style>
 {{end}}
 
-<body class="font-roboto dark-theme">
+<body class="font-roboto">
 
     {{block "sidebar" .}}
-    <aside class="main-sidebar bg-skin-sidebar-fill fixed hidden w-32 h-screen pb-10 overflow-y-scroll lg:block z-10">
+    <aside class="main-sidebar bg-skin-sidebar-fill fixed top-0 hidden w-32 h-screen pb-10 overflow-y-scroll lg:block z-10">
         <!-- logo -->
         <a class="" href="/dashboard">
             <svg class="w-11 h-11 mx-auto my-7" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,43 +50,43 @@
         <nav class="flex flex-col text-skin-muted-inverted">
             <a href="/dashboard" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted">
                 <img class="w-10 h-10" src="/resources/icon/home-icon.svg" alt="Home" srcset="">
-                <p class="text-lg font-medium text-center">Home</p>
+                <p class="text-lg font-light text-center">Home</p>
             </a>
             <a href="/client" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/users.svg" alt="Customer" srcset="">
-                <p class="text-lg font-medium text-center">Client</p>
+                <p class="text-lg font-light text-center">Client</p>
             </a>
             <a href="/domain" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/dns.svg" alt="Domain" srcset="">
-                <p class="text-lg font-medium text-center">Domain</p>
+                <p class="text-lg font-light text-center">Domain</p>
             </a>
             <a href="/database" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/database.svg" alt="Database" srcset="">
-                <p class="text-lg font-medium text-center">Database</p>
+                <p class="text-lg font-light text-center">Database</p>
             </a>
             <a href="/email" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/email-icon.svg" alt="Email" srcset="">
-                <p class="text-lg font-medium text-center">Email</p>
+                <p class="text-lg font-light text-center">Email</p>
             </a>
             <a href="/tools" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/tools.svg" alt="Tools" srcset="">
-                <p class="text-lg font-medium text-center">Tools</p>
+                <p class="text-lg font-light text-center">Tools</p>
             </a>
             <a href="/applications" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/application.svg" alt="Application" srcset="">
-                <p class="text-lg font-medium text-center">Application</p>
+                <p class="text-lg font-light text-center">Application</p>
             </a>
             <a href="/account" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/account.svg" alt="Account" srcset="">
-                <p class="text-lg font-medium text-center">Account</p>
+                <p class="text-lg font-light text-center">Account</p>
             </a>
             <a href="/packages" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/package.svg" alt="Package" srcset="">
-                <p class="text-lg font-medium text-center">Package</p>
+                <p class="text-lg font-light text-center">Package</p>
             </a>
             <a href="/billing" class="nav-item relative py-2 flex flex-col gap-1 items-center hover:text-skin-base-inverted transition">
                 <img class="w-10 h-10 transition" src="/resources/icon/billing.svg" alt="Billing" srcset="">
-                <p class="text-lg font-medium text-center">Billing</p>
+                <p class="text-lg font-light text-center">Billing</p>
             </a>
         </nav>
     </aside>
@@ -173,11 +178,11 @@
             </div>
         </header>
         
-        <header class="border-b border-b-skin-muted h-10 bg-skin-muted hidden lg:block">
+        <header class="border-b border-b-skin-muted h-10 bg-skin-muted hidden fixed top-0 lg:block z-50">
             <div class="container max-w-7xl h-full flex items-center justify-between">
                 <div class="news flex gap-2">
-                    <p class="text-sm font-extrabold text-skin-hover">NEWS:</p>
-                    <p class="text-sm font-normal text-skin-muted">Vultr Managed Databases now supports Redis</p>
+                    <p class="text-sm font-extrabold text-skin-hover">LXROOT </p>
+                    <p class="text-sm font-normal text-skin-muted">Your Cloud Hosting Management Solution.</p>
                 </div>
                 
 
@@ -338,7 +343,7 @@
         {{end}}
 
         {{block "content" .}}
-        <div class="content">
+        <div class="content sm:pt-12">
             <!-- <div class="container max-w-7xl my-10 flex justify-between gap-10 items-center">
                 <h1 class="text-4xl font-light">Dashboard</h1>
                 
@@ -457,14 +462,19 @@
             {{block "tab-content" .}}
             <div class="container max-w-7xl mt-12 mb-20">
                 <div class="tab-content active-content flex-col" id="instances">
-                    <div data-message class="message px-5 py-3 border-l-4 border-l-skin-base shadow-lg text-skin-base">
+                    <div data-message class="message px-5 py-3 border border-l-4 border-skin-muted border-l-skin-base shadow-md text-skin-base">
                         <p class="text-sm inline">Introducing Vultr Cloud GPUs powered by the NVIDIA A40. 
                             <a href="" class="font-bold underline text-skin-message">Provision your instance now.</a>
                         </p>
-                        <button data-close-message class="text-left sm:float-right text-skin-base hover:text-skin-hover">Dismiss</button>
+                        
+                        <button data-close-message class="p-1 menu-btn rounded-full text-left sm:float-right text-skin-base hover:text-skin-hover hover:bg-skin-button-inverted-hover">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-skin-base" d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </button>
                     </div>
 
-                    <div class="filter-content mt-8 mb-6 flex justify-between gap-5">
+                    <!-- <div class="filter-content mt-8 mb-6 flex justify-between gap-5">
                         <div class="search-field relative">
                             <input type="search" name="search-input" id="search-input" placeholder="Search..." class="pl-10">
                             <button class="absolute left-2 top-1/2 -translate-y-1/2">
@@ -488,7 +498,7 @@
                                 <option value="date">Date Created</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="card-wrap grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
                         <div class="card border border-skin-muted shadow-md rounded bg-skin-base h-fit">
@@ -507,9 +517,25 @@
                             </div>
     
                         </div>
-                        <div class="card border border-skin-muted shadow-md rounded bg-skin-base w-fit h-fit">
-                            <div class="flex gap-5 justify-between items-center p-4 sm:p-6 pr-10">
+                        <div class="card border border-skin-muted shadow-md rounded bg-skin-base h-fit">
+                            <div class="flex gap-2 xl:gap-5 justify-between items-center p-4 sm:p-6">
                                 <div class="flex items-start gap-5">
+                                    <img class="w-12 h-12" src="/resources/icon/dns.svg" alt="">
+                                    <div class="">
+                                        <p class="text-lg text-skin-base mb-1">Domain</p>
+                                        <p class="text-sm text-skin-muted">
+                                            All Domains
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-3xl text-skin-muted font-normal">40%</p>
+                            </div>
+    
+                        </div>
+                        <div class="card border border-skin-muted shadow-md rounded bg-skin-base h-fit">
+                            <div class="flex gap-5 items-center p-4 sm:p-6 pr-10">
+                                <div class="flex items-start justify-between gap-5">
                                     <img class="w-12 h-12" src="/resources/icon/dns.svg" alt="">
                                     <div class="">
                                         <p class="text-lg text-skin-base mb-1">Domain</p>

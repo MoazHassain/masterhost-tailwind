@@ -15,7 +15,7 @@
     {{end}}
 
     {{block "content" .}}
-    <div class="content">
+    <div class="content sm:p-12">
         <div class="container max-w-7xl my-10 flex justify-between gap-10 items-center">
             <h1 class="text-4xl font-light text-skin-base">DNS Zone Editor</h1>
             
@@ -30,7 +30,7 @@
                         <form id="filter" name="filter" action="">
                             <div class="field flex gap-5 items-center mb-4">
                                 <label for="record-input" class="min-w-[100px] mb-0">Record Name</label>
-                                <input type="text" id="record-input" name="record-input" class="w-full border-0 border-b-2 p-1 h-auto" placeholder=" ">
+                                <input type="text" id="record-input" name="record-input" class="w-full border-b-2 p-1 px-2 h-auto" placeholder=" ">
                             </div>
 
                             <div class="select-field flex gap-5 items-center mb-3">
@@ -109,7 +109,7 @@
                                     <input class="hover-content" type="checkbox" name="t" id="t">
                                     <div class="content">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
+                                            <path class="fill-skin-muted" d="M12 2C6.579 2 2 6.579 2 12C2 17.421 6.579 22 12 22C17.421 22 22 17.421 22 12C22 6.579 17.421 2 12 2ZM12 7C13.727 7 15 8.272 15 10C15 11.728 13.727 13 12 13C10.274 13 9 11.728 9 10C9 8.272 10.274 7 12 7ZM6.894 16.772C7.791 15.452 9.287 14.572 11 14.572H13C14.714 14.572 16.209 15.452 17.106 16.772C15.828 18.14 14.015 19 12 19C9.985 19 8.172 18.14 6.894 16.772Z" fill="black"/>
                                         </svg>
                                     </div>
                                 </td>

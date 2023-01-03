@@ -2,17 +2,23 @@
 
 {{block "custom-css" .}}
 <style>
+    header:not(.responsive-header)
+    {
+        width: calc(100% - 128px);
+    }
+
     [data-other-content] .arrow::before
     {
         content: "";
         position: absolute;
         top: -22px;
         right: 30px;
-        border-color: rgb(59 130 246);
+        border-color: var(--color-border-muted);
         border: solid transparent;
-        border-bottom-color: white;
+        border-bottom-color: var(--color-fill-base);
         border-width: 13px;
         z-index: 1;
+        transition: 0.15s ease-in-out;
     }
     [data-other-content] .arrow::after
     {
@@ -24,8 +30,19 @@
         height: 0;
         border: solid transparent;
         border-width: 12px;
-        border-bottom-color: rgb(59 130 246);
+        border-bottom-color: var(--color-border-muted);
         z-index: 0;
+        transition: 0.15s ease-in-out;
+    }
+
+    [data-other-content] input:focus + .arrow::before
+    {
+        border-bottom-color: var(--color-fill-base);
+    }
+
+    [data-other-content] input:focus + .arrow::after
+    {
+        border-bottom-color: var(--color-border-base);
     }
 </style>
 {{end}}
@@ -40,7 +57,7 @@
     {{end}}
 
     {{block "content" .}}
-    <div class="content">
+    <div class="content sm:pt-12">
         <div class="container max-w-7xl my-10 block sm:flex items-center justify-between">
             <h1 class="text-4xl font-light mb-4 sm:mb-0 text-skin-base">Billing</h1>
             
@@ -214,9 +231,9 @@
 
                                 <div class="mb-8" id="" data-other-content>
                                     <div class="field relative">
-                                        <input type="number" class="border-blue-500 w-full pl-10">
+                                        <input type="number" class="w-full pl-10">
                                         <div class="arrow"></div>
-                                        <span class="absolute top-1/2 -translate-y-1/2 left-5 text-lg text-blue-600 font-bold pointer-events-none">$</span>
+                                        <span class="absolute top-1/2 -translate-y-1/2 left-5 text-lg text-skin-base font-bold pointer-events-none">$</span>
                                     </div>
                                 </div>
 
